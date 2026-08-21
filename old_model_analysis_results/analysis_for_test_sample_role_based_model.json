@@ -1,0 +1,61 @@
+[
+    {
+        "id": 101,
+        "type": "Live Recording Evaluation",
+        "description": "2-minute automated sentence-continuity parsed validation text file.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Did you see the shared calendar invite I sent you for the next 3 weekends?"
+            },
+            {
+                "speaker": "B",
+                "text": "Yeah, I saw him pop on my phone during my meeting. I haven't had a 2nd to look at the actual dates yet."
+            },
+            {
+                "speaker": "A",
+                "text": "Right. Well, my parents are coming down for the 1st one. And then we have your cousin's dinner. I just need you to confirm them so I can actually plan our lives. It feels like if I don't lock you down weeks in advance, we just don't do anything together."
+            },
+            {
+                "speaker": "B",
+                "text": "Hey, that's not fair. I've been completely swamped with a quarter, with a 3rd quarter wrap up all week. I'm not ignoring you. I'm just trying to survive my work day. You make it sound like I'm intentionally avoiding our life."
+            },
+            {
+                "speaker": "A",
+                "text": "I'm just tired of feeling like scheduling time with my own partner as a secondary logistics project for you. It's always a battle to just get a weekend anchor down."
+            },
+            {
+                "speaker": "B",
+                "text": "Look, I know you're stressed about your parents coming. And I want to be there for that. I'm sorry I snapped. Let me grab my laptop right now. And we can look at the blocks together. Can we just reset?"
+            },
+            {
+                "speaker": "A",
+                "text": "Okay. Yeah. Let's just look at it now."
+            }
+        ],
+        "ground_truth": {
+            "criticism": true,
+            "defensiveness": true,
+            "validation": false,
+            "repair_attempt": true
+        },
+        "model_analysis": {
+            "criticism": {
+                "detected": false,
+                "confidence": 0.0
+            },
+            "defensiveness": {
+                "detected": true,
+                "confidence": 0.8
+            },
+            "validation": {
+                "detected": true,
+                "confidence": 0.9
+            },
+            "repair_attempt": {
+                "detected": true,
+                "confidence": 0.8
+            }
+        }
+    }
+]

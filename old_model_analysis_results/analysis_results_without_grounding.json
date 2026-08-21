@@ -1,0 +1,788 @@
+[
+  {
+    "id": 1,
+    "type": "Obvious - Severe Conflict",
+    "dialogue": "A: I saw the text messages on your phone last night. Why are you still talking to her?\nB: It isn't what it looks like, okay? We were just catching up as friends.\nA: Don't lie to me anymore! You promised me months ago that you cut off all contact.\nB: I only hid it because I knew you would overreact exactly like this!\nA: Overreact? You completely shattered my trust and you are blaming me?!\nB: Look, I am sorry. I messed up, but please let me explain what actually happened.",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 0.5,
+        "evidence": "You completely shattered my trust and you are blaming me?!"
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 0.8,
+        "evidence": "I only hid it because I knew you would overreact exactly like this!"
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "I am sorry. I messed up, but please let me explain what actually happened."
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 0.5,
+        "evidence": "I am sorry. I messed up, but please let me explain what actually happened."
+      }
+    }
+  },
+  {
+    "id": 2,
+    "type": "Obvious - Deep Romance",
+    "dialogue": "A: Happy five-year anniversary, my love. I still can't believe how lucky I am.\nB: Happy anniversary! These have honestly been the happiest years of my entire life.\nA: I brought you to the restaurant where we had our very first date.\nB: You remembered! You always know exactly how to make me feel special.\nA: I want to spend the rest of my life making you feel this loved.\nB: I love you so much, and I absolutely cannot wait for our future together.",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 0.5,
+        "evidence": "A: I brought you to the restaurant where we had our very first date."
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 0.7,
+        "evidence": "B: You remembered! You always know exactly how to make me feel special."
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 0.9,
+        "evidence": "B: These have honestly been the happiest years of my entire life."
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 0.8,
+        "evidence": "A: I want to spend the rest of my life making you feel this loved."
+      }
+    }
+  },
+  {
+    "id": 3,
+    "type": "Obvious - Overt Contempt",
+    "dialogue": "A: Did you forget to pay the electric bill again? It's the third time this year.\nB: I had a brutal week at work, I just need a second to breathe.\nA: You always have an excuse. It's exhausting carrying all the responsibility around here.\nB: I contribute plenty to this household, you just love to keep score.\nA: You contribute nothing but stress. Honestly, I don't even know why I stay.\nB: Then leave! Nobody is forcing you to deal with me anymore.",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 1,
+        "evidence": "Gottman markers for criticism include: 'you always have an excuse', 'you just love to keep score' and 'you contribute nothing but stress'. These statements are one-sided and focus on B's perceived shortcomings without acknowledging A's role in the issue."
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 1,
+        "evidence": "B's statement 'I contribute plenty to this household' and A's response 'You always have an excuse' are classic signs of defensiveness. Gottman marker for defensiveness include: 'you always', 'I'm not', and 'that's not true'."
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "There is no validation in this conversation. A fails to acknowledge B's feelings and B's statement 'I had a brutal week at work' is not acknowledged or accepted."
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "There is no attempt at repair in this conversation. No effort is made by A to acknowledge B's feelings, apologize, or make amends for past hurt."
+      }
+    }
+  },
+  {
+    "id": 4,
+    "type": "Obvious - Validation & Support",
+    "dialogue": "A: I didn't get the promotion. They gave it to someone external.\nB: Oh honey, come here. I am so incredibly sorry to hear that.\nA: I feel like a total failure. I worked so hard on that project.\nB: You are absolutely not a failure. They are blind not to see your worth.\nA: Thank you. I don't know what I would do without you in my corner.\nB: We are a team, always. Let's order your favorite food and figure out next steps.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 1,
+        "evidence": "I feel like a total failure. I worked so hard on that project."
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 1,
+        "evidence": "They are blind not to see your worth."
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 1,
+        "evidence": "You are absolutely not a failure. They are blind not to see your worth."
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 1,
+        "evidence": "Thank you. I don't know what I would do without you in my corner."
+      }
+    }
+  },
+  {
+    "id": 5,
+    "type": "Obvious - Clear Teamwork",
+    "dialogue": "A: If we cut back on dining out this month, we can save an extra $400 for the house deposit.\nB: That sounds perfect. I can also cancel that subscription I don't use.\nA: Awesome, every little bit helps us reach our goal faster.\nB: I'll update our shared spreadsheet tonight so we can track it accurately.\nA: You are so good at managing this stuff. I love how well we work together.\nB: Thanks! It's easy when we both want the exact same things for our future.",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 0.8,
+        "evidence": null
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0.2,
+        "evidence": null
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 0.9,
+        "evidence": null
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0.1,
+        "evidence": null
+      }
+    }
+  },
+  {
+    "id": 6,
+    "type": "Obvious - Breakup Decision",
+    "dialogue": "A: We've been going to therapy for six months and nothing is changing.\nB: I feel it too. We are just hurting each other at this point.\nA: I think we need to admit that this relationship is completely over.\nB: It breaks my heart, but I know you are right. We need to let go.\nA: I will always love the memories we made, but we aren't good together anymore.\nB: I agree. Let's focus on making this separation as peaceful as possible.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": ""
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": ""
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 8,
+        "evidence": "B: 'I feel it too.' (acknowledges A's emotions)"
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 6,
+        "evidence": "B: 'We are just hurting each other at this point.' (softens A's criticism)"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "type": "Obvious - Intense Jealousy",
+    "dialogue": "A: Who was that guy laughing at all your jokes at the party?\nB: He's just a new coworker from marketing, nothing more.\nA: You were touching his arm and leaning in close the whole time.\nB: Are you serious right now? I was just being polite and networking.\nA: It looked like flirting to me, and it made me feel completely invisible.\nB: Your jealousy is getting out of hand. I can't even talk to people anymore.",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 0,
+        "evidence": "Your jealousy is getting out of hand. I can't even talk to people anymore."
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 0,
+        "evidence": "Are you serious now? I was just being polite and networking."
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "He's just a new coworker from marketing, nothing more."
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "I was just being polite and networking."
+      }
+    }
+  },
+  {
+    "id": 8,
+    "type": "Obvious - Marriage Proposal",
+    "dialogue": "A: This trip has been completely magical, but there's one more thing I need to ask.\nB: What is it? You're acting all nervous suddenly.\nA: From the moment I met you, I knew my world had changed forever.\nB: Oh my gosh, are you doing what I think you're doing?\nA: Will you marry me and make me the happiest person alive?\nB: Yes! A thousand times yes! I love you so much!",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 1,
+        "evidence": "None"
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "None"
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "None"
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "None"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "type": "Obvious - Severe Neglect",
+    "dialogue": "A: You've spent the last four weekends playing video games with your online friends.\nB: It's how I unwind. I'm stressed, just leave me alone.\nA: We haven't had a real conversation or shared a meal in weeks.\nB: We live in the same house. We see each other every single day.\nA: Being in the same room while you ignore me is worse than being entirely alone.\nB: If you're going to nag me, I'm just going to put my headphones back on.",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 1,
+        "evidence": "B"
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 1,
+        "evidence": "B"
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": ""
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 1,
+        "evidence": "A"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "type": "Obvious - Deep Gratitude",
+    "dialogue": "A: Thank you for staying up with me all night while I was sick.\nB: Of course. There is absolutely nowhere else I would rather be.\nA: You made sure I had medicine, soup, and everything I needed.\nB: Taking care of you is second nature to me. I hate seeing you in pain.\nA: I don't say it enough, but you are the most incredible partner.\nB: Your love is all the thanks I need. Now get some more rest.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0.0,
+        "evidence": "} { "
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0.0,
+        "evidence": "} {  }, "
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 0.8,
+        "evidence": "} {  }, "
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0.0,
+        "evidence": "} {  }, "
+      }
+    }
+  },
+  {
+    "id": 11,
+    "type": "Obvious - Trust Issues",
+    "dialogue": "A: Why is there a thousand-dollar withdrawal from our joint account?\nB: I had to help my brother out with an emergency. I was going to tell you.\nA: You were going to tell me? The transaction happened two weeks ago!\nB: I knew you'd get mad and make a big deal out of it.\nA: It is a big deal! You stole from our shared savings without my consent.\nB: It's my money too! You don't get to control every single cent.",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 2,
+        "evidence": "}}, {  "
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 6,
+        "evidence": "}}, {  "
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "}, {  "
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "}, {  "
+      }
+    }
+  },
+  {
+    "id": 12,
+    "type": "Obvious - High Affection",
+    "dialogue": "A: Hey gorgeous, I made you coffee just the way you like it.\nB: Wow, extra foam and cinnamon? You really are a mind reader.\nA: Just trying to score some points with my favorite person in the world.\nB: Well, it definitely worked. Come here and give me a kiss.\nA: Don't have to ask me twice! Have a great day at work today.\nB: It's already great thanks to you. See you tonight, handsome.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "B: Well, it definitely worked. Come here and give me a kiss."
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "A: Just trying to score some points with my favorite person in the world."
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 0.8,
+        "evidence": "A: Hey gorgeous, I made you coffee just the way you like it."
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "A: Just trying to score some points with my favorite person in the world."
+      }
+    }
+  },
+  {
+    "id": 13,
+    "type": "Obvious - Defensiveness",
+    "dialogue": "A: You promised me you would clean the kitchen before I got home.\nB: Well, I got stuck in terrible traffic, so it's not my fault.\nA: Traffic? You've been home for two hours, I can see your coat right there.\nB: Why are you constantly tracking my time and breathing down my neck?\nA: I just want you to do what you say you are going to do!\nB: Nothing I do is ever good enough for you anyway, so why bother?",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 0.8,
+        "evidence": "B: Nothing I do is ever good enough for you anyway, so why bother?"
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 0.7,
+        "evidence": "B: Why are you constantly tracking my time and breathing down my neck?"
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0.2,
+        "evidence": "Some phrases, like 'nothing I do is ever good enough', can be considered validation of criticism, although the intent may be to blame rather than be heard."
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0.1,
+        "evidence": "No phrases in the dialogue attempt to repair the interaction or show empathy, like 'I can see you're frustrated' or 'I'm sorry you're having a bad day'."
+      }
+    }
+  },
+  {
+    "id": 14,
+    "type": "Obvious - Forgiveness",
+    "dialogue": "A: I want to sincerely apologize for shouting at you during our argument yesterday.\nB: Thank you. It really hurt my feelings, but I know emotions were running high.\nA: I was stressed about other things, but that doesn't justify taking it out on you.\nB: I appreciate you owning up to it. I accept your apology completely.\nA: Can I hug you? I want to make sure we are completely okay.\nB: Yes, please. I love you, let's just move past it together.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "That doesn't justify taking it out on you"
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "I was stressed about other things"
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "It really hurt my feelings, but I know emotions were running high"
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 0,
+        "evidence": "Can I hug you? I want to make sure we are completely okay."
+      }
+    }
+  },
+  {
+    "id": 15,
+    "type": "Obvious - Long Distance Excitement",
+    "dialogue": "A: My flight just landed! I'm walking toward the baggage claim right now.\nB: I'm standing right outside the exit doors wearing the red jacket!\nA: Three months apart has been absolute torture. I'm literally running to you.\nB: I see you! Drop your bags, I'm not letting go of you all weekend.\nA: Oh my god, finally! Holding you feels so incredibly surreal.\nB: We made it through the distance. We are finally back together.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "}},{ "
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "}}"
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 2,
+        "evidence": "I see you! "
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 1,
+        "evidence": "Drop your bags, I'm not letting go of you all weekend. "
+      }
+    }
+  },
+  {
+    "id": 16,
+    "type": "Ambiguous - Subtext & Distance",
+    "dialogue": "A: Are you heading out to meet your friends again tonight?\nB: Yeah, Dave invited me out for a quick drink. Do you want to come?\nA: No, it's totally fine. You should go out and have fun.\nB: Are you sure? You've been quiet since you got home.\nA: I'm completely fine. Just a little tired from the long work week.\nB: Okay then. Well, let me know if you need anything. See you later.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": null
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": null
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": null
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": null
+      }
+    }
+  },
+  {
+    "id": 17,
+    "type": "Ambiguous - Passive-Aggressive",
+    "dialogue": "A: Oh, I see you finally decided to load the dishwasher.\nB: Yeah, I had some free time. Is there a problem with how I did it?\nA: No, it's great. I just usually don't put the pots on the top rack.\nB: I can just take them out and leave them for you to do your way.\nA: Don't worry about it. I'll just fix it later like I always do.\nB: Perfect, let me know when I'm allowed to help out again.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0.0,
+        "evidence": "]}I have analyzed the dialogue between A and B, and here are some Gottman Communication Markers that I've extracted: 1.  Criticism: B uses the phrase "
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0.0,
+        "evidence": "} to deflect A's criticism, implying that A's way of doing things is not the only correct way. 2.  Stonewalling: A responds with {  "
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0.0,
+        "evidence": "} to A's request to help with the dishes, which implies that A is not interested in discussing the issue further. 3.  Defensiveness: B responds with {  "
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0.0,
+        "evidence": "} to A's comment about not putting the pots on the top rack, which implies that B feels defensive about his way of doing things. 4.  Withdrawal: B responds with {  "
+      }
+    }
+  },
+  {
+    "id": 18,
+    "type": "Ambiguous - Unaligned Future",
+    "dialogue": "A: The corporate office in London reached out about that two-year relocation slot.\nB: Wow, that is an incredible opportunity for your resume. You should take it.\nA: It would mean moving across the world by the end of next month.\nB: You've worked so hard for a global role. It makes perfect sense for you.\nA: Right, but we haven't talked about what that means for us.\nB: Well, it's just two years. I'm sure we can figure out the logistics.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0.2,
+        "evidence": "B's tone is overly confident and dismissive of A's concerns."
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0.1,
+        "evidence": "A's response to B's suggestion implies defensiveness, using the phrase 'but we haven't talked about what that means for us'."
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0.8,
+        "evidence": "B's statement 'You've worked so hard for a global role. It makes perfect sense for you' is a validation of A's efforts, showing empathy and understanding."
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 0.9,
+        "evidence": "A's request to discuss the logistics of the move shows A's willingness to work together with B, attempting to 'repare' the conversation and address concerns."
+      }
+    }
+  },
+  {
+    "id": 19,
+    "type": "Ambiguous - Polite Drift",
+    "dialogue": "A: Did you enjoy the movie? The cinematography was highly rated online.\nB: It was quite interesting. The plot structure was a bit unconventional.\nA: Good. I am glad we could find something agreeable to watch together.\nB: Yes, it is nice to sit down and unwind on a Tuesday evening.\nA: I will head upstairs now and read my book before going to sleep.\nB: Sounds good. I will finish this article and lock up the house.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0.25,
+        "evidence": "}This plot structure was a bit unconventional."
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0.0,
+        "evidence": ""
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 0.75,
+        "evidence": "Good. I am glad we could find something agreeable to watch together."
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 0.75,
+        "evidence": "Sounds good. I will finish this article and lock up the house."
+      }
+    }
+  },
+  {
+    "id": 20,
+    "type": "Ambiguous - Family Boundaries",
+    "dialogue": "A: My mother called and mentioned she might drop by this weekend to help clean.\nB: That's very generous of her. She certainly loves to keep busy when she visits.\nA: Is that a problem? She just wants to make sure we're taking care of things.\nB: Not at all. I just thought we planned on having a quiet weekend to ourselves.\nA: She's just trying to be supportive, we can always do our own thing later.\nB: Sure. I'll make sure the house is up to her standards before she arrives.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 1,
+        "evidence": "I  just  thought  we  planned  on  having  a  quiet  weekend  to  ourselves."
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 2,
+        "evidence": "She just wants to make sure we're taking care of things."
+      },
+      "validation": {
+        "detected": false,
+        "confidence": -1,
+        "evidence": "That's very generous of her. She certainly loves to keep busy when she visits."
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": -2,
+        "evidence": "We can always do our own thing later."
+      }
+    }
+  },
+  {
+    "id": 21,
+    "type": "Ambiguous - Coparenting Fatigue",
+    "dialogue": "A: I can drop Leo off at soccer practice tomorrow if you can pick him up.\nB: That works. I have a meeting until four, so I might be five minutes late.\nA: Okay, just text his coach if you're running behind so he knows.\nB: Will do. Did you remember to sign the permission slip for the field trip?\nA: Yes, it's already in his backpack along with the lunch money.\nB: Great. Looks like we have the entire schedule covered for the week.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0
+      }
+    }
+  },
+  {
+    "id": 22,
+    "type": "Ambiguous - Emotional Guardedness",
+    "dialogue": "A: I felt like we didn't really connect during dinner with my family tonight.\nB: What do you mean? I answered all their questions and was perfectly polite.\nA: You were polite, yeah, but it felt like you were wearing a mask the whole time.\nB: I was just trying to be a good guest. I don't want to overshare details.\nA: It just makes me feel like you're keeping them\u2014and me\u2014at arm's length.\nB: I'm just a private person. It has nothing to do with how I feel about you.",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 6,
+        "evidence": "A was not specific in describing B's behavior, which is a characteristic of defensiveness (described later), and A's statement of "
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 8,
+        "evidence": "B immediately became defensive, using the phrase "
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 2,
+        "evidence": "B did not acknowledge A's feelings or show understanding for their perspective."
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 3,
+        "evidence": "B did not attempt to repair the conversation or acknowledge A's feelings."
+      }
+    }
+  },
+  {
+    "id": 23,
+    "type": "Ambiguous - Gift Giving Tension",
+    "dialogue": "A: Surprise! Look what's parked in the driveway. Happy birthday!\nB: Oh... wow. An electric scooter? You shouldn't have spent this much.\nA: You said last month that you wished your morning commute was faster!\nB: I did, but we talked about consulting each other for big purchases this year.\nA: I wanted it to be a pure surprise. I guess I got too excited.\nB: It's an amazing gesture. I'm just trying to process the financial part.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "But you said last month that you wished your morning commute was faster!"
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "None"
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 0.5,
+        "evidence": "It's an amazing gesture."
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 0.8,
+        "evidence": "I guess I got too excited."
+      }
+    }
+  },
+  {
+    "id": 24,
+    "type": "Ambiguous - Career vs Quality Time",
+    "dialogue": "A: I have to finish up this presentation tonight, so don't wait up for me.\nB: No worries. It seems like the end of the quarter is keeping you very busy.\nA: Yeah, the new regional manager is looking closely at our team metrics.\nB: Understood. Your dedication to the job is definitely clear to everyone.\nA: Does it bother you? That I'm working late so often recently?\nB: You have goals to achieve. I'm just reading my book downstairs.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0
+      }
+    }
+  },
+  {
+    "id": 25,
+    "type": "Ambiguous - Lifestyle Conflict",
+    "dialogue": "A: The new neighbors invited us over for a weekend cocktail party.\nB: Sounds fun for you. You know I'm not much of a mixer with crowds.\nA: They specifically asked for both of us. It would be nice to go as a couple.\nB: You always bring life to the room anyway. You'll have a blast without me.\nA: I just feel awkward turning up alone every single time we get invited out.\nB: People know I'm introverted. It shouldn't surprise anyone at this point.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 1,
+        "evidence": "B's comment 'People know I'm introverted. It shouldn't surprise anyone at this point.' contains a tone of criticism and defensiveness,"
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 0,
+        "evidence": "B's comment 'People know I'm introverted. It shouldn't surprise anyone at this point.' has a condescending tone,"
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "A's message is supportive and acknowledges B's feelings, 'I just feel awkward turning up alone every single time we get invited out.'"
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0,
+        "evidence": "There is no repair attempt from B to acknowledge A's feelings or validate their experience,"
+      }
+    }
+  },
+  {
+    "id": 26,
+    "type": "Ambiguous - Apology Without Change",
+    "dialogue": "A: You forgot to buy the tickets before they sold out, didn't you?\nB: Yeah, I missed the window. I am really sorry about that error.\nA: It's fine. It's just that we planned this weekend trip over two months ago.\nB: I said I was sorry. I can't magically make the tickets reappear now.\nA: I know you can't. I just wish you took our joint plans a bit more seriously.\nB: I apologized immediately. I don't see what else there is to discuss here.",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 8.2,
+        "evidence": "You forgot to buy the tickets before they sold out, didn't you?"
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 7.5,
+        "evidence": "I said I was sorry. I don't see what else there is to discuss here."
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 2.1,
+        "evidence": ""
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 1.9,
+        "evidence": "It's fine. It's just that we planned this weekend trip over two months ago."
+      }
+    }
+  },
+  {
+    "id": 27,
+    "type": "Ambiguous - Avoidance Behavior",
+    "dialogue": "A: Can we talk about what happened at dinner with your friends last night?\nB: Hold on a second, I need to check the seal on this kitchen window first.\nA: The window can wait ten minutes. This feels like you're avoiding me.\nB: If I don't fix this leak now, the rain tomorrow is going to damage the drywall.\nA: Every time I bring up our communication, a new house project suddenly appears.\nB: I'm just trying to maintain the house we live in. It's an important task.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 5
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 0
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 3
+      }
+    }
+  },
+  {
+    "id": 28,
+    "type": "Ambiguous - Subtle Jealousy",
+    "dialogue": "A: You've been hitting the gym a lot more frequently over the past month.\nB: Yeah, just trying to get into better shape and clear my head after work.\nA: That's great. You also started wearing that new cologne out to casual errands.\nB: Oh, this sample bottle? I just found it in the drawer and gave it a spray.\nA: Nice, it smells really good. It's definitely a noticeable shift for you.\nB: Thanks. Change is good sometimes. I'm going to jump in the shower now.",
+    "analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 0.8
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0
+      }
+    }
+  },
+  {
+    "id": 29,
+    "type": "Ambiguous - Financial Divergence",
+    "dialogue": "A: Did you see the new designer boots I bought for the upcoming winter?\nB: Oh, nice. They look like they're very high quality and durable material.\nA: They were a bit of a splurge, but I've been saving up my fun money account.\nB: That's good. It's your personal allowance, so you should spend it how you like.\nA: You sound like you don't approve of the choice though.\nB: If you are happy with them, that is all that really matters to me.",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 0.7
+      },
+      "defensiveness": {
+        "detected": true,
+        "confidence": 0.8
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 0.6
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 0.0
+      }
+    }
+  },
+  {
+    "id": 30,
+    "type": "Ambiguous - Social Media Overlap",
+    "dialogue": "A: I noticed you didn't post any photos from our weekend beach trip on your feed.\nB: Oh, I haven't really been opening my social media apps at all lately.\nA: You posted a story about your coworker's farewell happy hour yesterday though.\nB: That was just a quick re-share because she tagged me directly in it.\nA: Right. It just looks a bit strange when our trips together never show up there.\nB: I prefer keeping our private life private. I thought you knew that.",
+    "analysis": {
+      "criticism": {
+        "detected": true,
+        "confidence": 7
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 4
+      },
+      "validation": {
+        "detected": false,
+        "confidence": 2
+      },
+      "repair_attempt": {
+        "detected": false,
+        "confidence": 1
+      }
+    }
+  }
+]

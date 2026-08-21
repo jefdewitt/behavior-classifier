@@ -1,0 +1,932 @@
+[
+    {
+        "id": 1,
+        "type": "Obvious - Severe Conflict",
+        "description": "An intense argument about broken trust and lies.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "I saw the text messages on your phone last night. Why are you still talking to her?"
+            },
+            {
+                "speaker": "B",
+                "text": "It isn't what it looks like, okay? We were just catching up as friends."
+            },
+            {
+                "speaker": "A",
+                "text": "Don't lie to me anymore! You promised me months ago that you cut off all contact."
+            },
+            {
+                "speaker": "B",
+                "text": "I only hid it because I knew you would overreact exactly like this!"
+            },
+            {
+                "speaker": "A",
+                "text": "Overreact? You completely shattered my trust and you are blaming me?!"
+            },
+            {
+                "speaker": "B",
+                "text": "Look, I am sorry. I messed up, but please let me explain what actually happened."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "type": "Obvious - Deep Romance",
+        "description": "Expressing deep affection and celebrating an anniversary.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Happy five-year anniversary, my love. I still can't believe how lucky I am."
+            },
+            {
+                "speaker": "B",
+                "text": "Happy anniversary! These have honestly been the happiest years of my entire life."
+            },
+            {
+                "speaker": "A",
+                "text": "I brought you to the restaurant where we had our very first date."
+            },
+            {
+                "speaker": "B",
+                "text": "You remembered! You always know exactly how to make me feel special."
+            },
+            {
+                "speaker": "A",
+                "text": "I want to spend the rest of my life making you feel this loved."
+            },
+            {
+                "speaker": "B",
+                "text": "I love you so much, and I absolutely cannot wait for our future together."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "type": "Obvious - Overt Contempt",
+        "description": "One partner expressing deep disdain and lack of respect.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Did you forget to pay the electric bill again? It's the third time this year."
+            },
+            {
+                "speaker": "B",
+                "text": "I had a brutal week at work, I just need a second to breathe."
+            },
+            {
+                "speaker": "A",
+                "text": "You always have an excuse. It's exhausting carrying all the responsibility around here."
+            },
+            {
+                "speaker": "B",
+                "text": "I contribute plenty to this household, you just love to keep score."
+            },
+            {
+                "speaker": "A",
+                "text": "You contribute nothing but stress. Honestly, I don't even know why I stay."
+            },
+            {
+                "speaker": "B",
+                "text": "Then leave! Nobody is forcing you to deal with me anymore."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "type": "Obvious - Validation & Support",
+        "description": "Supporting a partner going through a difficult career setback.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "I didn't get the promotion. They gave it to someone external."
+            },
+            {
+                "speaker": "B",
+                "text": "Oh honey, come here. I am so incredibly sorry to hear that."
+            },
+            {
+                "speaker": "A",
+                "text": "I feel like a total failure. I worked so hard on that project."
+            },
+            {
+                "speaker": "B",
+                "text": "You are absolutely not a failure. They are blind not to see your worth."
+            },
+            {
+                "speaker": "A",
+                "text": "Thank you. I don't know what I would do without you in my corner."
+            },
+            {
+                "speaker": "B",
+                "text": "We are a team, always. Let's order your favorite food and figure out next steps."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "type": "Obvious - Clear Teamwork",
+        "description": "Collaboratively planning a major budget and financial move.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "If we cut back on dining out this month, we can save an extra $400 for the house deposit."
+            },
+            {
+                "speaker": "B",
+                "text": "That sounds perfect. I can also cancel that subscription I don't use."
+            },
+            {
+                "speaker": "A",
+                "text": "Awesome, every little bit helps us reach our goal faster."
+            },
+            {
+                "speaker": "B",
+                "text": "I'll update our shared spreadsheet tonight so we can track it accurately."
+            },
+            {
+                "speaker": "A",
+                "text": "You are so good at managing this stuff. I love how well we work together."
+            },
+            {
+                "speaker": "B",
+                "text": "Thanks! It's easy when we both want the exact same things for our future."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "type": "Obvious - Breakup Decision",
+        "description": "A mutual, painful decision to end the relationship.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "We've been going to therapy for six months and nothing is changing."
+            },
+            {
+                "speaker": "B",
+                "text": "I feel it too. We are just hurting each other at this point."
+            },
+            {
+                "speaker": "A",
+                "text": "I think we need to admit that this relationship is completely over."
+            },
+            {
+                "speaker": "B",
+                "text": "It breaks my heart, but I know you are right. We need to let go."
+            },
+            {
+                "speaker": "A",
+                "text": "I will always love the memories we made, but we aren't good together anymore."
+            },
+            {
+                "speaker": "B",
+                "text": "I agree. Let's focus on making this separation as peaceful as possible."
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "type": "Obvious - Intense Jealousy",
+        "description": "Accusations over a partner's social interactions.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Who was that guy laughing at all your jokes at the party?"
+            },
+            {
+                "speaker": "B",
+                "text": "He's just a new coworker from marketing, nothing more."
+            },
+            {
+                "speaker": "A",
+                "text": "You were touching his arm and leaning in close the whole time."
+            },
+            {
+                "speaker": "B",
+                "text": "Are you serious right now? I was just being polite and networking."
+            },
+            {
+                "speaker": "A",
+                "text": "It looked like flirting to me, and it made me feel completely invisible."
+            },
+            {
+                "speaker": "B",
+                "text": "Your jealousy is getting out of hand. I can't even talk to people anymore."
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "type": "Obvious - Marriage Proposal",
+        "description": "A classic, joyful marriage proposal scene.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "This trip has been completely magical, but there's one more thing I need to ask."
+            },
+            {
+                "speaker": "B",
+                "text": "What is it? You're acting all nervous suddenly."
+            },
+            {
+                "speaker": "A",
+                "text": "From the moment I met you, I knew my world had changed forever."
+            },
+            {
+                "speaker": "B",
+                "text": "Oh my gosh, are you doing what I think you're doing?"
+            },
+            {
+                "speaker": "A",
+                "text": "Will you marry me and make me the happiest person alive?"
+            },
+            {
+                "speaker": "B",
+                "text": "Yes! A thousand times yes! I love you so much!"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "type": "Obvious - Severe Neglect",
+        "description": "One partner completely prioritizing hobbies over the relationship.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "You've spent the last four weekends playing video games with your online friends."
+            },
+            {
+                "speaker": "B",
+                "text": "It's how I unwind. I'm stressed, just leave me alone."
+            },
+            {
+                "speaker": "A",
+                "text": "We haven't had a real conversation or shared a meal in weeks."
+            },
+            {
+                "speaker": "B",
+                "text": "We live in the same house. We see each other every single day."
+            },
+            {
+                "speaker": "A",
+                "text": "Being in the same room while you ignore me is worse than being entirely alone."
+            },
+            {
+                "speaker": "B",
+                "text": "If you're going to nag me, I'm just going to put my headphones back on."
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "type": "Obvious - Deep Gratitude",
+        "description": "Expressing appreciation for care during an illness.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Thank you for staying up with me all night while I was sick."
+            },
+            {
+                "speaker": "B",
+                "text": "Of course. There is absolutely nowhere else I would rather be."
+            },
+            {
+                "speaker": "A",
+                "text": "You made sure I had medicine, soup, and everything I needed."
+            },
+            {
+                "speaker": "B",
+                "text": "Taking care of you is second nature to me. I hate seeing you in pain."
+            },
+            {
+                "speaker": "A",
+                "text": "I don't say it enough, but you are the most incredible partner."
+            },
+            {
+                "speaker": "B",
+                "text": "Your love is all the thanks I need. Now get some more rest."
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "type": "Obvious - Trust Issues",
+        "description": "Confronting a partner about hiding financial transactions.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Why is there a thousand-dollar withdrawal from our joint account?"
+            },
+            {
+                "speaker": "B",
+                "text": "I had to help my brother out with an emergency. I was going to tell you."
+            },
+            {
+                "speaker": "A",
+                "text": "You were going to tell me? The transaction happened two weeks ago!"
+            },
+            {
+                "speaker": "B",
+                "text": "I knew you'd get mad and make a big deal out of it."
+            },
+            {
+                "speaker": "A",
+                "text": "It is a big deal! You stole from our shared savings without my consent."
+            },
+            {
+                "speaker": "B",
+                "text": "It's my money too! You don't get to control every single cent."
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "type": "Obvious - High Affection",
+        "description": "Casual, joyful flirting and affection between a stable couple.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Hey gorgeous, I made you coffee just the way you like it."
+            },
+            {
+                "speaker": "B",
+                "text": "Wow, extra foam and cinnamon? You really are a mind reader."
+            },
+            {
+                "speaker": "A",
+                "text": "Just trying to score some points with my favorite person in the world."
+            },
+            {
+                "speaker": "B",
+                "text": "Well, it definitely worked. Come here and give me a kiss."
+            },
+            {
+                "speaker": "A",
+                "text": "Don't have to ask me twice! Have a great day at work today."
+            },
+            {
+                "speaker": "B",
+                "text": "It's already great thanks to you. See you tonight, handsome."
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "type": "Obvious - Defensiveness",
+        "description": "Classic deflection and refusal to take responsibility for chores.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "You promised me you would clean the kitchen before I got home."
+            },
+            {
+                "speaker": "B",
+                "text": "Well, I got stuck in terrible traffic, so it's not my fault."
+            },
+            {
+                "speaker": "A",
+                "text": "Traffic? You've been home for two hours, I can see your coat right there."
+            },
+            {
+                "speaker": "B",
+                "text": "Why are you constantly tracking my time and breathing down my neck?"
+            },
+            {
+                "speaker": "A",
+                "text": "I just want you to do what you say you are going to do!"
+            },
+            {
+                "speaker": "B",
+                "text": "Nothing I do is ever good enough for you anyway, so why bother?"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "type": "Obvious - Forgiveness",
+        "description": "A healing conversation after a major misunderstanding.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "I want to sincerely apologize for shouting at you during our argument yesterday."
+            },
+            {
+                "speaker": "B",
+                "text": "Thank you. It really hurt my feelings, but I know emotions were running high."
+            },
+            {
+                "speaker": "A",
+                "text": "I was stressed about other things, but that doesn't justify taking it out on you."
+            },
+            {
+                "speaker": "B",
+                "text": "I appreciate you owning up to it. I accept your apology completely."
+            },
+            {
+                "speaker": "A",
+                "text": "Can I hug you? I want to make sure we are completely okay."
+            },
+            {
+                "speaker": "B",
+                "text": "Yes, please. I love you, let's just move past it together."
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "type": "Obvious - Long Distance Excitement",
+        "description": "Anticipation and joy about reuniting after months apart.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "My flight just landed! I'm walking toward the baggage claim right now."
+            },
+            {
+                "speaker": "B",
+                "text": "I'm standing right outside the exit doors wearing the red jacket!"
+            },
+            {
+                "speaker": "A",
+                "text": "Three months apart has been absolute torture. I'm literally running to you."
+            },
+            {
+                "speaker": "B",
+                "text": "I see you! Drop your bags, I'm not letting go of you all weekend."
+            },
+            {
+                "speaker": "A",
+                "text": "Oh my god, finally! Holding you feels so incredibly surreal."
+            },
+            {
+                "speaker": "B",
+                "text": "We made it through the distance. We are finally back together."
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "type": "Ambiguous - Subtext & Distance",
+        "description": "Surface polite conversation hiding emotional drift.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Are you heading out to meet your friends again tonight?"
+            },
+            {
+                "speaker": "B",
+                "text": "Yeah, Dave invited me out for a quick drink. Do you want to come?"
+            },
+            {
+                "speaker": "A",
+                "text": "No, it's totally fine. You should go out and have fun."
+            },
+            {
+                "speaker": "B",
+                "text": "Are you sure? You've been quiet since you got home."
+            },
+            {
+                "speaker": "A",
+                "text": "I'm completely fine. Just a little tired from the long work week."
+            },
+            {
+                "speaker": "B",
+                "text": "Okay then. Well, let me know if you need anything. See you later."
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "type": "Ambiguous - Passive-Aggressive",
+        "description": "Masked resentment wrapped in helpful chore management.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Oh, I see you finally decided to load the dishwasher."
+            },
+            {
+                "speaker": "B",
+                "text": "Yeah, I had some free time. Is there a problem with how I did it?"
+            },
+            {
+                "speaker": "A",
+                "text": "No, it's great. I just usually don't put the pots on the top rack."
+            },
+            {
+                "speaker": "B",
+                "text": "I can just take them out and leave them for you to do your way."
+            },
+            {
+                "speaker": "A",
+                "text": "Don't worry about it. I'll just fix it later like I always do."
+            },
+            {
+                "speaker": "B",
+                "text": "Perfect, let me know when I'm allowed to help out again."
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "type": "Ambiguous - Unaligned Future",
+        "description": "A polite conversation about career moves that implicitly challenges the relationship stability.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "The corporate office in London reached out about that two-year relocation slot."
+            },
+            {
+                "speaker": "B",
+                "text": "Wow, that is an incredible opportunity for your resume. You should take it."
+            },
+            {
+                "speaker": "A",
+                "text": "It would mean moving across the world by the end of next month."
+            },
+            {
+                "speaker": "B",
+                "text": "You've worked so hard for a global role. It makes perfect sense for you."
+            },
+            {
+                "speaker": "A",
+                "text": "Right, but we haven't talked about what that means for us."
+            },
+            {
+                "speaker": "B",
+                "text": "Well, it's just two years. I'm sure we can figure out the logistics."
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "type": "Ambiguous - Polite Drift",
+        "description": "An overly formal, emotionless exchange between long-term partners.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Did you enjoy the movie? The cinematography was highly rated online."
+            },
+            {
+                "speaker": "B",
+                "text": "It was quite interesting. The plot structure was a bit unconventional."
+            },
+            {
+                "speaker": "A",
+                "text": "Good. I am glad we could find something agreeable to watch together."
+            },
+            {
+                "speaker": "B",
+                "text": "Yes, it is nice to sit down and unwind on a Tuesday evening."
+            },
+            {
+                "speaker": "A",
+                "text": "I will head upstairs now and read my book before going to sleep."
+            },
+            {
+                "speaker": "B",
+                "text": "Sounds good. I will finish this article and lock up the house."
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "type": "Ambiguous - Family Boundaries",
+        "description": "An indirect conflict about a mother-in-law's overbearing presence.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "My mother called and mentioned she might drop by this weekend to help clean."
+            },
+            {
+                "speaker": "B",
+                "text": "That's very generous of her. She certainly loves to keep busy when she visits."
+            },
+            {
+                "speaker": "A",
+                "text": "Is that a problem? She just wants to make sure we're taking care of things."
+            },
+            {
+                "speaker": "B",
+                "text": "Not at all. I just thought we planned on having a quiet weekend to ourselves."
+            },
+            {
+                "speaker": "A",
+                "text": "She's just trying to be supportive, we can always do our own thing later."
+            },
+            {
+                "speaker": "B",
+                "text": "Sure. I'll make sure the house is up to her standards before she arrives."
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "type": "Ambiguous - Coparenting Fatigue",
+        "description": "A sterile logistics conversation that replaces romantic connection.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "I can drop Leo off at soccer practice tomorrow if you can pick him up."
+            },
+            {
+                "speaker": "B",
+                "text": "That works. I have a meeting until four, so I might be five minutes late."
+            },
+            {
+                "speaker": "A",
+                "text": "Okay, just text his coach if you're running behind so he knows."
+            },
+            {
+                "speaker": "B",
+                "text": "Will do. Did you remember to sign the permission slip for the field trip?"
+            },
+            {
+                "speaker": "A",
+                "text": "Yes, it's already in his backpack along with the lunch money."
+            },
+            {
+                "speaker": "B",
+                "text": "Great. Looks like we have the entire schedule covered for the week."
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "type": "Ambiguous - Emotional Guardedness",
+        "description": "One partner trying to open up while the other maintains strict boundaries.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "I felt like we didn't really connect during dinner with my family tonight."
+            },
+            {
+                "speaker": "B",
+                "text": "What do you mean? I answered all their questions and was perfectly polite."
+            },
+            {
+                "speaker": "A",
+                "text": "You were polite, yeah, but it felt like you were wearing a mask the whole time."
+            },
+            {
+                "speaker": "B",
+                "text": "I was just trying to be a good guest. I don't want to overshare details."
+            },
+            {
+                "speaker": "A",
+                "text": "It just makes me feel like you're keeping them—and me—at arm's length."
+            },
+            {
+                "speaker": "B",
+                "text": "I'm just a private person. It has nothing to do with how I feel about you."
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "type": "Ambiguous - Gift Giving Tension",
+        "description": "An expensive gift highlighting unaligned values and unspoken guilt.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Surprise! Look what's parked in the driveway. Happy birthday!"
+            },
+            {
+                "speaker": "B",
+                "text": "Oh... wow. An electric scooter? You shouldn't have spent this much."
+            },
+            {
+                "speaker": "A",
+                "text": "You said last month that you wished your morning commute was faster!"
+            },
+            {
+                "speaker": "B",
+                "text": "I did, but we talked about consulting each other for big purchases this year."
+            },
+            {
+                "speaker": "A",
+                "text": "I wanted it to be a pure surprise. I guess I got too excited."
+            },
+            {
+                "speaker": "B",
+                "text": "It's an amazing gesture. I'm just trying to process the financial part."
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "type": "Ambiguous - Career vs Quality Time",
+        "description": "A discussion on working hours where dissatisfaction is implied but denied.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "I have to finish up this presentation tonight, so don't wait up for me."
+            },
+            {
+                "speaker": "B",
+                "text": "No worries. It seems like the end of the quarter is keeping you very busy."
+            },
+            {
+                "speaker": "A",
+                "text": "Yeah, the new regional manager is looking closely at our team metrics."
+            },
+            {
+                "speaker": "B",
+                "text": "Understood. Your dedication to the job is definitely clear to everyone."
+            },
+            {
+                "speaker": "A",
+                "text": "Does it bother you? That I'm working late so often recently?"
+            },
+            {
+                "speaker": "B",
+                "text": "You have goals to achieve. I'm just reading my book downstairs."
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "type": "Ambiguous - Lifestyle Conflict",
+        "description": "Subtle tension around social habits and matching energy levels.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "The new neighbors invited us over for a weekend cocktail party."
+            },
+            {
+                "speaker": "B",
+                "text": "Sounds fun for you. You know I'm not much of a mixer with crowds."
+            },
+            {
+                "speaker": "A",
+                "text": "They specifically asked for both of us. It would be nice to go as a couple."
+            },
+            {
+                "speaker": "B",
+                "text": "You always bring life to the room anyway. You'll have a blast without me."
+            },
+            {
+                "speaker": "A",
+                "text": "I just feel awkward turning up alone every single time we get invited out."
+            },
+            {
+                "speaker": "B",
+                "text": "People know I'm introverted. It shouldn't surprise anyone at this point."
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "type": "Ambiguous - Apology Without Change",
+        "description": "An empty apology that deflects deep behavioral correction.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "You forgot to buy the tickets before they sold out, didn't you?"
+            },
+            {
+                "speaker": "B",
+                "text": "Yeah, I missed the window. I am really sorry about that error."
+            },
+            {
+                "speaker": "A",
+                "text": "It's fine. It's just that we planned this weekend trip over two months ago."
+            },
+            {
+                "speaker": "B",
+                "text": "I said I was sorry. I can't magically make the tickets reappear now."
+            },
+            {
+                "speaker": "A",
+                "text": "I know you can't. I just wish you took our joint plans a bit more seriously."
+            },
+            {
+                "speaker": "B",
+                "text": "I apologized immediately. I don't see what else there is to discuss here."
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "type": "Ambiguous - Avoidance Behavior",
+        "description": "Using house maintenance to avoid dealing with emotional tension.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Can we talk about what happened at dinner with your friends last night?"
+            },
+            {
+                "speaker": "B",
+                "text": "Hold on a second, I need to check the seal on this kitchen window first."
+            },
+            {
+                "speaker": "A",
+                "text": "The window can wait ten minutes. This feels like you're avoiding me."
+            },
+            {
+                "speaker": "B",
+                "text": "If I don't fix this leak now, the rain tomorrow is going to damage the drywall."
+            },
+            {
+                "speaker": "A",
+                "text": "Every time I bring up our communication, a new house project suddenly appears."
+            },
+            {
+                "speaker": "B",
+                "text": "I'm just trying to maintain the house we live in. It's an important task."
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "type": "Ambiguous - Subtle Jealousy",
+        "description": "Masked curiosity about a partner's changing appearance or behavior.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "You've been hitting the gym a lot more frequently over the past month."
+            },
+            {
+                "speaker": "B",
+                "text": "Yeah, just trying to get into better shape and clear my head after work."
+            },
+            {
+                "speaker": "A",
+                "text": "That's great. You also started wearing that new cologne out to casual errands."
+            },
+            {
+                "speaker": "B",
+                "text": "Oh, this sample bottle? I just found it in the drawer and gave it a spray."
+            },
+            {
+                "speaker": "A",
+                "text": "Nice, it smells really good. It's definitely a noticeable shift for you."
+            },
+            {
+                "speaker": "B",
+                "text": "Thanks. Change is good sometimes. I'm going to jump in the shower now."
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "type": "Ambiguous - Financial Divergence",
+        "description": "An awkward exchange regarding personal discretionary spending choices.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "Did you see the new designer boots I bought for the upcoming winter?"
+            },
+            {
+                "speaker": "B",
+                "text": "Oh, nice. They look like they're very high quality and durable material."
+            },
+            {
+                "speaker": "A",
+                "text": "They were a bit of a splurge, but I've been saving up my fun money account."
+            },
+            {
+                "speaker": "B",
+                "text": "That's good. It's your personal allowance, so you should spend it how you like."
+            },
+            {
+                "speaker": "A",
+                "text": "You sound like you don't approve of the choice though."
+            },
+            {
+                "speaker": "B",
+                "text": "If you are happy with them, that is all that really matters to me."
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "type": "Ambiguous - Social Media Overlap",
+        "description": "Vague boundaries and unvoiced expectations about online presence.",
+        "turns": [
+            {
+                "speaker": "A",
+                "text": "I noticed you didn't post any photos from our weekend beach trip on your feed."
+            },
+            {
+                "speaker": "B",
+                "text": "Oh, I haven't really been opening my social media apps at all lately."
+            },
+            {
+                "speaker": "A",
+                "text": "You posted a story about your coworker's farewell happy hour yesterday though."
+            },
+            {
+                "speaker": "B",
+                "text": "That was just a quick re-share because she tagged me directly in it."
+            },
+            {
+                "speaker": "A",
+                "text": "Right. It just looks a bit strange when our trips together never show up there."
+            },
+            {
+                "speaker": "B",
+                "text": "I prefer keeping our private life private. I thought you knew that."
+            }
+        ]
+    }
+]

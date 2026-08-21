@@ -1,0 +1,31 @@
+[
+  {
+    "id": 101,
+    "type": "Live Recording Evaluation",
+    "dialogue": "A: Did you see the shared calendar invite I sent you for the next 3 weekends?\nB: Yeah, I saw him pop on my phone during my meeting. I haven't had a 2nd to look at the actual dates yet.\nA: Right. Well, my parents are coming down for the 1st one. And then we have your cousin's dinner. I just need you to confirm them so I can actually plan our lives. It feels like if I don't lock you down weeks in advance, we just don't do anything together.\nB: Hey, that's not fair. I've been completely swamped with a quarter, with a 3rd quarter wrap up all week. I'm not ignoring you. I'm just trying to survive my work day. You make it sound like I'm intentionally avoiding our life.\nA: I'm just tired of feeling like scheduling time with my own partner as a secondary logistics project for you. It's always a battle to just get a weekend anchor down.\nB: Look, I know you're stressed about your parents coming. And I want to be there for that. I'm sorry I snapped. Let me grab my laptop right now. And we can look at the blocks together. Can we just reset?\nA: Okay. Yeah. Let's just look at it now.",
+    "ground_truth": {
+      "criticism": true,
+      "defensiveness": true,
+      "validation": false,
+      "repair_attempt": true
+    },
+    "model_analysis": {
+      "criticism": {
+        "detected": false,
+        "confidence": 0
+      },
+      "defensiveness": {
+        "detected": false,
+        "confidence": 0
+      },
+      "validation": {
+        "detected": true,
+        "confidence": 0.8
+      },
+      "repair_attempt": {
+        "detected": true,
+        "confidence": 0.9
+      }
+    }
+  }
+]

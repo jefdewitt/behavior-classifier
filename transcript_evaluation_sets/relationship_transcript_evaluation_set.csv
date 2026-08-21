@@ -1,0 +1,181 @@
+Dialogue_ID,Category,Turn_Number,Speaker,Text
+1,Obvious - Conflict,1,A,"You forgot our anniversary again, didn't you?"
+1,Obvious - Conflict,2,B,"I had a massive deadline at work today, I'm sorry."
+1,Obvious - Conflict,3,A,Work is always your excuse. I'm tired of being second place.
+1,Obvious - Conflict,4,B,That's not fair. I am trying to build a future for us.
+1,Obvious - Conflict,5,A,A future means nothing if you aren't present in the baseline relationship.
+1,Obvious - Conflict,6,B,I don't know how to make you happy anymore.
+2,Ambiguous - Subtext,1,A,Are you going out with your friends again tonight?
+2,Ambiguous - Subtext,2,B,"Yeah, Mark invited me out. Do you want to come?"
+2,Ambiguous - Subtext,3,A,"No, it's fine. You should go have fun."
+2,Ambiguous - Subtext,4,B,Are you sure? You seem a bit distant.
+2,Ambiguous - Subtext,5,A,I'm completely fine. Just tired from the week.
+2,Ambiguous - Subtext,6,B,"Okay, well, let me know if you need anything."
+3,Obvious - Supportive,1,A,I'm so nervous about this job interview tomorrow.
+3,Obvious - Supportive,2,B,You are going to crush it. You've prepared so hard.
+3,Obvious - Supportive,3,A,What if they ask something I don't know?
+3,Obvious - Supportive,4,B,Then you'll be honest and smart about it. I believe in you entirely.
+3,Obvious - Supportive,5,A,Thank you for always being my biggest rock.
+3,Obvious - Supportive,6,B,Always. Let's celebrate after you finish.
+4,Ambiguous - Transition,1,A,I received the job offer in Chicago today.
+4,Ambiguous - Transition,2,B,Wow. That's a huge opportunity for your career.
+4,Ambiguous - Transition,3,A,"It is, but it means moving across the country."
+4,Ambiguous - Transition,4,B,We always said we'd figure things out when they happen.
+4,Ambiguous - Transition,5,A,Does 'figuring it out' mean you coming with me?
+4,Ambiguous - Transition,6,B,"I love my job here, A. It's a lot to think about."
+5,Obvious - Romance,1,A,"Look at the stars tonight, it's incredibly clear."
+5,Obvious - Romance,2,B,"They're beautiful, but I'd rather look at you."
+5,Obvious - Romance,3,A,"That was incredibly cheesy, you know."
+5,Obvious - Romance,4,B,"Maybe, but I mean every single word of it."
+5,Obvious - Romance,5,A,"I love you so much, B."
+5,Obvious - Romance,6,B,I love you more.
+6,Ambiguous - Drift,1,A,We haven't sat down for dinner together all week.
+6,Ambiguous - Drift,2,B,"Schedules have just been chaotic, it's nothing personal."
+6,Ambiguous - Drift,3,A,"I know, it just feels like we're roommates lately."
+6,Ambiguous - Drift,4,B,We're just in a busy season. It'll pass soon.
+6,Ambiguous - Drift,5,A,I hope so. I miss how things used to be.
+6,Ambiguous - Drift,6,B,"Things change, A. It doesn't mean it's bad."
+7,Obvious - Jealousy,1,A,Who was texting you so late last night?
+7,Obvious - Jealousy,2,B,Just a coworker about the project timeline.
+7,Obvious - Jealousy,3,A,Since when do coworkers text you emojis at midnight?
+7,Obvious - Jealousy,4,B,Are you seriously interrogating me right now?
+7,Obvious - Jealousy,5,A,"If you have nothing to hide, show me the thread."
+7,Obvious - Jealousy,6,B,"No, because you don't trust me, and that's the real issue."
+8,Ambiguous - Financial Stress,1,A,Did you see the credit card statement this month?
+8,Ambiguous - Financial Stress,2,B,"Yes, I had to fix the car brakes. It was urgent."
+8,Ambiguous - Financial Stress,3,A,We agreed to consult each other for anything over two hundred.
+8,Ambiguous - Financial Stress,4,B,"I was stranded on the highway, A! What should I have done?"
+8,Ambiguous - Financial Stress,5,A,A quick phone call would have sufficed.
+8,Ambiguous - Financial Stress,6,B,Fine. Next time I'll just sit on the shoulder and wait.
+9,Obvious - Shared Joy,1,A,The adoption agency just approved our application!
+9,Obvious - Shared Joy,2,B,"Oh my god, really?! This is happening!"
+9,Obvious - Shared Joy,3,A,Yes! We are officially going to be parents!
+9,Obvious - Shared Joy,4,B,"I'm crying, I can't believe our dream is finally real."
+9,Obvious - Shared Joy,5,A,We're going to be great at this together.
+9,Obvious - Shared Joy,6,B,The absolute best team ever.
+10,Ambiguous - Parenting Styles,1,A,You let Leo stay up past his bedtime again.
+10,Ambiguous - Parenting Styles,2,B,He was right in the middle of reading his book.
+10,Ambiguous - Parenting Styles,3,A,"Consistency is important for his development, B."
+10,Ambiguous - Parenting Styles,4,B,A little bit of flexibility won't hurt him either.
+10,Ambiguous - Parenting Styles,5,A,It hurts our routine when I have to deal with the tantrums.
+10,Ambiguous - Parenting Styles,6,B,I'll handle him tomorrow morning then.
+11,Obvious - Forgiveness,1,A,I am so incredibly sorry for what I said during the fight.
+11,Obvious - Forgiveness,2,B,"It really hurt me, A. It crossed a major line."
+11,Obvious - Forgiveness,3,A,I know. I lost my temper and it was completely inexcusable.
+11,Obvious - Forgiveness,4,B,Thank you for acknowledging that. It means a lot.
+11,Obvious - Forgiveness,5,A,Can we work through this? I want to make it right.
+11,Obvious - Forgiveness,6,B,"Yes, we can. Come here."
+12,Ambiguous - Family Boundaries,1,A,My mother wants to stay with us for three weeks.
+12,Ambiguous - Family Boundaries,2,B,Three weeks is a long time for our small apartment.
+12,Ambiguous - Family Boundaries,3,A,She lives alone and really misses us.
+12,Ambiguous - Family Boundaries,4,B,"I understand, but my work is incredibly stressful right now."
+12,Ambiguous - Family Boundaries,5,A,So her presence is a burden to you?
+12,Ambiguous - Family Boundaries,6,B,I didn't say that. I just value our personal space.
+13,Obvious - Defensiveness,1,A,Did you forget to take out the trash again?
+13,Obvious - Defensiveness,2,B,"I've been working a twelve-hour shift, cut me some slack."
+13,Obvious - Defensiveness,3,A,It takes literally thirty seconds to do.
+13,Obvious - Defensiveness,4,B,"If it's so quick, why don't you just do it yourself?"
+13,Obvious - Defensiveness,5,A,Because we live here together and split chores!
+13,Obvious - Defensiveness,6,B,"Well right now I'm exhausted, so it's staying there."
+14,Ambiguous - Future Planning,1,A,Do you think we'll ever get married?
+14,Ambiguous - Future Planning,2,B,"We're happy right now, isn't that what matters?"
+14,Ambiguous - Future Planning,3,A,"It matters, but I want a sense of commitment and security."
+14,Ambiguous - Future Planning,4,B,"A piece of paper doesn't guarantee security, A."
+14,Ambiguous - Future Planning,5,A,It's not just paper to me. It's a statement.
+14,Ambiguous - Future Planning,6,B,Let's just focus on enjoying our time together today.
+15,Obvious - Validation,1,A,I feel really overwhelmed handling the house cleaning alone.
+15,Obvious - Validation,2,B,I'm so sorry. I didn't realize how much fell on you.
+15,Obvious - Validation,3,A,Thank you for listening. I just need a bit of help.
+15,Obvious - Validation,4,B,Let's set up a weekly schedule right now so it's fair.
+15,Obvious - Validation,5,A,That would honestly make me feel so much better.
+15,Obvious - Validation,6,B,I'm on it. We're partners in everything.
+16,Ambiguous - Passive Aggressive,1,A,"Oh, you bought the generic brand of coffee."
+16,Ambiguous - Passive Aggressive,2,B,It was on sale. Is it a problem?
+16,Ambiguous - Passive Aggressive,3,A,"No, it's fine. If you like cheap coffee, that's fine."
+16,Ambiguous - Passive Aggressive,4,B,You can drink something else if you hate it so much.
+16,Ambiguous - Passive Aggressive,5,A,"I didn't say I hated it. I just noticed, that's all."
+16,Ambiguous - Passive Aggressive,6,B,Right. Message received.
+17,Obvious - Reassurance,1,A,Do you still find me attractive after all these years?
+17,Obvious - Reassurance,2,B,"More than the day I met you, without a doubt."
+17,Obvious - Reassurance,3,A,My body has changed so much since having kids.
+17,Obvious - Reassurance,4,B,Every change reminds me of the beautiful family we built.
+17,Obvious - Reassurance,5,A,You always know exactly what to say to comfort me.
+17,Obvious - Reassurance,6,B,Because it's the absolute truth. You're stunning.
+18,Ambiguous - Differing Goals,1,A,I want to start saving up to buy a house.
+18,Ambiguous - Differing Goals,2,B,I was thinking we should travel Europe next summer instead.
+18,Ambiguous - Differing Goals,3,A,"Europe is temporary, a house is an asset for our life."
+18,Ambiguous - Differing Goals,4,B,"We're only young once, A. Houses can wait."
+18,Ambiguous - Differing Goals,5,A,I feel like our timelines just aren't matching up.
+18,Ambiguous - Differing Goals,6,B,"We just have different priorities right now, it's fine."
+19,Obvious - Contempt,1,A,Can you please try to be on time for once?
+19,Obvious - Contempt,2,B,Can you please get off my back for once?
+19,Obvious - Contempt,3,A,It's disrespectful to keep everyone waiting for you.
+19,Obvious - Contempt,4,B,Maybe I just don't care about your boring work events.
+19,Obvious - Contempt,5,A,You don't care about anything that isn't about you.
+19,Obvious - Contempt,6,B,Bingo. Glad you finally figured it out.
+20,Ambiguous - Emotional Availability,1,A,What are you thinking about right now?
+20,Ambiguous - Emotional Availability,2,B,"Nothing really, just tired."
+20,Ambiguous - Emotional Availability,3,A,You've been staring at the wall for ten minutes.
+20,Ambiguous - Emotional Availability,4,B,Just spacing out. Don't read too much into it.
+20,Ambiguous - Emotional Availability,5,A,I wish you would share your internal world with me more.
+20,Ambiguous - Emotional Availability,6,B,There's nothing to share. I'm just empty right now.
+21,Obvious - Affection,1,A,I made your favorite pancakes for breakfast today.
+21,Obvious - Affection,2,B,"Wow, what did I do to deserve you?"
+21,Obvious - Affection,3,A,Just being you is more than enough.
+21,Obvious - Affection,4,B,You make every morning feel like a holiday.
+21,Obvious - Affection,5,A,Eat up before they get cold!
+21,Obvious - Affection,6,B,"Thank you, sweetheart."
+22,Ambiguous - Quality Time,1,A,Do you want to watch a movie tonight?
+22,Ambiguous - Quality Time,2,B,"Sure, as long as I can finish this email first."
+22,Ambiguous - Quality Time,3,A,You're always on your laptop when we watch things.
+22,Ambiguous - Quality Time,4,B,I'm still sitting right next to you though.
+22,Ambiguous - Quality Time,5,A,Being in the same room isn't the same as being together.
+22,Ambiguous - Quality Time,6,B,I'm multitasking so I can free up my weekend.
+23,Obvious - Heartbreak,1,A,"I don't think I love you anymore, B."
+23,Obvious - Heartbreak,2,B,Please don't say that. We can fix this.
+23,Obvious - Heartbreak,3,A,We've been trying to fix this for three years.
+23,Obvious - Heartbreak,4,B,"I can change, I will do anything it takes."
+23,Obvious - Heartbreak,5,A,The spark is completely gone. Trying just hurts more.
+23,Obvious - Heartbreak,6,B,My heart is completely breaking right now.
+24,Ambiguous - Secretive,1,A,Why did you lock your phone when I walked in?
+24,Ambiguous - Secretive,2,B,"No reason, just closing an app."
+24,Ambiguous - Secretive,3,A,You've been very protective of it lately.
+24,Ambiguous - Secretive,4,B,You're acting paranoid. It's just a phone.
+24,Ambiguous - Secretive,5,A,I never used to feel unsafe sharing things with you.
+24,Ambiguous - Secretive,6,B,You are creating a problem out of absolutely nothing.
+25,Obvious - Gratitude,1,A,Thank you for taking care of me while I was sick.
+25,Obvious - Gratitude,2,B,Of course. There's nowhere else I'd rather be.
+25,Obvious - Gratitude,3,A,"The soup was amazing, and the house is spotless."
+25,Obvious - Gratitude,4,B,Your only job right now is to rest and recover.
+25,Obvious - Gratitude,5,A,I am incredibly lucky to have you as my partner.
+25,Obvious - Gratitude,6,B,I'm the lucky one. Rest up.
+26,Ambiguous - Compromise,1,A,So we're spending Thanksgiving with your parents?
+26,Ambiguous - Compromise,2,B,"Yes, and Christmas with yours. Like we agreed."
+26,Ambiguous - Compromise,3,A,"I know, it's just your parents' place is so chaotic."
+26,Ambiguous - Compromise,4,B,"It's only for four days, A. We can survive it."
+26,Ambiguous - Compromise,5,A,I'll try my best to keep a smile on my face.
+26,Ambiguous - Compromise,6,B,I appreciate you doing this for me.
+27,Obvious - Boredom,1,A,What do you want to do this weekend?
+27,Obvious - Boredom,2,B,"I don't know, same old stuff I guess."
+27,Obvious - Boredom,3,A,We do the exact same routine every single week.
+27,Obvious - Boredom,4,B,Routine is comfortable. I like comfortable.
+27,Obvious - Boredom,5,A,"It feels incredibly stagnant to me, like a trap."
+27,Obvious - Boredom,6,B,"If you're bored, find a hobby."
+28,Ambiguous - Intimacy,1,A,You didn't kiss me goodbye this morning.
+28,Ambiguous - Intimacy,2,B,"I was running late for my train, sorry."
+28,Ambiguous - Intimacy,3,A,It feels like those small physical connections are dropping off.
+28,Ambiguous - Intimacy,4,B,"I was literally sprinting out the door, A."
+28,Ambiguous - Intimacy,5,A,It's not just today. It's a pattern.
+28,Ambiguous - Intimacy,6,B,I think you're overanalyzing a hectic morning.
+29,Obvious - Teamwork,1,A,The budget is going to be tight this month due to the move.
+29,Obvious - Teamwork,2,B,We can cut back on eating out and cancel a few apps.
+29,Obvious - Teamwork,3,A,I'll pack lunches for work to save extra cash.
+29,Obvious - Teamwork,4,B,Perfect. Together we can handle this easily.
+29,Obvious - Teamwork,5,A,We always find a way to make it work.
+29,Obvious - Teamwork,6,B,"Because we're in this together, 100%."
+30,Ambiguous - Ex Boundaries,1,A,I saw your ex liked your photo online today.
+30,Ambiguous - Ex Boundaries,2,B,"Oh, did she? We're on civil terms, it's harmless."
+30,Ambiguous - Ex Boundaries,3,A,I thought you cut off contact after the breakup.
+30,Ambiguous - Ex Boundaries,4,B,An occasional double tap isn't 'keeping contact'.
+30,Ambiguous - Ex Boundaries,5,A,It still makes me feel slightly uncomfortable.
+30,Ambiguous - Ex Boundaries,6,B,"I can't control what other people click on, A."
