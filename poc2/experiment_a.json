@@ -1,0 +1,2145 @@
+{
+  "experiment": "A",
+  "experiment_name": "multi_agent_cot_baseline",
+  "prompt_version": "poc2-multi-agent-cot-baseline-v1",
+  "model": "llama3.2",
+  "input_file": "poc2_gold.json",
+  "input_sha256": "1ec238552765dec346a0109814ecf937d858865f51f1504dbdc57024159732f5",
+  "input_sample_count": 44,
+  "evaluated_sample_count": 44,
+  "input_mode": "full_dialogue_with_focal_turn_marked",
+  "scoring_unit": "target_label_on_focal_turn",
+  "ontology_provided_to_classifier": false,
+  "created_at_utc": "2026-10-02T16:21:25.741840+00:00",
+  "metrics": {
+    "by_target_label": {
+      "criticism": {
+        "n": 11,
+        "tp": 6,
+        "fp": 0,
+        "tn": 3,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571
+      },
+      "defensiveness": {
+        "n": 11,
+        "tp": 6,
+        "fp": 1,
+        "tn": 2,
+        "fn": 2,
+        "precision": 0.8571428571428571,
+        "recall": 0.75,
+        "f1": 0.7999999999999999
+      },
+      "validation": {
+        "n": 11,
+        "tp": 6,
+        "fp": 2,
+        "tn": 1,
+        "fn": 2,
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75
+      },
+      "repair_attempt": {
+        "n": 11,
+        "tp": 6,
+        "fp": 1,
+        "tn": 2,
+        "fn": 2,
+        "precision": 0.8571428571428571,
+        "recall": 0.75,
+        "f1": 0.7999999999999999
+      }
+    },
+    "macro_f1": 0.8017857142857142
+  },
+  "predictions": [
+    {
+      "id": "cri_obvious_01",
+      "plan_case_id": "TC001",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "\"You never do anything unless I remind you. You're lazy about this stuff.\"",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Statement conveys a negative judgment about Speaker B's behavior.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "\"You never do anything unless I remind you. You're lazy about this stuff.\"",
+          "decision_note": "Statement conveys a negative judgment about Speaker B's behavior.",
+          "evidence_is_exact": false
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "\"I said I would do it after the laundry.\"",
+          "decision_note": "Response appears to be an attempt to clarify and provide context, rather than defend against criticism.",
+          "evidence_is_exact": false
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.6,
+          "evidence": "",
+          "decision_note": "No indication that Speaker A is acknowledging or agreeing with Speaker B's perspective.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "\"I said I would do it after the laundry.\"",
+          "decision_note": "Response appears to be an attempt to rectify the situation by providing more context and information.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "cri_obvious_02",
+      "plan_case_id": "TC002",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You're always late because your time matters more to you than mine.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Accusatory language and implication of prioritizing one's own time over the speaker's.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "You're always late because your time matters more to you than mine.",
+          "decision_note": "Accusatory language and implication of prioritizing one's own time over the speaker's.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "Traffic got bad and I lost track of time.",
+          "decision_note": "The speaker's excuse may be seen as somewhat flimsy or unconvincing.",
+          "evidence_is_exact": false
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "The speaker does not validate Speaker B's actions or emotions.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "There is no attempt to repair or diffuse the tension in the conversation.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_obvious_03",
+      "plan_case_id": "TC003",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You can't give anyone your full attention. Your phone always matters more.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Explicit criticism of Speaker B's phone usage.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You can't give anyone your full attention. Your phone always matters more.",
+          "decision_note": "Explicit criticism of Speaker B's phone usage.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "No defensive language or tone in the focal turn.",
+          "decision_note": "Lacks defensive phrases or words, and tone appears disapproving.",
+          "evidence_is_exact": false
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "No acknowledgment or agreement with Speaker B's perspective.",
+          "decision_note": "Does not show understanding or acceptance of Speaker B's actions.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Speaker B attempts to move forward and avoid further conflict.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_obvious_04",
+      "plan_case_id": "TC004",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You never keep track of anything. You're just irresponsible.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Confirmed. The statement directly attacks Speaker B's responsibility and makes a value judgment.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "You never keep track of anything. You're just irresponsible.",
+          "decision_note": "Confirmed. The statement directly attacks Speaker B's responsibility and makes a value judgment.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Confirmed. Speaker B responds to the criticism with a justification, indicating defensiveness.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.7,
+          "evidence": "I had the groceries and insurance renewal on my list.",
+          "decision_note": "Confirmed. Speaker B attempts to show that they were on top of things, validating their original statement.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.6,
+          "evidence": "I had the groceries and insurance renewal on my list.",
+          "decision_note": "Confirmed. Speaker B's response aims to mitigate the criticism and restore a sense of responsibility.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_01",
+      "plan_case_id": "TC005",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "I did think about it, and it was within my spending amount.",
+          "decision_note": "The speaker directly acknowledges and confirms speaker A's statement with a positive response.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_02",
+      "plan_case_id": "TC006",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You always choose being the fun parent because you don't want to be the responsible one.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Expresses a negative sentiment towards Speaker B's parenting style, indicating a critical tone.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You always choose being the fun parent because you don't want to be the responsible one.",
+          "decision_note": "Expresses a negative sentiment towards Speaker B's parenting style, indicating a critical tone.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "She was finishing her project with me.",
+          "decision_note": "Not entirely defensive, as it's a neutral explanation.",
+          "evidence_is_exact": false
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "I wasn't trying to leave the hard part to you.",
+          "decision_note": "More of a response to criticism than a genuine attempt to validate Speaker B's actions.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.6,
+          "evidence": "I wasn't trying to leave the hard part to you.",
+          "decision_note": "Does not provide enough context to alleviate tension or shift the conversation to a more positive topic.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_03",
+      "plan_case_id": "TC007",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "\"Commitments only seem to matter to you when they're convenient.\"",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Speaker A is criticizing Speaker B for prioritizing convenience over commitment.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "\"Commitments only seem to matter to you when they're convenient.\"",
+          "decision_note": "Speaker A is criticizing Speaker B for prioritizing convenience over commitment.",
+          "evidence_is_exact": false
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "No defensiveness detected.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "\"I should have checked with you before changing it.\"",
+          "decision_note": "Speaker B is taking responsibility, but it's not clear if they're validating the criticism.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.6,
+          "evidence": "\"I should have checked with you before changing it.\"",
+          "decision_note": "Speaker B's tone seems more focused on taking responsibility than genuinely attempting to repair the relationship.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_04",
+      "plan_case_id": "TC008",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.6,
+          "evidence": "'You lose your backbone' implies a loss of resolve or courage, rather than a criticism of Speaker B.",
+          "decision_note": "",
+          "evidence_is_exact": false
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.2,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_hn_01",
+      "plan_case_id": "TC009",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "When you snapped at me after work last night, I felt pushed away.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Not the best fit. The focal turn is about expressing feelings and needs, not criticizing the listener's behavior. The tone is more empathetic than critical. ",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.2,
+          "evidence": "When you snapped at me after work last night, I felt pushed away.",
+          "decision_note": "Not the best fit. The focal turn is about expressing feelings and needs, not criticizing the listener's behavior. The tone is more empathetic than critical. ",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "Not the best fit. The speaker is not taking a confrontational tone, but rather using a direct and empathetic approach to address the issue. The focus is on expressing their own emotional experience and needs. ",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.3,
+          "evidence": "",
+          "decision_note": "Not the best fit. The speaker is not simply stating their own feelings, but is using their emotional experience to understand and respond to the listener's request. The focus is on addressing the listener's needs. ",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "Please tell me directly when you need space.",
+          "decision_note": "Plausible. The speaker is using a direct and empathetic approach to address the issue, asking the listener to communicate their needs directly. This approach suggests a repair attempt to repair the relationship. ",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_hn_02",
+      "plan_case_id": "TC010",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "I feel lonely when weeks pass without much affection.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "No",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "I feel lonely when weeks pass without much affection.",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I don't want you feeling alone.",
+          "decision_note": "Yes",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I feel lonely when weeks pass without much affection. Can we talk about what kind of closeness feels manageable right now?",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_hn_03",
+      "plan_case_id": "TC011",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Not classified. The focal turn's anger is directed at the situation, not Speaker B's responsibility.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.3,
+          "evidence": "",
+          "decision_note": "Not classified. The focal turn's anger is directed at the situation, not Speaker B's responsibility.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.4,
+          "evidence": "",
+          "decision_note": "Not classified. The speaker's tone and language suggest a request, not entitlement.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.2,
+          "evidence": "",
+          "decision_note": "Not classified. The speaker's request does not explicitly validate Speaker B's ability to assist.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "Not classified. The speaker's request does not explicitly repair the situation or address the issue of Speaker B's responsibility.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_obvious_01",
+      "plan_case_id": "TC012",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Rejected. The speaker is responding to a criticism, not simply defending themselves from a criticism.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Rejected. The focus is on the speaker's responsibility, not on labeling the speaker as 'terrible' with the phrase 'Your memory is terrible'. ",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Rejected. The speaker is responding to a criticism, not simply defending themselves from a criticism.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Rejected. The speaker is not validating the statement 'I thought autopay was set up' as true or accurate.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I'm asking about this bill, not last month's.",
+          "decision_note": "Accepted. The speaker is attempting to repair the criticism by shifting the focus to their own question and clarifying their intentions.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "def_obvious_02",
+      "plan_case_id": "TC013",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness",
+        "criticism"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.2,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.5,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_obvious_03",
+      "plan_case_id": "TC014",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You put me in that position.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Positive",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "",
+          "decision_note": "Negative",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You put me in that position.",
+          "decision_note": "Positive",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I only gave him the tablet because you got him worked up. You put me in that position.",
+          "decision_note": "Positive",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Not Applicable",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_obvious_04",
+      "plan_case_id": "TC015",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 3,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness",
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You're blaming me for canceling, but you're the one who never checks the forecast.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The speaker is defending themselves against criticism, using a defensive tone to shift the focus away from their own actions.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You're blaming me for canceling, but you're the one who never checks the forecast.",
+          "decision_note": "The speaker is criticizing Speaker A's behavior, using a phrase as an implied criticism.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.7,
+          "evidence": "You're blaming me for canceling, but you're the one who never checks the forecast.",
+          "decision_note": "The speaker is defending themselves against criticism, using a defensive tone to shift the focus away from their own actions.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.6,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.4,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_subtle_01",
+      "plan_case_id": "TC016",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 3,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "\"I guess I'm not allowed to unwind for five minutes without it becoming a whole thing.\"",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Speaker B is using a defensive tone to shift the focus to their own needs and downplay the impact of their actions.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "\"I guess I'm not allowed to unwind for five minutes without it becoming a whole thing.\"",
+          "decision_note": "Speaker B is using a dismissive tone to reframe the issue as their own responsibility, implying that Speaker A's feelings are unreasonable.",
+          "evidence_is_exact": false
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "\"I guess I'm not allowed to unwind for five minutes without it becoming a whole thing.\"",
+          "decision_note": "Speaker B is using a defensive tone to shift the focus to their own needs and downplay the impact of their actions.",
+          "evidence_is_exact": false
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.6,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.4,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_subtle_02",
+      "plan_case_id": "TC017",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "So now I'm the bad guy because I wasn't cheerful after twelve hours at work?",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Likely. Speaker A's question shifts the focus away from the original issue and onto Speaker A's own emotions, implying that Speaker A is being unfairly criticized.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.2,
+          "evidence": "",
+          "decision_note": "Unlikely. The statement 'Nobody even asks what I need' doesn't directly criticize Speaker B, but rather expresses Speaker A's feelings of undervaluation, which is a related but distinct topic.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "So now I'm the bad guy because I wasn't cheerful after twelve hours at work?",
+          "decision_note": "Likely. Speaker A's question shifts the focus away from the original issue and onto Speaker A's own emotions, implying that Speaker A is being unfairly criticized.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "I'm trying to tell you how it landed...",
+          "decision_note": "Unlikely. While Speaker B acknowledges Speaker A's feelings, the statement 'I'm trying to tell you how it landed' is more of a explanation than a validation, and doesn't directly acknowledge Speaker A's perspective.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.05,
+          "evidence": "I'm trying to tell you how it landed...",
+          "decision_note": "Unlikely. Speaker B's statement does aim to diffuse the tension, but the primary goal is to explain what happened, rather than directly repairing the relationship or addressing the underlying issue.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "def_subtle_03",
+      "plan_case_id": "TC018",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Accepted. Speaker A's statement expresses frustration and defensiveness, focusing on their own experience and feelings.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.4,
+          "evidence": "",
+          "decision_note": "Dismissed. The focal turn does not explicitly criticize Speaker B's behavior or actions; it criticizes the perceived responsibility placed on Speaker A.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "Accepted. Speaker A's statement expresses frustration and defensiveness, focusing on their own experience and feelings.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.3,
+          "evidence": "",
+          "decision_note": "Dismissed. Speaker A does not validate or acknowledge Speaker B's feelings or perspective; instead, they express a sense of unfairness and criticism.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.2,
+          "evidence": "",
+          "decision_note": "Dismissed. The focal turn does not contain a clear attempt to repair or move the conversation forward; it is primarily critical and defensive.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_subtle_04",
+      "plan_case_id": "TC019",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "\"So the lunches, repairs, and groceries I handle just don't count now?\"",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "\"So the lunches, repairs, and groceries I handle just don't count now?\"",
+          "decision_note": "",
+          "evidence_is_exact": false
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "\"They count\"",
+          "decision_note": "",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "\"So the lunches, repairs, and groceries I handle just don't count now?\"",
+          "decision_note": "",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "def_hn_01",
+      "plan_case_id": "TC020",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Speaker A displays defensiveness, as they take responsibility for the potential error and suggest a solution.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.2,
+          "evidence": "",
+          "decision_note": "Negative, Speaker A criticizes Speaker B for not cleaning the bathroom on the agreed day.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.7,
+          "evidence": "",
+          "decision_note": "Speaker A displays defensiveness, as they take responsibility for the potential error and suggest a solution.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Speaker A attempts to repair the issue by suggesting to check the calendar and cleaning the bathroom tonight.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_hn_02",
+      "plan_case_id": "TC021",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "No. The focal turn does not contain language that implies a defensive attitude, and instead shows empathy and an attempt to understand Speaker B's perspective.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "None. The focal turn does not express a negative judgment about Speaker B's behavior or character.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No. The focal turn does not contain language that implies a defensive attitude, and instead shows empathy and an attempt to understand Speaker B's perspective.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "Speaker A acknowledges that their behavior might have been perceived as rejection and expresses understanding for how it felt to Speaker B.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "Speaker A explicitly states that they should have told Speaker B they needed a minute and takes responsibility for their actions, attempting to repair the interaction.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_hn_03",
+      "plan_case_id": "TC022",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "No evidence.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No evidence.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No evidence.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "You're right",
+          "decision_note": "Speaker A explicitly states 'You're right' and acknowledges Speaker B's point, indicating a validating response.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "Tuesday I didn't text, and that was on me. Today I did text, so I want to keep those two situations separate.",
+          "decision_note": "Speaker A corrects a perceived miscommunication, separating Tuesday and today's texting incidents, and invites Speaker B to acknowledge this correction, indicating a repair attempt.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_01",
+      "plan_case_id": "TC023",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I can understand why that felt like I wasn't interested in you",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Correct; explicitly acknowledges and empathizes with Speaker B's feelings",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "that felt like I wasn't interested in you",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.33,
+          "evidence": "",
+          "decision_note": "Inaccurate; tone is empathetic, not just apologetic",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.99,
+          "evidence": "I can understand why that felt like I wasn't interested in you",
+          "decision_note": "Correct; explicitly acknowledges and empathizes with Speaker B's feelings",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.22,
+          "evidence": "",
+          "decision_note": "Inaccurate; aims to heal hurt, but is more accurately described as validation and empathy",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_02",
+      "plan_case_id": "TC024",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "It makes sense that you're depleted. You've carried the bedtime routine alone all week.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Speaker A expresses understanding and validation towards Speaker B's situation, using phrases like ",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "The focal turn does not exhibit any clear criticism towards Speaker B's situation or actions.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "There is no evidence in the focal turn to suggest defensiveness.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "It makes sense that you're depleted. You've carried the bedtime routine alone all week.",
+          "decision_note": "Speaker A expresses understanding and validation towards Speaker B's situation, using phrases like ",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "It makes sense that you're depleted. You've carried the bedtime routine alone all week.",
+          "decision_note": "The focal turn suggests a repair attempt, as Speaker A is attempting to address Speaker B's need for rebalancing the bedtime routine by offering acknowledgment and support (",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_03",
+      "plan_case_id": "TC025",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Speaker B's response 'Exactly' validates Speaker A's comment, showing that Speaker A's words resonated with Speaker B's feelings.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "Of course you're anxious.",
+          "decision_note": "Speaker A's tone implies that Speaker B is being overly anxious and planning too much, which can be seen as a critical comment.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.7,
+          "evidence": "Of course you're anxious.",
+          "decision_note": "Speaker A's phrase 'Of course you're anxious' can be perceived as a defensive remark, minimizing Speaker B's legitimate concerns and reactions.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.6,
+          "evidence": "",
+          "decision_note": "Speaker B's response 'Exactly' validates Speaker A's comment, showing that Speaker A's words resonated with Speaker B's feelings.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.4,
+          "evidence": "",
+          "decision_note": "Speaker A's comment does not directly attempt to repair the issue or offer a solution, but rather reflects on Speaker B's emotional state, which may not directly address the original concern.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_04",
+      "plan_case_id": "TC026",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I can see why you experienced it as rejection when I turned away without explaining what was happening.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Detected",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Not detected",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Not detected",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "I can see why you experienced it as rejection when I turned away without explaining what was happening.",
+          "decision_note": "Detected",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "I can see why you experienced it as rejection when I turned away without explaining what was happening.",
+          "decision_note": "Detected",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_01",
+      "plan_case_id": "TC027",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I know it's only dishes, but after a long day it feels like one more thing waiting for me.",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Applicable. Speaker B's statement is validated by Speaker A's acknowledgment of the emotional impact of the sink on Speaker B's long day.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Not applicable. Speaker A's statement is an empathetic opening, not a criticism.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Not applicable. Speaker A's response acknowledges Speaker B's concern and provides a relatable perspective, rather than defending against it.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I know it's only dishes, but after a long day it feels like one more thing waiting for me.",
+          "decision_note": "Applicable. Speaker B's statement is validated by Speaker A's acknowledgment of the emotional impact of the sink on Speaker B's long day.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You walk in already exhausted, and seeing the sink full feels like one more demand waiting for you.",
+          "decision_note": "Applicable. Speaker A's statement attempts to repair Speaker B's emotional state by understanding and empathizing with their situation, using phrases like 'feels like one more demand waiting for you'.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_02",
+      "plan_case_id": "TC028",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "That number lands differently for you after the months when money really was tight.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Rejected. The focal turn does not acknowledge or validate Speaker B's emotional experience; it is a factual observation about their emotional response.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.2,
+          "evidence": "That number lands differently for you after the months when money really was tight.",
+          "decision_note": "Rejected. The focal turn does not express a criticism of Speaker B's reaction, but rather a comparison of their emotional experience.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "That number lands differently for you after the months when money really was tight.",
+          "decision_note": "Rejected. The focal turn does not have a stern or accusatory tone; it is a neutral, observational statement.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "That number lands differently for you after the months when money really was tight.",
+          "decision_note": "Rejected. The focal turn does not acknowledge or validate Speaker B's emotional experience; it is a factual observation about their emotional response.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "That number lands differently for you after the months when money really was tight.",
+          "decision_note": "Rejected. The focal turn does not attempt to repair or mitigate the issue; it is a neutral, observational statement.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_03",
+      "plan_case_id": "TC029",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You had already spent the week counting on that downtime, and I changed what you thought you were coming home to.",
+          "decision_note": "Implication that Speaker B's expectation was based on a previous state that Speaker A has now altered, suggesting a criticism of Speaker B's planning or assumption.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You had already spent the week counting on that downtime, and I changed what you thought you were coming home to.",
+          "decision_note": "Use of 'you' and phrasing suggests pushing back against Speaker B's expectation or assumption, characteristic of defensiveness.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_04",
+      "plan_case_id": "TC030",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I wish I did not feel that way, but I do",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "B acknowledges and accepts their emotions.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Those last few dinners have given you plenty of reason to walk in braced for another comment.",
+          "decision_note": "Speakers A makes a judgment about B's behavior, implying criticism.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "braced for another comment",
+          "decision_note": "The implication of a potential attack triggers a defensive response.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I wish I did not feel that way, but I do",
+          "decision_note": "B acknowledges and accepts their emotions.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I wish I did not feel that way, but I do",
+          "decision_note": "B expresses a desire to change their emotions, but does not directly address the issue.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "val_hn_01",
+      "plan_case_id": "TC031",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "That would help, but I wanted you to understand why I was upset.",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Yes. This focal turn is classified as validation because it acknowledges Speaker A's emotional investment and shows consideration for their concern.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.2,
+          "evidence": "",
+          "decision_note": "No. This focal turn is not criticism because it doesn't express disapproval or contempt, but rather a practical suggestion.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "",
+          "decision_note": "No (as reviewed by the other reviewer). This focal turn cannot be classified as defensiveness because Speaker B's response suggests a genuine attempt to understand and validate Speaker A's concern, rather than a defensive reaction.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "That would help, but I wanted you to understand why I was upset.",
+          "decision_note": "Yes. This focal turn is classified as validation because it acknowledges Speaker A's emotional investment and shows consideration for their concern.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "You should keep a charger in your bag so this doesn't happen again.",
+          "decision_note": "Yes. This focal turn is classified as a repair attempt because it suggests a solution to a problem that caused distress (Speaker B's lateness and lack of communication), aiming to repair the relationship.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_hn_02",
+      "plan_case_id": "TC032",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "Don't worry. It'll all work out",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "Don't worry. It'll all work out",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.3,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_hn_03",
+      "plan_case_id": "TC033",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Incorrect. The statement does acknowledge Speaker B's perspective, but it also downplays its significance, which undermines the validating intention.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Incorrect. The phrase ",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Incorrect. The phrase ",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Incorrect. The statement does acknowledge Speaker B's perspective, but it also downplays its significance, which undermines the validating intention.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I hear you, but you're making this into a much bigger deal than it was.",
+          "decision_note": "This statement does not directly address the underlying issue or offer a solution, but rather tries to diffuse the situation by downplaying the significance of Speaker B's concerns.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_01",
+      "plan_case_id": "TC034",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "\"Let me start again: I was exhausted, and I should have texted you about the kitchen.\"",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Evidence supports repair attempt label. Speaker A's phrase indicates an attempt to repair any potential issue or hurt caused by the previous statement.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No clear evidence found in the focal turn. The phrase ",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No clear evidence found in the focal turn. The phrase ",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "\"I can work with that.\": This statement is clear evidence of Speaker B's willingness to accept and move forward, indicating validation.",
+          "decision_note": "Evidence supports validation label. Speaker B's statement indicates acceptance and willingness to move forward.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "\"Let me start again: I was exhausted, and I should have texted you about the kitchen.\"",
+          "decision_note": "Evidence supports repair attempt label. Speaker A's phrase indicates an attempt to repair any potential issue or hurt caused by the previous statement.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_02",
+      "plan_case_id": "TC035",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Yes (evidence: Speaker A explicitly requests a restart and a collaborative conversation, indicating an attempt to repair the interaction)",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No (evidence: “We’re both getting sharp’ suggests a collaborative tone, rather than a critical one)",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No (evidence: Speaker A uses phrases like “We’re both getting sharp’ and “Can we restart’ which suggest a conciliatory approach, rather than a defensive one)",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "Yes (evidence: “That’s not true’ in Speaker B’s previous turn was a potential attack, but Speaker A acknowledges and redirects the conversation to a more collaborative tone)",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Yes (evidence: Speaker A explicitly requests a restart and a collaborative conversation, indicating an attempt to repair the interaction)",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_03",
+      "plan_case_id": "TC036",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "Speaker A initiates a new attempt to communicate their feelings, using the phrase \\",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Positive",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "\"Telling you what you feel wasn't fair.\" Speaker A acknowledges their mistake and takes responsibility, which can be interpreted as a self-critical stance.",
+          "decision_note": "Positive",
+          "evidence_is_exact": false
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "Speaker A explicitly states \\",
+          "decision_note": "Negative",
+          "evidence_is_exact": false
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "Speaker A says \\",
+          "decision_note": "Positive",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "Speaker A initiates a new attempt to communicate their feelings, using the phrase \\",
+          "decision_note": "Positive",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_04",
+      "plan_case_id": "TC037",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "\"This is turning into us against each other. I love you, and I want us on the same team while we figure out the visit.\"",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Seeks to repair the relationship by acknowledging the conflict and reiterating love and shared goals.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "\"You criticize her no matter what she does.\"",
+          "decision_note": "Asserts criticism and responds with a defensive tone.",
+          "evidence_is_exact": false
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "\"I love you, and I want us on the same team while we figure out the visit.\"",
+          "decision_note": "Uses love and shared goals to validate speaker B's perspective and shift the focus away from criticism.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "\"This is turning into us against each other. I love you, and I want us on the same team while we figure out the visit.\"",
+          "decision_note": "Seeks to repair the relationship by acknowledging the conflict and reiterating love and shared goals.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_01",
+      "plan_case_id": "TC038",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I'm arguing about permission instead of what we agreed to.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Decided: Yes; Suggested alternative label: Acknowledgment",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "I'm arguing about permission instead of what we agreed to.",
+          "decision_note": "Decided: No; Suggested alternative label: Criticism",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "I'm arguing about permission instead of what we agreed to.",
+          "decision_note": "Decided: No; Suggested alternative label: Defensiveness",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Decided: No; Suggested alternative label: Acknowledgment",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I'm arguing about permission instead of what we agreed to.",
+          "decision_note": "Decided: Yes; Suggested alternative label: Acknowledgment",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_02",
+      "plan_case_id": "TC039",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Speaker A attempts to repair the interaction by asking a question and taking responsibility for their part in the situation.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "The initial sentence from Speaker A is not a criticism, but rather a statement of concern. A criticism would imply a negative evaluation or judgment, which is not present in this turn.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "While Speaker B uses the word 'ridiculous', it's not clear that they're defending themselves against an accusation. The tone seems more reactive and frustrated than defensive.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "",
+          "decision_note": "Speaker A acknowledges and shows empathy towards Speaker B's perspective.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 1.0,
+          "evidence": "",
+          "decision_note": "Speaker A attempts to repair the interaction by asking a question and taking responsibility for their part in the situation.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_03",
+      "plan_case_id": "TC040",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I need ten quiet minutes, and then I want to come back and hear what you were trying to tell me.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The focal turn offers a solution to re-engage in the conversation and address the conflict.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No evidence found in the marked focal turn.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "You're not my enemy.",
+          "decision_note": "The marked turn is a response to being criticized, using a counter-attack to protect the speaker's identity.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "The focal turn does not validate Speaker B's statement or acknowledge its truthfulness.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.7,
+          "evidence": "I need ten quiet minutes, and then I want to come back and hear what you were trying to tell me.",
+          "decision_note": "The focal turn offers a solution to re-engage in the conversation and address the conflict.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_04",
+      "plan_case_id": "TC041",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The focal turn is more accurately described as a clarification request. The speaker (A) is seeking clarification on the needs of the other person (B) rather than attempting to repair the conversation.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "Labeling the focal turn as criticism is misleading. The speaker (A) is not criticizing the other person (B) but rather seeking to redirect the conversation to avoid a potentially contentious discussion.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.6,
+          "evidence": "",
+          "decision_note": "The focal turn does not exhibit clear defensiveness. The speaker (A) is not defending themselves against an accusation, but rather seeking clarification on the needs of the other person (B).",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "What did you need from me tonight?",
+          "decision_note": "Labeling the focal turn as validation is plausible. The speaker (A) appears to be seeking validation of their needs and asking the other person (B) to acknowledge what they needed, which could be seen as seeking confirmation.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "",
+          "decision_note": "The focal turn is more accurately described as a clarification request. The speaker (A) is seeking clarification on the needs of the other person (B) rather than attempting to repair the conversation.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_hn_01",
+      "plan_case_id": "TC042",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.4,
+          "evidence": "",
+          "decision_note": "Weak classification; tone suggests criticism but no direct evidence.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_hn_02",
+      "plan_case_id": "TC043",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I'm sorry you feel undermined",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The phrase is a clear attempt to repair the relationship and make amends after the conflict.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "you made me step in",
+          "decision_note": "The phrase implies that Speaker A is holding Speaker B responsible for their actions.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I'm sorry you feel undermined",
+          "decision_note": "The phrase acknowledges a negative emotion and attempts to shift the focus to Speaker B's actions, indicating defensiveness.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "I'm sorry you feel undermined",
+          "decision_note": "The phrase is primarily an attempt to repair the relationship, rather than a genuine validation of Speaker B's emotions.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I'm sorry you feel undermined",
+          "decision_note": "The phrase is a clear attempt to repair the relationship and make amends after the conflict.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_hn_03",
+      "plan_case_id": "TC044",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        }
+      }
+    }
+  ],
+  "error_analysis": [
+    {
+      "id": "cri_subtle_01",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "",
+      "evidence": ""
+    },
+    {
+      "id": "cri_subtle_04",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "",
+      "evidence": ""
+    },
+    {
+      "id": "def_obvious_01",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "Rejected. The speaker is responding to a criticism, not simply defending themselves from a criticism.",
+      "evidence": ""
+    },
+    {
+      "id": "def_obvious_02",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "",
+      "evidence": ""
+    },
+    {
+      "id": "def_hn_01",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "Speaker A displays defensiveness, as they take responsibility for the potential error and suggest a solution.",
+      "evidence": ""
+    },
+    {
+      "id": "val_subtle_02",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "Rejected. The focal turn does not acknowledge or validate Speaker B's emotional experience; it is a factual observation about their emotional response.",
+      "evidence": "That number lands differently for you after the months when money really was tight."
+    },
+    {
+      "id": "val_subtle_03",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "",
+      "evidence": ""
+    },
+    {
+      "id": "val_hn_01",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "Yes. This focal turn is classified as validation because it acknowledges Speaker A's emotional investment and shows consideration for their concern.",
+      "evidence": "That would help, but I wanted you to understand why I was upset."
+    },
+    {
+      "id": "val_hn_02",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "",
+      "evidence": "Don't worry. It'll all work out"
+    },
+    {
+      "id": "rep_obvious_03",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "Positive",
+      "evidence": "Speaker A initiates a new attempt to communicate their feelings, using the phrase \\"
+    },
+    {
+      "id": "rep_subtle_04",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "The focal turn is more accurately described as a clarification request. The speaker (A) is seeking clarification on the needs of the other person (B) rather than attempting to repair the conversation.",
+      "evidence": ""
+    },
+    {
+      "id": "rep_hn_02",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "The phrase is a clear attempt to repair the relationship and make amends after the conflict.",
+      "evidence": "I'm sorry you feel undermined"
+    }
+  ]
+}

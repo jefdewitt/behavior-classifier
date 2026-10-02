@@ -2,7 +2,7 @@
   "plan_version": "1.0.0",
   "purpose": "Pre-generation blueprint for a synthetic relationship-communication classifier test set.",
   "ontology_reference": "ontology.json",
-  "generation_frozen": false,
+  "generation_frozen": true,
   "total_planned_cases": 44,
   "design_constraints": {
     "scenario_first": true,

@@ -39,7 +39,7 @@ For example:
 
 | Target | Obvious | Subtle | Hard negative |
 | ------ | ------- | ------ | ------------- |
-| Criticism	| 4	| 4 | 	3 |
+| Criticism | 4 | 4 | 3 |
 | Defensiveness	| 4	| 4	| 3 |
 | Validation | 4 | 4	| 3 |
 | Repair attempt	| 4	| 4	| 3 |
@@ -94,7 +94,15 @@ Deliverable: poc2_gold.json
 
 ### Phase 5 — Experiment A: Baseline
 
-Run the existing POC classifier unchanged against the frozen dataset.
+Run the POC 1 multi-agent CoT approach as a POC 2 baseline against the frozen gold dataset. The POC 2 runner uses the full dialogue as context, marks the focal turn, and asks for predictions about that turn only. It does not provide the ontology; its prompts are generic and contain no POC 1 transcript-specific examples or verdicts.
+
+Run from the repository root:
+
+```sh
+python poc2/multi_agent_cot_baseline.py
+```
+
+This writes `experiment_a.json` and `experiment_a_error_analysis.json` in `poc2/`. The result records the input hash, model, prompt version, target-turn scoring scope, metrics, predictions, and model-generated error notes. Review the error notes manually.
 
 Measure per label:
 

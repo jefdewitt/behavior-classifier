@@ -1,0 +1,127 @@
+{
+  "experiment": "A",
+  "input_sha256": "1ec238552765dec346a0109814ecf937d858865f51f1504dbdc57024159732f5",
+  "likely_reason_note": "Model-generated decision note; review errors manually.",
+  "errors": [
+    {
+      "id": "cri_subtle_01",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "",
+      "evidence": ""
+    },
+    {
+      "id": "cri_subtle_04",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "",
+      "evidence": ""
+    },
+    {
+      "id": "def_obvious_01",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "Rejected. The speaker is responding to a criticism, not simply defending themselves from a criticism.",
+      "evidence": ""
+    },
+    {
+      "id": "def_obvious_02",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "",
+      "evidence": ""
+    },
+    {
+      "id": "def_hn_01",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "Speaker A displays defensiveness, as they take responsibility for the potential error and suggest a solution.",
+      "evidence": ""
+    },
+    {
+      "id": "val_subtle_02",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "Rejected. The focal turn does not acknowledge or validate Speaker B's emotional experience; it is a factual observation about their emotional response.",
+      "evidence": "That number lands differently for you after the months when money really was tight."
+    },
+    {
+      "id": "val_subtle_03",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "",
+      "evidence": ""
+    },
+    {
+      "id": "val_hn_01",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "Yes. This focal turn is classified as validation because it acknowledges Speaker A's emotional investment and shows consideration for their concern.",
+      "evidence": "That would help, but I wanted you to understand why I was upset."
+    },
+    {
+      "id": "val_hn_02",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "",
+      "evidence": "Don't worry. It'll all work out"
+    },
+    {
+      "id": "rep_obvious_03",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "Positive",
+      "evidence": "Speaker A initiates a new attempt to communicate their feelings, using the phrase \\"
+    },
+    {
+      "id": "rep_subtle_04",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "The focal turn is more accurately described as a clarification request. The speaker (A) is seeking clarification on the needs of the other person (B) rather than attempting to repair the conversation.",
+      "evidence": ""
+    },
+    {
+      "id": "rep_hn_02",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "The phrase is a clear attempt to repair the relationship and make amends after the conflict.",
+      "evidence": "I'm sorry you feel undermined"
+    }
+  ]
+}
