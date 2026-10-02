@@ -1,0 +1,30 @@
+{
+  "language": {
+    "en": 100,
+    "ko": 100,
+    "fr": 50,
+    "ka": 50
+  },
+  "defense": {
+    "suppression": 39,
+    "acting_out": 30,
+    "projection": 35,
+    "humor": 16,
+    "denial": 48,
+    "displacement": 32,
+    "rationalization": 20,
+    "intellectualization": 35,
+    "sublimation": 15,
+    "passive_aggression": 30
+  },
+  "motivation": {
+    "anger": 38,
+    "joy": 38,
+    "trust": 38,
+    "surprise": 37,
+    "sadness": 37,
+    "fear": 37,
+    "disgust": 37,
+    "anticipation": 38
+  }
+}

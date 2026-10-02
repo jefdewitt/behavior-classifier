@@ -1,0 +1,161 @@
+{
+  "ontology_version": "1.0.0",
+  "task": "multi_label_relationship_communication_behavior_classification",
+  "unit_of_analysis": "A single speaker turn interpreted with the immediately preceding conversational context when available.",
+  "annotation_note": "Labels are not mutually exclusive. Assign every label whose criteria are independently satisfied. Judge the communicative behavior expressed in the text, not the speaker's presumed intent, personality, diagnosis, or whether the underlying factual claim is correct.",
+  "labels": {
+    "criticism": {
+      "operational_definition": "A negative evaluation that locates the problem in the other person's character, personality, motives, or enduring pattern rather than describing a specific behavior or event. Criticism commonly uses blame, global judgments, or character-focused generalizations such as 'you always,' 'you never,' or 'that's just who you are.'",
+      "inclusion_criteria": [
+        "Attributes a problem to the other person's character, personality, motives, or stable disposition.",
+        "Uses a global or generalized negative judgment about the other person rather than a bounded complaint about a specific action.",
+        "Frames the other person as fundamentally defective, selfish, careless, lazy, or otherwise 'the problem.'"
+      ],
+      "exclusion_criteria": [
+        "A specific complaint that identifies an observable behavior, its impact, or a requested change without attacking character.",
+        "An expression of hurt, anger, disappointment, or an unmet need that does not negatively define the other person.",
+        "A disagreement, correction, or boundary stated without global blame or a character judgment.",
+        "A negative evaluation directed at the speaker themself, a third party, or a situation rather than the conversation partner."
+      ],
+      "positive_examples": [
+        {
+          "text": "You never think about anyone but yourself. You're unbelievably selfish.",
+          "rationale": "The speaker turns the conflict into a global judgment of the partner's character."
+        },
+        {
+          "text": "Of course you forgot again. You're just an irresponsible person.",
+          "rationale": "A specific event is used to define the partner as having an enduring personal defect."
+        }
+      ],
+      "hard_negative_examples": [
+        {
+          "text": "You said you'd call when you were leaving, but you didn't, and I was worried.",
+          "rationale": "This is a specific complaint about an observable behavior and its impact, not a character attack."
+        },
+        {
+          "text": "I'm angry that the dishes were left for me again. I need us to divide them tonight.",
+          "rationale": "The speaker expresses anger and identifies a recurring behavior, but does not globally condemn the partner's character."
+        }
+      ]
+    },
+    "defensiveness": {
+      "operational_definition": "A response to perceived criticism, blame, or complaint that protects the self by rejecting responsibility, making excuses, counterattacking, or shifting blame instead of engaging with the concern. The defining feature is self-protection that deflects or reverses the issue, not merely disagreement or the presentation of relevant context.",
+      "inclusion_criteria": [
+        "Denies or minimizes responsibility without substantively engaging with the concern.",
+        "Offers an excuse primarily to dismiss accountability rather than to add context while acknowledging impact.",
+        "Responds to a complaint with a counter-complaint or redirects blame to the other person.",
+        "Adopts an innocent-victim stance implying that the speaker did nothing wrong and is being unfairly attacked."
+      ],
+      "exclusion_criteria": [
+        "Calmly disagrees with an accusation while addressing the underlying concern.",
+        "Provides relevant context and also acknowledges responsibility or impact.",
+        "Sets a boundary against insults, threats, or an unproductive interaction without retaliating or evading a separate concern.",
+        "Asks for clarification before responding.",
+        "Corrects a factual error without using the correction to dismiss the other person's experience."
+      ],
+      "positive_examples": [
+        {
+          "context": "Partner: I felt abandoned when you left without telling me.",
+          "text": "I wouldn't have left if you hadn't been acting so impossible. This is really your fault.",
+          "rationale": "The response avoids the concern by reversing blame onto the partner."
+        },
+        {
+          "context": "Partner: You didn't pay the bill by the date we agreed on.",
+          "text": "Why are you always on my case? I do plenty around here, and you forget things too.",
+          "rationale": "The speaker counters attacks and shifts attention away from the missed agreement."
+        }
+      ],
+      "hard_negative_examples": [
+        {
+          "context": "Partner: You ignored my messages all afternoon.",
+          "text": "I was in a four-hour meeting and couldn't answer, but I understand why the silence worried you. I should have warned you beforehand.",
+          "rationale": "The speaker supplies context while acknowledging impact and responsibility."
+        },
+        {
+          "context": "Partner: You're completely useless when things get hard.",
+          "text": "I'm willing to discuss what I did, but I'm not willing to be called useless.",
+          "rationale": "This is a direct boundary against an insult, not an attempt to evade a specific concern."
+        }
+      ]
+    },
+    "validation": {
+      "operational_definition": "A response that explicitly communicates that the other person's emotion, perspective, or reaction is understandable, recognizable, or meaningful in context. Validation acknowledges the internal experience without necessarily agreeing with the person's interpretation, factual claims, or requested solution.",
+      "inclusion_criteria": [
+        "Accurately names, reflects, or summarizes the other person's emotion or perspective.",
+        "Communicates that the reaction makes sense given the person's experience or the available context.",
+        "Shows understanding of the impact an event had on the other person.",
+        "Acknowledges the other person's experience even while maintaining a different viewpoint."
+      ],
+      "exclusion_criteria": [
+        "Mere agreement, compliance, praise, reassurance, apology, or affection without recognizing the other person's experience.",
+        "Problem-solving or advice that bypasses acknowledgment of the emotion or perspective.",
+        "Formulaic listening language that is immediately contradicted or dismissed, such as 'I hear you, but you're overreacting.'",
+        "Endorsing the factual accuracy of a claim without acknowledging its emotional or subjective meaning.",
+        "Naming an emotion sarcastically, contemptuously, or as a way to discredit it."
+      ],
+      "positive_examples": [
+        {
+          "context": "Partner: When you joked about me in front of them, I felt humiliated.",
+          "text": "I can understand why that felt humiliating. You expected me to protect you, not make you the joke.",
+          "rationale": "The response identifies both the emotion and why it makes sense from the partner's perspective."
+        },
+        {
+          "context": "Partner: I know you didn't mean to exclude me, but it still hurt.",
+          "text": "That makes sense. Even though it wasn't intentional, you were left out and it hurt.",
+          "rationale": "The response recognizes the impact without claiming harmful intent."
+        }
+      ],
+      "hard_negative_examples": [
+        {
+          "context": "Partner: I'm overwhelmed and I don't know how I'll finish everything.",
+          "text": "Just make a list and start with the easiest task.",
+          "rationale": "This offers advice but does not acknowledge or reflect the partner's emotional experience."
+        },
+        {
+          "context": "Partner: I felt dismissed when you changed the subject.",
+          "text": "I hear you, but you're making a big deal out of nothing.",
+          "rationale": "The listening phrase is immediately canceled by dismissal, so the response is not validating."
+        }
+      ]
+    },
+    "repair_attempt": {
+      "operational_definition": "A verbal move intended and functionally shaped to interrupt negativity, reduce escalation, restore safety or goodwill, or redirect the interaction toward constructive engagement. A repair attempt can include taking responsibility, apologizing, softening, requesting a pause, using affiliative humor, expressing care, or proposing a calmer restart, provided the move addresses the interactional rupture rather than merely changing the subject.",
+      "inclusion_criteria": [
+        "Takes responsibility or apologizes in a way that seeks to repair harm or reconnect.",
+        "Explicitly asks to pause, restart, slow down, or change tone so the conversation can continue more constructively.",
+        "Expresses care, shared purpose, or goodwill during conflict to reduce hostility and preserve connection.",
+        "Uses non-hostile humor or warmth to de-escalate, when it does not mock, minimize, or evade the issue.",
+        "Corrects the speaker's own escalating statement and replaces it with a softer or more accurate one."
+      ],
+      "exclusion_criteria": [
+        "Generic positivity, affection, or humor outside a rupture or conflict-regulation function.",
+        "A solution proposal that addresses only the practical problem without attempting to repair the interaction.",
+        "Withdrawal, stonewalling, topic-changing, or ending the conversation solely to escape discomfort.",
+        "A conditional, sarcastic, blame-shifting, or coerced apology.",
+        "Appeasement that concedes the issue only to silence the other person, without a discernible move toward constructive engagement.",
+        "Validation alone, unless it also functions to interrupt conflict or restore connection."
+      ],
+      "positive_examples": [
+        {
+          "text": "That came out as an attack. I'm sorry. Let me start again: I miss spending time with you, and I want us to figure this out together.",
+          "rationale": "The speaker recognizes an escalating move, softens it, and explicitly restarts with connection and shared purpose."
+        },
+        {
+          "text": "We're both getting louder. Can we take twenty minutes, calm down, and come back at eight? I don't want this to turn into us hurting each other.",
+          "rationale": "The speaker proposes a bounded pause with a return time in order to prevent escalation and resume constructively."
+        }
+      ],
+      "hard_negative_examples": [
+        {
+          "text": "Fine, I'm sorry you're so sensitive. Can we drop it now?",
+          "rationale": "The conditional apology contains blame and is used to shut down the issue rather than repair it."
+        },
+        {
+          "context": "Partner: We keep fighting about how much we're spending.",
+          "text": "I'll make a spreadsheet tomorrow.",
+          "rationale": "This may address the practical problem, but it does not repair or regulate the strained interaction."
+        }
+      ]
+    }
+  }
+}

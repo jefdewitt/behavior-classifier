@@ -1,0 +1,56 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "integer"
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "allowed": [
+        "en",
+        "ko",
+        "fr",
+        "ka"
+      ]
+    },
+    {
+      "name": "text",
+      "type": "string"
+    },
+    {
+      "name": "defense",
+      "type": "string",
+      "allowed": [
+        "denial",
+        "projection",
+        "passive_aggression",
+        "acting_out",
+        "displacement",
+        "intellectualization",
+        "rationalization",
+        "suppression",
+        "humor",
+        "sublimation"
+      ]
+    },
+    {
+      "name": "motivation",
+      "type": "string",
+      "allowed": [
+        "anger",
+        "anticipation",
+        "joy",
+        "trust",
+        "disgust",
+        "fear",
+        "sadness",
+        "surprise"
+      ]
+    },
+    {
+      "name": "meta_json",
+      "type": "json"
+    }
+  ]
+}

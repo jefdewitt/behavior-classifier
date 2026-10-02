@@ -1,0 +1,586 @@
+{
+  "plan_version": "1.0.0",
+  "purpose": "Pre-generation blueprint for a synthetic relationship-communication classifier test set.",
+  "ontology_reference": "ontology.json",
+  "generation_frozen": false,
+  "total_planned_cases": 44,
+  "design_constraints": {
+    "scenario_first": true,
+    "scenario_definitions_must_be_label_neutral": true,
+    "generate_dialogue_after_plan_approval_only": true,
+    "primary_balance_axis": "target_label × difficulty",
+    "label_mode": "multi_label",
+    "note": "target_label defines the decision boundary being tested. Other labels may be present when dialogue is later generated, but must be annotated explicitly rather than assumed absent."
+  },
+  "difficulty_levels": {
+    "obvious": "A clear positive instance containing direct, readily identifiable evidence for the target label.",
+    "subtle": "A positive instance whose evidence is indirect, softened, context-dependent, or lexically atypical, but still satisfies the ontology.",
+    "hard_negative": "A non-instance intentionally close to the target label's decision boundary; it may share surface wording or conversational purpose but must violate at least one required criterion."
+  },
+  "scenarios": [
+    {
+      "id": "chores",
+      "premise": "A couple is coordinating recurring cleaning tasks such as dishes, laundry, bathrooms, and taking out trash.",
+      "variables": [
+        "task ownership",
+        "timing",
+        "completion standard"
+      ]
+    },
+    {
+      "id": "money",
+      "premise": "A couple is discussing routine spending, saving, bills, or a purchase that affects their shared budget.",
+      "variables": [
+        "purchase size",
+        "budget expectations",
+        "financial priorities"
+      ]
+    },
+    {
+      "id": "lateness",
+      "premise": "One partner arrives later than expected or communicates poorly about a delay.",
+      "variables": [
+        "length of delay",
+        "advance notice",
+        "effect on the other partner"
+      ]
+    },
+    {
+      "id": "phones",
+      "premise": "Phone use affects attention, availability, privacy, or time spent together.",
+      "variables": [
+        "timing of use",
+        "notification or message",
+        "attention during conversation"
+      ]
+    },
+    {
+      "id": "parenting",
+      "premise": "Co-parents are making an everyday decision about routines, discipline, school, or division of childcare.",
+      "variables": [
+        "routine consistency",
+        "discipline choice",
+        "parenting workload"
+      ]
+    },
+    {
+      "id": "plans",
+      "premise": "A couple is negotiating social plans, travel, weekend activities, or a change to an existing commitment.",
+      "variables": [
+        "whose preference",
+        "notice of change",
+        "competing commitments"
+      ]
+    },
+    {
+      "id": "work_stress",
+      "premise": "Work demands, fatigue, or frustration are spilling into the couple's time or communication.",
+      "variables": [
+        "overtime",
+        "emotional availability",
+        "need for support or space"
+      ]
+    },
+    {
+      "id": "intimacy",
+      "premise": "A couple is discussing affection, sexual or nonsexual closeness, initiation, rejection, or mismatched desire.",
+      "variables": [
+        "type of closeness",
+        "timing",
+        "need for reassurance or autonomy"
+      ]
+    },
+    {
+      "id": "family_in_laws",
+      "premise": "A couple is handling visits, boundaries, comments, obligations, or divided loyalties involving extended family.",
+      "variables": [
+        "visit expectations",
+        "boundary ownership",
+        "family loyalty"
+      ]
+    },
+    {
+      "id": "household_responsibilities",
+      "premise": "A couple is coordinating the broader mental and administrative load of running a household.",
+      "variables": [
+        "planning burden",
+        "appointments or errands",
+        "recognition of invisible labor"
+      ]
+    }
+  ],
+  "allocation_matrix": {
+    "criticism": {
+      "obvious": 4,
+      "subtle": 4,
+      "hard_negative": 3,
+      "total": 11
+    },
+    "defensiveness": {
+      "obvious": 4,
+      "subtle": 4,
+      "hard_negative": 3,
+      "total": 11
+    },
+    "validation": {
+      "obvious": 4,
+      "subtle": 4,
+      "hard_negative": 3,
+      "total": 11
+    },
+    "repair_attempt": {
+      "obvious": 4,
+      "subtle": 4,
+      "hard_negative": 3,
+      "total": 11
+    },
+    "totals": {
+      "obvious": 16,
+      "subtle": 16,
+      "hard_negative": 12,
+      "total": 44
+    }
+  },
+  "planned_cases": [
+    {
+      "case_id": "TC001",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "scenario_id": "chores",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC002",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "scenario_id": "lateness",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC003",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "scenario_id": "phones",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC004",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "scenario_id": "household_responsibilities",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC005",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "scenario_id": "money",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC006",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "scenario_id": "parenting",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC007",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "scenario_id": "plans",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC008",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "scenario_id": "family_in_laws",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC009",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "scenario_id": "work_stress",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    },
+    {
+      "case_id": "TC010",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "scenario_id": "intimacy",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    },
+    {
+      "case_id": "TC011",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "scenario_id": "chores",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    },
+    {
+      "case_id": "TC012",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "scenario_id": "money",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC013",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "scenario_id": "lateness",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC014",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "scenario_id": "parenting",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC015",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "scenario_id": "plans",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC016",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "scenario_id": "phones",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC017",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "scenario_id": "work_stress",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC018",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "scenario_id": "family_in_laws",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC019",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "scenario_id": "household_responsibilities",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC020",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "scenario_id": "chores",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    },
+    {
+      "case_id": "TC021",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "scenario_id": "intimacy",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    },
+    {
+      "case_id": "TC022",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "scenario_id": "lateness",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    },
+    {
+      "case_id": "TC023",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "scenario_id": "phones",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC024",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "scenario_id": "parenting",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC025",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "scenario_id": "work_stress",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC026",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "scenario_id": "intimacy",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC027",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "scenario_id": "chores",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC028",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "scenario_id": "money",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC029",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "scenario_id": "plans",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC030",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "scenario_id": "family_in_laws",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC031",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "scenario_id": "lateness",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    },
+    {
+      "case_id": "TC032",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "scenario_id": "household_responsibilities",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    },
+    {
+      "case_id": "TC033",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "scenario_id": "phones",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    },
+    {
+      "case_id": "TC034",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "scenario_id": "chores",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC035",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "scenario_id": "plans",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC036",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "scenario_id": "intimacy",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC037",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "scenario_id": "family_in_laws",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC038",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "scenario_id": "money",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC039",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "scenario_id": "lateness",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC040",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "scenario_id": "work_stress",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC041",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "scenario_id": "household_responsibilities",
+      "expected_target_value": 1,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Satisfy the target definition and at least one inclusion criterion in ontology.json; avoid relying on keywords alone."
+    },
+    {
+      "case_id": "TC042",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "scenario_id": "phones",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    },
+    {
+      "case_id": "TC043",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "scenario_id": "parenting",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    },
+    {
+      "case_id": "TC044",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "scenario_id": "plans",
+      "expected_target_value": 0,
+      "generation_status": "planned",
+      "dialogue": null,
+      "boundary_requirement": "Resemble the target at the surface level while remaining excluded under ontology.json; record the exact exclusion criterion during generation."
+    }
+  ]
+}

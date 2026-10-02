@@ -1,0 +1,1675 @@
+{
+  "dataset_name": "poc2_generated",
+  "dataset_version": "1.1.0",
+  "ontology_reference": "ontology(1).json",
+  "generation_plan_reference": "generation_plan.json",
+  "unit_of_classification": "speaker turn with preceding dialogue context",
+  "label_mode": "multi_label",
+  "sample_count": 44,
+  "conventions": {
+    "target_turn_index": "Zero-based index into dialogue.",
+    "target_label": "The decision boundary tested by the sample.",
+    "intended_label": "The required positive label; null for hard negatives.",
+    "expected_target_value": "1 means target label present on focal turn; 0 means absent.",
+    "target_turn_gold_labels": "All deliberately instantiated ontology labels on the focal turn. An empty array means none of the four labels is intended.",
+    "ontology_alignment": "For positives, records an inclusion criterion satisfied by the focal turn. For hard negatives, records the target-label exclusion criterion that keeps the focal turn outside that class."
+  },
+  "samples": [
+    {
+      "id": "cri_obvious_01",
+      "plan_case_id": "TC001",
+      "scenario": "chores",
+      "target_label": "criticism",
+      "intended_label": "criticism",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Did you get a chance to unload the dishwasher?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, I was finishing the laundry first."
+        },
+        {
+          "speaker": "A",
+          "text": "You never do anything unless I remind you. You're lazy about this stuff."
+        },
+        {
+          "speaker": "B",
+          "text": "I said I would do it after the laundry."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "criticism"
+      ],
+      "annotation_note": "Positive for criticism; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Frames the other person as fundamentally defective, selfish, careless, lazy, or otherwise 'the problem.'",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of criticism and this inclusion criterion."
+      }
+    },
+    {
+      "id": "cri_obvious_02",
+      "plan_case_id": "TC002",
+      "scenario": "lateness",
+      "target_label": "criticism",
+      "intended_label": "criticism",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You said you'd be home by six."
+        },
+        {
+          "speaker": "B",
+          "text": "Traffic got bad and I lost track of time."
+        },
+        {
+          "speaker": "A",
+          "text": "You're always late because your time matters more to you than mine."
+        },
+        {
+          "speaker": "B",
+          "text": "I should have texted, but that's not fair."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "criticism"
+      ],
+      "annotation_note": "Positive for criticism; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Attributes a problem to the other person's character, personality, motives, or stable disposition.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of criticism and this inclusion criterion."
+      }
+    },
+    {
+      "id": "cri_obvious_03",
+      "plan_case_id": "TC003",
+      "scenario": "phones",
+      "target_label": "criticism",
+      "intended_label": "criticism",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can you put your phone down while we're eating?"
+        },
+        {
+          "speaker": "B",
+          "text": "I'm just answering one message."
+        },
+        {
+          "speaker": "A",
+          "text": "You can't give anyone your full attention. Your phone always matters more."
+        },
+        {
+          "speaker": "B",
+          "text": "I'm putting it away now."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "criticism"
+      ],
+      "annotation_note": "Positive for criticism; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Uses a global or generalized negative judgment about the other person rather than a bounded complaint about a specific action.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of criticism and this inclusion criterion."
+      }
+    },
+    {
+      "id": "cri_obvious_04",
+      "plan_case_id": "TC004",
+      "scenario": "household_responsibilities",
+      "target_label": "criticism",
+      "intended_label": "criticism",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "The dog still needs a vet appointment."
+        },
+        {
+          "speaker": "B",
+          "text": "I thought you were going to call."
+        },
+        {
+          "speaker": "A",
+          "text": "You never keep track of anything. You're just irresponsible."
+        },
+        {
+          "speaker": "B",
+          "text": "I had the groceries and insurance renewal on my list."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "criticism"
+      ],
+      "annotation_note": "Positive for criticism; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Frames the other person as fundamentally defective, selfish, careless, lazy, or otherwise 'the problem.'",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of criticism and this inclusion criterion."
+      }
+    },
+    {
+      "id": "cri_subtle_01",
+      "plan_case_id": "TC005",
+      "scenario": "money",
+      "target_label": "criticism",
+      "intended_label": "criticism",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I noticed another delivery came today."
+        },
+        {
+          "speaker": "B",
+          "text": "It was the replacement charger I mentioned."
+        },
+        {
+          "speaker": "A",
+          "text": "You go through life assuming money will somehow work itself out. You never think ahead."
+        },
+        {
+          "speaker": "B",
+          "text": "I did think about it, and it was within my spending amount."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "criticism"
+      ],
+      "annotation_note": "Positive for criticism; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Attributes a problem to the other person's character, personality, motives, or stable disposition.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of criticism and this inclusion criterion."
+      }
+    },
+    {
+      "id": "cri_subtle_02",
+      "plan_case_id": "TC006",
+      "scenario": "parenting",
+      "target_label": "criticism",
+      "intended_label": "criticism",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You let Maya stay up past nine again."
+        },
+        {
+          "speaker": "B",
+          "text": "She was finishing her project with me."
+        },
+        {
+          "speaker": "A",
+          "text": "You always choose being the fun parent because you don't want to be the responsible one."
+        },
+        {
+          "speaker": "B",
+          "text": "I wasn't trying to leave the hard part to you."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "criticism"
+      ],
+      "annotation_note": "Positive for criticism; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Attributes a problem to the other person's character, personality, motives, or stable disposition.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of criticism and this inclusion criterion."
+      }
+    },
+    {
+      "id": "cri_subtle_03",
+      "plan_case_id": "TC007",
+      "scenario": "plans",
+      "target_label": "criticism",
+      "intended_label": "criticism",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Are we still going to dinner with Sam and Lee?"
+        },
+        {
+          "speaker": "B",
+          "text": "I told them we might need to cancel."
+        },
+        {
+          "speaker": "A",
+          "text": "Commitments only seem to matter to you when they're convenient."
+        },
+        {
+          "speaker": "B",
+          "text": "I should have checked with you before changing it."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "criticism"
+      ],
+      "annotation_note": "Positive for criticism; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Attributes a problem to the other person's character, personality, motives, or stable disposition.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of criticism and this inclusion criterion."
+      }
+    },
+    {
+      "id": "cri_subtle_04",
+      "plan_case_id": "TC008",
+      "scenario": "family_in_laws",
+      "target_label": "criticism",
+      "intended_label": "criticism",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Your mom asked if she can stay through Monday."
+        },
+        {
+          "speaker": "B",
+          "text": "I told her I'd discuss it with you."
+        },
+        {
+          "speaker": "A",
+          "text": "You lose your backbone whenever your family asks for something."
+        },
+        {
+          "speaker": "B",
+          "text": "I haven't agreed to anything yet."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "criticism"
+      ],
+      "annotation_note": "Positive for criticism; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Attributes a problem to the other person's character, personality, motives, or stable disposition.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of criticism and this inclusion criterion."
+      }
+    },
+    {
+      "id": "cri_hn_01",
+      "plan_case_id": "TC009",
+      "scenario": "work_stress",
+      "target_label": "criticism",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You've been working late all week."
+        },
+        {
+          "speaker": "B",
+          "text": "The deadline moved up, and I'm exhausted."
+        },
+        {
+          "speaker": "A",
+          "text": "When you snapped at me after work last night, I felt pushed away. Please tell me directly when you need space."
+        },
+        {
+          "speaker": "B",
+          "text": "That's fair. I can say it directly tonight."
+        }
+      ],
+      "target_turn_gold_labels": [],
+      "annotation_note": "Hard negative for criticism; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "A specific complaint that identifies an observable behavior, its impact, or a requested change without attacking character.",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from criticism under this ontology criterion."
+      }
+    },
+    {
+      "id": "cri_hn_02",
+      "plan_case_id": "TC010",
+      "scenario": "intimacy",
+      "target_label": "criticism",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "We haven't been affectionate much lately."
+        },
+        {
+          "speaker": "B",
+          "text": "I've been tired and nervous about bringing it up."
+        },
+        {
+          "speaker": "A",
+          "text": "I feel lonely when weeks pass without much affection. Can we talk about what kind of closeness feels manageable right now?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes. I don't want you feeling alone."
+        }
+      ],
+      "target_turn_gold_labels": [],
+      "annotation_note": "Hard negative for criticism; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "An expression of hurt, anger, disappointment, or an unmet need that does not negatively define the other person.",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from criticism under this ontology criterion."
+      }
+    },
+    {
+      "id": "cri_hn_03",
+      "plan_case_id": "TC011",
+      "scenario": "chores",
+      "target_label": "criticism",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "The recycling is still by the door."
+        },
+        {
+          "speaker": "B",
+          "text": "I forgot it this morning."
+        },
+        {
+          "speaker": "A",
+          "text": "I'm angry that the recycling was left for me again. Please take it out before dinner."
+        },
+        {
+          "speaker": "B",
+          "text": "I will do it now."
+        }
+      ],
+      "target_turn_gold_labels": [],
+      "annotation_note": "Hard negative for criticism; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "A specific complaint that identifies an observable behavior, its impact, or a requested change without attacking character.",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from criticism under this ontology criterion."
+      }
+    },
+    {
+      "id": "def_obvious_01",
+      "plan_case_id": "TC012",
+      "scenario": "money",
+      "target_label": "defensiveness",
+      "intended_label": "defensiveness",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "The electric bill is overdue."
+        },
+        {
+          "speaker": "B",
+          "text": "I thought autopay was set up."
+        },
+        {
+          "speaker": "A",
+          "text": "Why is this suddenly all on me? You forgot the water bill last month, so you're just as responsible for this."
+        },
+        {
+          "speaker": "B",
+          "text": "I'm asking about this bill, not last month's."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "defensiveness"
+      ],
+      "annotation_note": "Positive for defensiveness; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Responds to a complaint with a counter-complaint or redirects blame to the other person.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of defensiveness and this inclusion criterion."
+      }
+    },
+    {
+      "id": "def_obvious_02",
+      "plan_case_id": "TC013",
+      "scenario": "lateness",
+      "target_label": "defensiveness",
+      "intended_label": "defensiveness",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I waited forty minutes without hearing from you."
+        },
+        {
+          "speaker": "B",
+          "text": "My meeting ran over."
+        },
+        {
+          "speaker": "A",
+          "text": "If you weren't so rigid about time, this wouldn't even be a problem."
+        },
+        {
+          "speaker": "B",
+          "text": "Wanting a message isn't being rigid."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "defensiveness",
+        "criticism"
+      ],
+      "annotation_note": "Positive for defensiveness; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Responds to a complaint with a counter-complaint or redirects blame to the other person.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of defensiveness and this inclusion criterion."
+      }
+    },
+    {
+      "id": "def_obvious_03",
+      "plan_case_id": "TC014",
+      "scenario": "parenting",
+      "target_label": "defensiveness",
+      "intended_label": "defensiveness",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "We agreed not to give him the tablet after bedtime."
+        },
+        {
+          "speaker": "B",
+          "text": "He wouldn't settle down."
+        },
+        {
+          "speaker": "A",
+          "text": "I only gave him the tablet because you got him worked up. You put me in that position."
+        },
+        {
+          "speaker": "B",
+          "text": "You could have called me in."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "defensiveness"
+      ],
+      "annotation_note": "Positive for defensiveness; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Responds to a complaint with a counter-complaint or redirects blame to the other person.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of defensiveness and this inclusion criterion."
+      }
+    },
+    {
+      "id": "def_obvious_04",
+      "plan_case_id": "TC015",
+      "scenario": "plans",
+      "target_label": "defensiveness",
+      "intended_label": "defensiveness",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 3,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You canceled our hike without asking me."
+        },
+        {
+          "speaker": "B",
+          "text": "The weather looked bad, so I called it."
+        },
+        {
+          "speaker": "A",
+          "text": "I wanted us to decide together instead of finding out after you canceled."
+        },
+        {
+          "speaker": "B",
+          "text": "You're blaming me for canceling, but you're the one who never checks the forecast."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "defensiveness",
+        "criticism"
+      ],
+      "annotation_note": "Positive for defensiveness; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Responds to a complaint with a counter-complaint or redirects blame to the other person.",
+        "rationale": "The focal turn now directly answers the complaint by reversing blame onto the partner; the global \"never checks\" judgment also independently satisfies criticism."
+      }
+    },
+    {
+      "id": "def_subtle_01",
+      "plan_case_id": "TC016",
+      "scenario": "phones",
+      "target_label": "defensiveness",
+      "intended_label": "defensiveness",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 3,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I felt ignored when you kept checking your phone while I was talking."
+        },
+        {
+          "speaker": "B",
+          "text": "I was following the game score."
+        },
+        {
+          "speaker": "A",
+          "text": "I was trying to tell you something important, and you kept looking away."
+        },
+        {
+          "speaker": "B",
+          "text": "I guess I'm not allowed to unwind for five minutes without it becoming a whole thing."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "defensiveness"
+      ],
+      "annotation_note": "Positive for defensiveness; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Adopts an innocent-victim stance implying that the speaker did nothing wrong and is being unfairly attacked.",
+        "rationale": "The focal turn reframes a specific complaint about attention as an unfair restriction on the speaker, avoiding the impact of the phone use without an overt counterattack."
+      }
+    },
+    {
+      "id": "def_subtle_02",
+      "plan_case_id": "TC017",
+      "scenario": "work_stress",
+      "target_label": "defensiveness",
+      "intended_label": "defensiveness",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You were really short with me when you got home."
+        },
+        {
+          "speaker": "B",
+          "text": "Today was brutal."
+        },
+        {
+          "speaker": "A",
+          "text": "So now I'm the bad guy because I wasn't cheerful after twelve hours at work? Nobody even asks what I need."
+        },
+        {
+          "speaker": "B",
+          "text": "I'm trying to tell you how it landed, not demand cheerfulness."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "defensiveness"
+      ],
+      "annotation_note": "Positive for defensiveness; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Adopts an innocent-victim stance implying that the speaker did nothing wrong and is being unfairly attacked.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of defensiveness and this inclusion criterion."
+      }
+    },
+    {
+      "id": "def_subtle_03",
+      "plan_case_id": "TC018",
+      "scenario": "family_in_laws",
+      "target_label": "defensiveness",
+      "intended_label": "defensiveness",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I wish you'd spoken up when your dad criticized me."
+        },
+        {
+          "speaker": "B",
+          "text": "I didn't know what to say in the moment."
+        },
+        {
+          "speaker": "A",
+          "text": "Somehow I get blamed whether I defend you or keep the peace. I can't win with you."
+        },
+        {
+          "speaker": "B",
+          "text": "I'm asking what we can do next time."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "defensiveness"
+      ],
+      "annotation_note": "Positive for defensiveness; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Adopts an innocent-victim stance implying that the speaker did nothing wrong and is being unfairly attacked.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of defensiveness and this inclusion criterion."
+      }
+    },
+    {
+      "id": "def_subtle_04",
+      "plan_case_id": "TC019",
+      "scenario": "household_responsibilities",
+      "target_label": "defensiveness",
+      "intended_label": "defensiveness",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I need you to track the school forms without me reminding you."
+        },
+        {
+          "speaker": "B",
+          "text": "I submitted the last one."
+        },
+        {
+          "speaker": "A",
+          "text": "So the lunches, repairs, and groceries I handle just don't count now?"
+        },
+        {
+          "speaker": "B",
+          "text": "They count. This one task is still falling to me."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "defensiveness"
+      ],
+      "annotation_note": "Positive for defensiveness; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Responds to a complaint with a counter-complaint or redirects blame to the other person.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of defensiveness and this inclusion criterion."
+      }
+    },
+    {
+      "id": "def_hn_01",
+      "plan_case_id": "TC020",
+      "scenario": "chores",
+      "target_label": "defensiveness",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You didn't clean the bathroom like we agreed."
+        },
+        {
+          "speaker": "B",
+          "text": "I thought we had said Saturday, not Friday."
+        },
+        {
+          "speaker": "A",
+          "text": "I may have the day wrong. Let's check the calendar, and if we agreed on Friday, I'll clean it tonight."
+        },
+        {
+          "speaker": "B",
+          "text": "Okay, let's look."
+        }
+      ],
+      "target_turn_gold_labels": [],
+      "annotation_note": "Hard negative for defensiveness; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "Calmly disagrees with an accusation while addressing the underlying concern.",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from defensiveness under this ontology criterion."
+      }
+    },
+    {
+      "id": "def_hn_02",
+      "plan_case_id": "TC021",
+      "scenario": "intimacy",
+      "target_label": "defensiveness",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You pulled away when I tried to hug you."
+        },
+        {
+          "speaker": "B",
+          "text": "I was overwhelmed in that moment."
+        },
+        {
+          "speaker": "A",
+          "text": "I wasn't trying to reject you. I can understand why it felt that way, and I should have told you I needed a minute."
+        },
+        {
+          "speaker": "B",
+          "text": "Thank you for explaining."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "validation"
+      ],
+      "annotation_note": "Hard negative for defensiveness; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "Provides relevant context and also acknowledges responsibility or impact.",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from defensiveness under this ontology criterion."
+      }
+    },
+    {
+      "id": "def_hn_03",
+      "plan_case_id": "TC022",
+      "scenario": "lateness",
+      "target_label": "defensiveness",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You said I never text when I'm late, but I texted today."
+        },
+        {
+          "speaker": "B",
+          "text": "You're right, you did today. I was thinking about Tuesday."
+        },
+        {
+          "speaker": "A",
+          "text": "Tuesday I didn't text, and that was on me. Today I did text, so I want to keep those two situations separate."
+        },
+        {
+          "speaker": "B",
+          "text": "That's accurate."
+        }
+      ],
+      "target_turn_gold_labels": [],
+      "annotation_note": "Hard negative for defensiveness; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "Corrects a factual error without using the correction to dismiss the other person's experience.",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from defensiveness under this ontology criterion."
+      }
+    },
+    {
+      "id": "val_obvious_01",
+      "plan_case_id": "TC023",
+      "scenario": "phones",
+      "target_label": "validation",
+      "intended_label": "validation",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I was checking a work alert while you were talking."
+        },
+        {
+          "speaker": "B",
+          "text": "I know, but when you looked at your phone while I was telling you about my dad, I felt unimportant."
+        },
+        {
+          "speaker": "A",
+          "text": "I can understand why that felt like I wasn't interested in you, especially when you were telling me something personal."
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, that's what hurt."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "validation"
+      ],
+      "annotation_note": "Positive for validation; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Shows understanding of the impact an event had on the other person.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of validation and this inclusion criterion."
+      }
+    },
+    {
+      "id": "val_obvious_02",
+      "plan_case_id": "TC024",
+      "scenario": "parenting",
+      "target_label": "validation",
+      "intended_label": "validation",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I've been getting home after the kids are asleep this week."
+        },
+        {
+          "speaker": "B",
+          "text": "And I've been doing bedtime alone every night. I'm exhausted."
+        },
+        {
+          "speaker": "A",
+          "text": "It makes sense that you're depleted. You've carried the bedtime routine alone all week."
+        },
+        {
+          "speaker": "B",
+          "text": "I need us to rebalance it."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "validation"
+      ],
+      "annotation_note": "Positive for validation; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Accurately names, reflects, or summarizes the other person's emotion or perspective.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of validation and this inclusion criterion."
+      }
+    },
+    {
+      "id": "val_obvious_03",
+      "plan_case_id": "TC025",
+      "scenario": "work_stress",
+      "target_label": "validation",
+      "intended_label": "validation",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Your manager moved the deadline up again?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yeah. I planned around Friday, and now I'm panicking because two days of work got dumped into tonight."
+        },
+        {
+          "speaker": "A",
+          "text": "Of course you're anxious. You planned around Friday, and now two days of work got dumped into one night."
+        },
+        {
+          "speaker": "B",
+          "text": "Exactly."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "validation"
+      ],
+      "annotation_note": "Positive for validation; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Communicates that the reaction makes sense given the person's experience or the available context.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of validation and this inclusion criterion."
+      }
+    },
+    {
+      "id": "val_obvious_04",
+      "plan_case_id": "TC026",
+      "scenario": "intimacy",
+      "target_label": "validation",
+      "intended_label": "validation",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I was exhausted last night, so I turned away without saying anything."
+        },
+        {
+          "speaker": "B",
+          "text": "I know you were tired, but in the moment I felt rejected."
+        },
+        {
+          "speaker": "A",
+          "text": "I can see why you experienced it as rejection when I turned away without explaining what was happening."
+        },
+        {
+          "speaker": "B",
+          "text": "I didn't need you to say yes; I needed that explanation."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "validation"
+      ],
+      "annotation_note": "Positive for validation; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Shows understanding of the impact an event had on the other person.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of validation and this inclusion criterion."
+      }
+    },
+    {
+      "id": "val_subtle_01",
+      "plan_case_id": "TC027",
+      "scenario": "chores",
+      "target_label": "validation",
+      "intended_label": "validation",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I didn't realize the sink bothered you that much after work."
+        },
+        {
+          "speaker": "B",
+          "text": "I know it's only dishes, but after a long day it feels like one more thing waiting for me."
+        },
+        {
+          "speaker": "A",
+          "text": "You walk in already exhausted, and seeing the sink full feels like one more demand waiting for you."
+        },
+        {
+          "speaker": "B",
+          "text": "That's it."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "validation"
+      ],
+      "annotation_note": "Positive for validation; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Accurately names, reflects, or summarizes the other person's emotion or perspective.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of validation and this inclusion criterion."
+      }
+    },
+    {
+      "id": "val_subtle_02",
+      "plan_case_id": "TC028",
+      "scenario": "money",
+      "target_label": "validation",
+      "intended_label": "validation",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "We still have enough in checking to cover the bills."
+        },
+        {
+          "speaker": "B",
+          "text": "I know. I still get nervous when the balance drops that low."
+        },
+        {
+          "speaker": "A",
+          "text": "That number lands differently for you after the months when money really was tight."
+        },
+        {
+          "speaker": "B",
+          "text": "Yeah. My body still reacts like we are back there."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "validation"
+      ],
+      "annotation_note": "Positive for validation; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Acknowledges the other person's experience even while maintaining a different viewpoint.",
+        "rationale": "The focal turn does not simply agree that the balance is dangerous; it recognizes why the same number carries a different emotional meaning for the partner."
+      }
+    },
+    {
+      "id": "val_subtle_03",
+      "plan_case_id": "TC029",
+      "scenario": "plans",
+      "target_label": "validation",
+      "intended_label": "validation",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I thought adding people to Saturday would make the weekend more fun."
+        },
+        {
+          "speaker": "B",
+          "text": "I was disappointed. I had been counting on two quiet days with you."
+        },
+        {
+          "speaker": "A",
+          "text": "You had already spent the week counting on that downtime, and I changed what you thought you were coming home to."
+        },
+        {
+          "speaker": "B",
+          "text": "Yes. That is what got to me."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "validation"
+      ],
+      "annotation_note": "Positive for validation; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Shows understanding of the impact an event had on the other person.",
+        "rationale": "The focal turn reflects the lost expectation and impact without using explicit validation formulas such as \"that makes sense.\""
+      }
+    },
+    {
+      "id": "val_subtle_04",
+      "plan_case_id": "TC030",
+      "scenario": "family_in_laws",
+      "target_label": "validation",
+      "intended_label": "validation",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Dinner with my sister is Friday. You got quiet when I mentioned it."
+        },
+        {
+          "speaker": "B",
+          "text": "I tense up around her after some of the comments she has made."
+        },
+        {
+          "speaker": "A",
+          "text": "Those last few dinners have given you plenty of reason to walk in braced for another comment."
+        },
+        {
+          "speaker": "B",
+          "text": "I wish I did not feel that way, but I do."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "validation"
+      ],
+      "annotation_note": "Positive for validation; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Communicates that the reaction makes sense given the person's experience or the available context.",
+        "rationale": "The focal turn links the partner's guardedness to prior interactions without relying on a stock phrase like \"it makes sense.\""
+      }
+    },
+    {
+      "id": "val_hn_01",
+      "plan_case_id": "TC031",
+      "scenario": "lateness",
+      "target_label": "validation",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I was worried when you were late and didn't text."
+        },
+        {
+          "speaker": "B",
+          "text": "My phone died on the train."
+        },
+        {
+          "speaker": "A",
+          "text": "You should keep a charger in your bag so this doesn't happen again."
+        },
+        {
+          "speaker": "B",
+          "text": "That would help, but I wanted you to understand why I was upset."
+        }
+      ],
+      "target_turn_gold_labels": [],
+      "annotation_note": "Hard negative for validation; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "Problem-solving or advice that bypasses acknowledgment of the emotion or perspective.",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from validation under this ontology criterion."
+      }
+    },
+    {
+      "id": "val_hn_02",
+      "plan_case_id": "TC032",
+      "scenario": "household_responsibilities",
+      "target_label": "validation",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I feel buried under all the appointments and forms."
+        },
+        {
+          "speaker": "B",
+          "text": "There are a lot this month."
+        },
+        {
+          "speaker": "A",
+          "text": "Don't worry. It'll all work out."
+        },
+        {
+          "speaker": "B",
+          "text": "I know you're trying to reassure me, but I still feel alone in it."
+        }
+      ],
+      "target_turn_gold_labels": [],
+      "annotation_note": "Hard negative for validation; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "Mere agreement, compliance, praise, reassurance, apology, or affection without recognizing the other person's experience.",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from validation under this ontology criterion."
+      }
+    },
+    {
+      "id": "val_hn_03",
+      "plan_case_id": "TC033",
+      "scenario": "phones",
+      "target_label": "validation",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "It hurt when you answered messages through our whole dinner."
+        },
+        {
+          "speaker": "B",
+          "text": "I was dealing with a work issue."
+        },
+        {
+          "speaker": "A",
+          "text": "I hear you, but you're making this into a much bigger deal than it was."
+        },
+        {
+          "speaker": "B",
+          "text": "That's exactly why I don't feel heard."
+        }
+      ],
+      "target_turn_gold_labels": [],
+      "annotation_note": "Hard negative for validation; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "Formulaic listening language that is immediately contradicted or dismissed, such as 'I hear you, but you're overreacting.'",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from validation under this ontology criterion."
+      }
+    },
+    {
+      "id": "rep_obvious_01",
+      "plan_case_id": "TC034",
+      "scenario": "chores",
+      "target_label": "repair_attempt",
+      "intended_label": "repair_attempt",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You left the kitchen for me again."
+        },
+        {
+          "speaker": "B",
+          "text": "I worked late. Stop acting like I do nothing."
+        },
+        {
+          "speaker": "A",
+          "text": "That came out as an attack. I'm sorry. Let me start again: I was exhausted, and I should have texted you about the kitchen."
+        },
+        {
+          "speaker": "B",
+          "text": "Okay. I can work with that."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "repair_attempt"
+      ],
+      "annotation_note": "Positive for repair_attempt; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Corrects the speaker's own escalating statement and replaces it with a softer or more accurate one.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of repair_attempt and this inclusion criterion."
+      }
+    },
+    {
+      "id": "rep_obvious_02",
+      "plan_case_id": "TC035",
+      "scenario": "plans",
+      "target_label": "repair_attempt",
+      "intended_label": "repair_attempt",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You always change our plans when something better comes up."
+        },
+        {
+          "speaker": "B",
+          "text": "That's not true, and now you're attacking me."
+        },
+        {
+          "speaker": "A",
+          "text": "We're both getting sharp. Can we restart and talk about tonight without attacking each other?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes. Let's reset."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "repair_attempt"
+      ],
+      "annotation_note": "Positive for repair_attempt; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Explicitly asks to pause, restart, slow down, or change tone so the conversation can continue more constructively.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of repair_attempt and this inclusion criterion."
+      }
+    },
+    {
+      "id": "rep_obvious_03",
+      "plan_case_id": "TC036",
+      "scenario": "intimacy",
+      "target_label": "repair_attempt",
+      "intended_label": "repair_attempt",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You don't want me anymore."
+        },
+        {
+          "speaker": "B",
+          "text": "I hate when you tell me what I feel."
+        },
+        {
+          "speaker": "A",
+          "text": "I'm sorry. Telling you what you feel wasn't fair. Let me try again and tell you what I'm scared of without blaming you."
+        },
+        {
+          "speaker": "B",
+          "text": "I'm listening."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "repair_attempt"
+      ],
+      "annotation_note": "Positive for repair_attempt; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Corrects the speaker's own escalating statement and replaces it with a softer or more accurate one.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of repair_attempt and this inclusion criterion."
+      }
+    },
+    {
+      "id": "rep_obvious_04",
+      "plan_case_id": "TC037",
+      "scenario": "family_in_laws",
+      "target_label": "repair_attempt",
+      "intended_label": "repair_attempt",
+      "difficulty": "obvious",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You let your mother run our entire weekend."
+        },
+        {
+          "speaker": "B",
+          "text": "You criticize her no matter what she does."
+        },
+        {
+          "speaker": "A",
+          "text": "This is turning into us against each other. I love you, and I want us on the same team while we figure out the visit."
+        },
+        {
+          "speaker": "B",
+          "text": "Me too. Let's look at the dates."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "repair_attempt"
+      ],
+      "annotation_note": "Positive for repair_attempt; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Expresses care, shared purpose, or goodwill during conflict to reduce hostility and preserve connection.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of repair_attempt and this inclusion criterion."
+      }
+    },
+    {
+      "id": "rep_subtle_01",
+      "plan_case_id": "TC038",
+      "scenario": "money",
+      "target_label": "repair_attempt",
+      "intended_label": "repair_attempt",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You bought it without telling me."
+        },
+        {
+          "speaker": "B",
+          "text": "It was my money, so I didn't think I needed permission."
+        },
+        {
+          "speaker": "A",
+          "text": "I'm arguing about permission instead of what we agreed to. What about the purchase worried you most?"
+        },
+        {
+          "speaker": "B",
+          "text": "That we had agreed to mention anything over two hundred."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "repair_attempt"
+      ],
+      "annotation_note": "Positive for repair_attempt; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Corrects the speaker's own escalating statement and replaces it with a softer or more accurate one.",
+        "rationale": "The focal turn catches the unproductive frame and redirects toward understanding, but avoids explicit reset/repair language."
+      }
+    },
+    {
+      "id": "rep_subtle_02",
+      "plan_case_id": "TC039",
+      "scenario": "lateness",
+      "target_label": "repair_attempt",
+      "intended_label": "repair_attempt",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You clearly don't respect my time."
+        },
+        {
+          "speaker": "B",
+          "text": "I was ten minutes late. This is ridiculous."
+        },
+        {
+          "speaker": "A",
+          "text": "I don't want ten minutes to turn into a verdict on either of us. Tell me what waiting on me messed up for you."
+        },
+        {
+          "speaker": "B",
+          "text": "I missed the start of the appointment and felt stranded."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "repair_attempt"
+      ],
+      "annotation_note": "Positive for repair_attempt; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Expresses care, shared purpose, or goodwill during conflict to reduce hostility and preserve connection.",
+        "rationale": "The focal turn rejects the escalating character frame and invites the concrete impact, functioning as repair without textbook \"reset/slow down\" wording."
+      }
+    },
+    {
+      "id": "rep_subtle_03",
+      "plan_case_id": "TC040",
+      "scenario": "work_stress",
+      "target_label": "repair_attempt",
+      "intended_label": "repair_attempt",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You've been snapping at me all evening."
+        },
+        {
+          "speaker": "B",
+          "text": "Because work is a disaster and you keep asking questions."
+        },
+        {
+          "speaker": "A",
+          "text": "You're not my enemy. I need ten quiet minutes, and then I want to come back and hear what you were trying to tell me."
+        },
+        {
+          "speaker": "B",
+          "text": "All right. Ten minutes."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "repair_attempt"
+      ],
+      "annotation_note": "Positive for repair_attempt; focal turn regenerated against ontology(1).json.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Explicitly asks to pause, restart, slow down, or change tone so the conversation can continue more constructively.",
+        "rationale": "The focal turn is intended to satisfy the ontology definition of repair_attempt and this inclusion criterion."
+      }
+    },
+    {
+      "id": "rep_subtle_04",
+      "plan_case_id": "TC041",
+      "scenario": "household_responsibilities",
+      "target_label": "repair_attempt",
+      "intended_label": "repair_attempt",
+      "difficulty": "subtle",
+      "expected_target_value": 1,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I should not have to manage you too."
+        },
+        {
+          "speaker": "B",
+          "text": "And I should not have to guess what you want."
+        },
+        {
+          "speaker": "A",
+          "text": "I don't want this to become another round of who carries more. What did you need from me tonight?"
+        },
+        {
+          "speaker": "B",
+          "text": "I needed you to take the laundry without waiting for me to ask."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "repair_attempt"
+      ],
+      "annotation_note": "Positive for repair_attempt; focal turn regenerated against ontology(1).json. QC revision applied for speaker coherence/difficulty calibration.",
+      "ontology_alignment": {
+        "target_status": "positive",
+        "criterion_type": "inclusion",
+        "criterion": "Expresses care, shared purpose, or goodwill during conflict to reduce hostility and preserve connection.",
+        "rationale": "The focal turn interrupts the scorekeeping dynamic and reopens constructive engagement without explicitly announcing a repair attempt."
+      }
+    },
+    {
+      "id": "rep_hn_01",
+      "plan_case_id": "TC042",
+      "scenario": "phones",
+      "target_label": "repair_attempt",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can you stop scrolling while we're talking?"
+        },
+        {
+          "speaker": "B",
+          "text": "I'm listening."
+        },
+        {
+          "speaker": "A",
+          "text": "Fine, whatever. Let's just forget it."
+        },
+        {
+          "speaker": "B",
+          "text": "That doesn't resolve anything."
+        }
+      ],
+      "target_turn_gold_labels": [],
+      "annotation_note": "Hard negative for repair_attempt; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "Withdrawal, stonewalling, topic-changing, or ending the conversation solely to escape discomfort.",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from repair_attempt under this ontology criterion."
+      }
+    },
+    {
+      "id": "rep_hn_02",
+      "plan_case_id": "TC043",
+      "scenario": "parenting",
+      "target_label": "repair_attempt",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "You undermined me in front of the kids."
+        },
+        {
+          "speaker": "B",
+          "text": "You were being too strict."
+        },
+        {
+          "speaker": "A",
+          "text": "I'm sorry you feel undermined, but you made me step in."
+        },
+        {
+          "speaker": "B",
+          "text": "That's not an apology."
+        }
+      ],
+      "target_turn_gold_labels": [
+        "defensiveness"
+      ],
+      "annotation_note": "Hard negative for repair_attempt; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "A conditional, sarcastic, blame-shifting, or coerced apology.",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from repair_attempt under this ontology criterion."
+      }
+    },
+    {
+      "id": "rep_hn_03",
+      "plan_case_id": "TC044",
+      "scenario": "plans",
+      "target_label": "repair_attempt",
+      "intended_label": null,
+      "difficulty": "hard_negative",
+      "expected_target_value": 0,
+      "target_turn_index": 2,
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "We're going in circles about Saturday."
+        },
+        {
+          "speaker": "B",
+          "text": "Because you won't compromise."
+        },
+        {
+          "speaker": "A",
+          "text": "I'll book the six o'clock reservation."
+        },
+        {
+          "speaker": "B",
+          "text": "That settles dinner, but we're still speaking to each other like enemies."
+        }
+      ],
+      "target_turn_gold_labels": [],
+      "annotation_note": "Hard negative for repair_attempt; focal turn regenerated against ontology(1).json and must remain negative for the target label.",
+      "ontology_alignment": {
+        "target_status": "hard_negative",
+        "criterion_type": "exclusion",
+        "criterion": "A solution proposal that addresses only the practical problem without attempting to repair the interaction.",
+        "rationale": "The focal turn is intentionally near the decision boundary but excluded from repair_attempt under this ontology criterion."
+      }
+    }
+  ],
+  "ontology_version": "1.0.0",
+  "generation_note": "Phase 4 QC revision: preserved 44-case matrix; regenerated def_obvious_04 and def_subtle_01; repaired speaker-role coherence for all eight validation positives; recalibrated several subtle positives to reduce prototype wording; criticism samples and hard-negative boundaries otherwise preserved."
+}
