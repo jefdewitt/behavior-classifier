@@ -6,7 +6,7 @@ from ollama import Client
 class MarkerMetrics(BaseModel):
     detected: bool = Field(description="Must be true if the marker is present, false otherwise.")
     confidence: float = Field(description="Confidence score between 0.0 and 1.0")
-    evidence: Optional[str] = Field(None, description="The exact quote from the text that proves your conclusion.")
+    evidence: str = Field(description="The exact quote from the text that proves your conclusion, or an empty string if not detected.")
 
 class RelationshipAnalysis(BaseModel):
     criticism: MarkerMetrics
@@ -79,6 +79,8 @@ def run_true_multi_agent_evaluation(input_file="live_test_sample.json", output_f
         )
         
         parsed_analysis = json.loads(final_response['message']['content'])
+        for marker_data in parsed_analysis.values():
+            marker_data.setdefault("evidence", "")  # safety net if the model still omits it
         item["model_analysis"] = parsed_analysis
         results.append(item)
         

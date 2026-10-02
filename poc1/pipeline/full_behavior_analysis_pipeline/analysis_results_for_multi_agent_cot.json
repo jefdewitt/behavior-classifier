@@ -42,23 +42,23 @@
         "model_analysis": {
             "criticism": {
                 "detected": true,
-                "confidence": 0.9,
-                "evidence": "['always a battle', 'lock you down']"
+                "confidence": 0.8,
+                "evidence": "These lines convey a sense of blame and accusation, implying that Speaker A is not confident in their partner's ability to manage their time."
             },
             "defensiveness": {
                 "detected": true,
                 "confidence": 0.8,
-                "evidence": "['That's not fair', 'You make it sound like...']"
+                "evidence": "These lines convey a sense of defensiveness and accusation, implying that Speaker B is trying to protect themselves from criticism."
             },
             "validation": {
                 "detected": false,
-                "confidence": 0.7,
-                "evidence": "['Okay. Yeah. Let's just look at it now']"
+                "confidence": 0.9,
+                "evidence": "This line lacks emotional validation or empathy, and instead conveys a sense of acceptance without acknowledging Speaker B's feelings."
             },
             "repair_attempt": {
                 "detected": true,
                 "confidence": 0.9,
-                "evidence": "['I'm sorry I snapped. Can we just reset?']"
+                "evidence": "These lines convey a genuine attempt to diffuse tension and repair the relationship, with Speaker B taking ownership of their emotional response and apologizing for their behavior."
             }
         }
     }

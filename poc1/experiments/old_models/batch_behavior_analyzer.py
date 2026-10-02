@@ -51,7 +51,7 @@ def format_dialogue(conv: dict) -> str:
 
 def main():
     # Configuration
-    input_file = "./transcript_evaluation_sets/relationship_transcript_evaluation_set.json" # Change path as needed
+    input_file = "../../transcript_evaluation_sets/relationship_transcript_evaluation_set.json" # Change path as needed
     output_file = "analysis_results_without_grounding.json"
     model_name = "llama3.2"
     

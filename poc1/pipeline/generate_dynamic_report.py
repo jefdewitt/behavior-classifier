@@ -28,13 +28,13 @@ def generate_dynamic_report(input_json="analysis_results_for_multi_agent_cot.jso
     
     # Dynamically inject model tracking observations straight out of your JSON payload
     if analysis["criticism"]["detected"]:
-        ugly_log += f"00:31 Possible criticism — HIGH \"{analysis['criticism']['evidence']}\"\n"
+        ugly_log += f"00:31 Possible criticism — HIGH \"{analysis['criticism'].get('evidence', '')}\"\n"
     if analysis["defensiveness"]["detected"]:
-        ugly_log += f"00:37 Possible defensiveness — MODERATE \"{analysis['defensiveness']['evidence']}\"\n"
+        ugly_log += f"00:37 Possible defensiveness — MODERATE \"{analysis['defensiveness'].get('evidence', '')}\"\n"
     if analysis["repair_attempt"]["detected"]:
-        ugly_log += f"01:12 Possible repair attempt — MODERATE \"{analysis['repair_attempt']['evidence']}\"\n"
+        ugly_log += f"01:12 Possible repair attempt — MODERATE \"{analysis['repair_attempt'].get('evidence', '')}\"\n"
     if analysis["validation"]["detected"]:
-        ugly_log += f"01:16 Validation — HIGH \"{analysis['validation']['evidence']}\"\n"
+        ugly_log += f"01:16 Validation — HIGH \"{analysis['validation'].get('evidence', '')}\"\n"
         
     # Compile the telemetry metrics block dynamically
     ugly_log += (
