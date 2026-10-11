@@ -1,0 +1,2031 @@
+{
+  "experiment": "B",
+  "experiment_name": "multi_agent_cot_theory_grounded",
+  "prompt_version": "poc2-multi-agent-cot-theory-grounded-v1",
+  "model": "claude-opus-5-5",
+  "model_options": {
+    "effort": "high",
+    "max_tokens": 16000
+  },
+  "input_file": "poc2_gold.json",
+  "input_sha256": "f34049a1ae5ddd6e75ad2e87c42880566841a70719a70c3f44d85bc71d20d5f8",
+  "input_sample_count": 44,
+  "evaluated_sample_count": 44,
+  "input_mode": "full_dialogue_with_focal_turn_marked",
+  "scoring_unit": "target_label_on_focal_turn",
+  "ontology_provided_to_classifier": true,
+  "ontology_content": "definitions_and_criteria",
+  "ontology_version": "1.0.0",
+  "ontology_sha256": "b3131b6114e969797e47680791d57e736fd39879eda5313ec6b52031e5ca5eea",
+  "created_at_utc": "2026-10-07T15:15:22.458824+00:00",
+  "metrics": {
+    "by_target_label": {
+      "criticism": {
+        "n": 11,
+        "tp": 8,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "defensiveness": {
+        "n": 11,
+        "tp": 8,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "validation": {
+        "n": 11,
+        "tp": 8,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "repair_attempt": {
+        "n": 11,
+        "tp": 8,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "macro_f1": 1.0
+  },
+  "predictions": [
+    {
+      "id": "cri_obvious_01",
+      "plan_case_id": "TC001",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You never do anything unless I remind you. You're lazy about this stuff.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Generalizes one undone chore into a global pattern ('never do anything') and assigns a character label ('lazy') to the partner.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.96,
+          "evidence": "You never do anything unless I remind you. You're lazy about this stuff.",
+          "decision_note": "Generalizes one undone chore into a global pattern ('never do anything') and assigns a character label ('lazy') to the partner.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Turn 2 was a neutral explanation, not blame directed at A. The focal turn is an initial attack, not a self-protective deflection of perceived criticism.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn makes no acknowledgment of B's stated reason (finishing the laundry) or of B's perspective.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn contains no softening, apology, care, or de-escalation. It escalates negativity rather than repairing it.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_obvious_02",
+      "plan_case_id": "TC002",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You're always late because your time matters more to you than mine.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The turn generalizes the lateness into a pattern with \"always\" and attributes it to a selfish motive (\"your time matters more to you than mine\"). That is a character judgment, not a bounded complaint.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.95,
+          "evidence": "You're always late because your time matters more to you than mine.",
+          "decision_note": "The turn generalizes the lateness into a pattern with \"always\" and attributes it to a selfish motive (\"your time matters more to you than mine\"). That is a character judgment, not a bounded complaint.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "A is pressing a complaint, not protecting the self. There is no denial of A's own responsibility, no excuse, and no innocent-victim stance in response to criticism of A.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn does not acknowledge B's stated context or perspective. It overrides B's explanation with a negative motive attribution.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "There is no softening, apology, care, pause request, or de-escalating move. The turn escalates negativity.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_obvious_03",
+      "plan_case_id": "TC003",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You can't give anyone your full attention. Your phone always matters more.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Shifts from a bounded request to a global judgment of B's capacity and priorities ('can't... anyone', 'always'), framing B's character as the problem.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.93,
+          "evidence": "You can't give anyone your full attention. Your phone always matters more.",
+          "decision_note": "Shifts from a bounded request to a global judgment of B's capacity and priorities ('can't... anyone', 'always'), framing B's character as the problem.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.88,
+          "evidence": "",
+          "decision_note": "A presses the original complaint harder rather than protecting self; there is no denial, excuse, victim stance, or blame reversal, and B never complained about A.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn neither acknowledges nor reflects B's perspective about answering one message; it rejects B's framing.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn escalates negativity, with no softening, apology, care, humor, or restart.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_obvious_04",
+      "plan_case_id": "TC004",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You never keep track of anything. You're just irresponsible.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The turn uses a global generalization ('never... anything') and a character label ('irresponsible') about B, rather than naming the specific missed vet call.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.95,
+          "evidence": "You never keep track of anything. You're just irresponsible.",
+          "decision_note": "The turn uses a global generalization ('never... anything') and a character label ('irresponsible') about B, rather than naming the specific missed vet call.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.6,
+          "evidence": "You never keep track of anything.",
+          "decision_note": "Turn 2 implies A was responsible for calling. A ignores that point and instead redirects blame onto B with a counterattack. This is borderline, since A also raised the original issue.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.97,
+          "evidence": "",
+          "decision_note": "The turn does not acknowledge B's perspective or feelings, including B's belief that A would call. It dismisses B by attacking B.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.97,
+          "evidence": "",
+          "decision_note": "The turn has no apology, softening, expression of care, or constructive redirection. It escalates the conflict.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_01",
+      "plan_case_id": "TC005",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You go through life assuming money will somehow work itself out. You never think ahead.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Turns a single delivery into a global judgment of B's disposition (\"go through life,\" \"never\"), framing B as a careless person rather than complaining about one specific purchase.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.95,
+          "evidence": "You go through life assuming money will somehow work itself out. You never think ahead.",
+          "decision_note": "Turns a single delivery into a global judgment of B's disposition (\"go through life,\" \"never\"), framing B as a careless person rather than complaining about one specific purchase.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "B's prior turn was a neutral explanation, not blame directed at A. A is attacking, not protecting self from a complaint or shifting responsibility.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "A ignores B's charger explanation and does not acknowledge B's perspective or reasoning.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "There is no softening, care, apology, or de-escalating move. The turn escalates the conflict.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_02",
+      "plan_case_id": "TC006",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You always choose being the fun parent because you don't want to be the responsible one.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The turn escalates a specific bedtime complaint into a global pattern (\"You always\") and assigns B a negative motive, which locates the problem in B's character.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.95,
+          "evidence": "You always choose being the fun parent because you don't want to be the responsible one.",
+          "decision_note": "The turn escalates a specific bedtime complaint into a global pattern (\"You always\") and assigns B a negative motive, which locates the problem in B's character.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "There is no denial of A's own responsibility, no excuse, no victim stance, and no deflection of a complaint against A. The turn intensifies A's original complaint rather than protecting A, and that escalation is captured by the criticism label.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn neither acknowledges nor reflects B's stated context about the project or any feeling B has. It overrides B's view by attributing a motive.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn contains no softening, apology, care, pause request, or self-correction. It escalates the conflict.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_03",
+      "plan_case_id": "TC007",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "Commitments only seem to matter to you when they're convenient.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The turn generalizes from one possible cancellation to a negative judgment about B's motives and values. It describes an enduring pattern of selective reliability rather than a bounded complaint, and the hedge \"seem to\" does not change that.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Commitments only seem to matter to you when they're convenient.",
+          "decision_note": "The turn generalizes from one possible cancellation to a negative judgment about B's motives and values. It describes an enduring pattern of selective reliability rather than a bounded complaint, and the hedge \"seem to\" does not change that.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Turn 2 was an informational update, not blame aimed at A. The focal turn starts a complaint rather than deflecting or counterattacking.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn does not acknowledge B's reasons, feelings, or perspective. It only gives A's negative evaluation of B.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn contains no apology, softening, or expression of care, and it escalates the conflict. The responsibility-taking appears in Turn 4 from B, not in the focal turn.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_04",
+      "plan_case_id": "TC008",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You lose your backbone whenever your family asks for something.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Character judgment ('lose your backbone') framed as an enduring pattern ('whenever'), not a bounded complaint about the Monday request.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.95,
+          "evidence": "You lose your backbone whenever your family asks for something.",
+          "decision_note": "Character judgment ('lose your backbone') framed as an enduring pattern ('whenever'), not a bounded complaint about the Monday request.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.93,
+          "evidence": "",
+          "decision_note": "Turn 2 contained no blame toward A, so there was nothing to deflect. The focal turn initiates an attack rather than protecting A.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.96,
+          "evidence": "",
+          "decision_note": "The turn does not acknowledge or reflect B's perspective or feelings. It bypasses B's statement about deferring to A.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.96,
+          "evidence": "",
+          "decision_note": "There is no apology, softening, goodwill, or de-escalation. The turn escalates negativity.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_hn_01",
+      "plan_case_id": "TC009",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The turn names one specific behavior at one time (\"snapped at me after work last night\"), states the speaker's own feeling, and makes a concrete request. There is no global or character-based judgment.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.93,
+          "evidence": "",
+          "decision_note": "The turn names one specific behavior at one time (\"snapped at me after work last night\"), states the speaker's own feeling, and makes a concrete request. There is no global or character-based judgment.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "Turn 2 did not criticize A, so there was nothing to defend against. The turn contains no denial, excuse, counter-complaint, or victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "The turn does not name, reflect, or make sense of B's exhaustion or deadline stress. \"When you need space\" implicitly accepts B's need but is not explicit acknowledgment.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.78,
+          "evidence": "",
+          "decision_note": "This is a gently framed complaint about a past event plus a request about future behavior. There is no active negativity in this exchange to interrupt, and no apology, expression of care, pause request, or self-correction.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_hn_02",
+      "plan_case_id": "TC010",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "An I-statement about feeling lonely tied to a lack of affection; no attribution to B's character, motives, or disposition.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "An I-statement about feeling lonely tied to a lack of affection; no attribution to B's character, motives, or disposition.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.96,
+          "evidence": "",
+          "decision_note": "A is not responding to any complaint against A; there is no denial, excuse, counterattack, or victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.72,
+          "evidence": "",
+          "decision_note": "\"Feels manageable right now\" implicitly accommodates B's tiredness but does not explicitly name, reflect, or affirm B's experience.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "",
+          "decision_note": "The request is softened and collaborative, but there is no rupture or escalation in prior turns for it to repair; it is a gentle start to raising a concern.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_hn_03",
+      "plan_case_id": "TC011",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The turn names a specific behavior, its impact, and the speaker's anger, then makes a concrete request. \"Again\" marks a recurring event but does not judge B's character or motives.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.88,
+          "evidence": "",
+          "decision_note": "The turn names a specific behavior, its impact, and the speaker's anger, then makes a concrete request. \"Again\" marks a recurring event but does not judge B's character or motives.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "There is no denial, excuse, counter-complaint, blame-shifting, or victim stance. A is raising a complaint, not deflecting one.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.93,
+          "evidence": "",
+          "decision_note": "A names only A's own emotion. Nothing reflects or acknowledges B's perspective or B's explanation that they forgot.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "The polite request addresses only the practical task. There is no apology, request to pause, expression of care, or move to restore goodwill.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_obvious_01",
+      "plan_case_id": "TC012",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "Why is this suddenly all on me? You forgot the water bill last month, so you're just as responsible for this.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A responds to B's mild implied blame with an innocent-victim protest and a counter-complaint about a different bill, shifting responsibility instead of engaging with the overdue electric bill.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "",
+          "decision_note": "The blame references one bounded past event (the water bill) and assigns shared responsibility without a global or character-based judgment of B.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Why is this suddenly all on me? You forgot the water bill last month, so you're just as responsible for this.",
+          "decision_note": "A responds to B's mild implied blame with an innocent-victim protest and a counter-complaint about a different bill, shifting responsibility instead of engaging with the overdue electric bill.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "There is no acknowledgment of B's belief that autopay was set up or of any feeling B has.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn has no apology, softening, or goodwill. Raising a separate grievance escalates the exchange rather than de-escalating it.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_obvious_02",
+      "plan_case_id": "TC013",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness",
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "If you weren't so rigid about time, this wouldn't even be a problem.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Responding to B's complaint about the missing message, A shifts blame onto B and minimizes the issue instead of engaging with it.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "If you weren't so rigid about time",
+          "decision_note": "Calling B \"so rigid\" attributes the problem to B's stable disposition rather than to a specific behavior.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.92,
+          "evidence": "If you weren't so rigid about time, this wouldn't even be a problem.",
+          "decision_note": "Responding to B's complaint about the missing message, A shifts blame onto B and minimizes the issue instead of engaging with it.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "Nothing in the turn acknowledges B's experience of waiting. The turn treats B's reaction as the defect.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The focal turn contains no apology, softening, or goodwill. It escalates through blame. The apology in Turn 1 is outside the focal turn.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_obvious_03",
+      "plan_case_id": "TC014",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I only gave him the tablet because you got him worked up. You put me in that position.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A responds to B's reminder of the agreement with a minimizing excuse and shifts responsibility to B. A also takes a forced-hand stance without engaging with the broken agreement.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.72,
+          "evidence": "",
+          "decision_note": "The turn blames B for a single bounded event (getting the child worked up last night). It contains no character, motive, or enduring-pattern judgment and no global framing, so the blame fits defensiveness rather than criticism.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.92,
+          "evidence": "I only gave him the tablet because you got him worked up. You put me in that position.",
+          "decision_note": "A responds to B's reminder of the agreement with a minimizing excuse and shifts responsibility to B. A also takes a forced-hand stance without engaging with the broken agreement.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn does not name, reflect, or acknowledge B's concern or perspective about the agreement.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.94,
+          "evidence": "",
+          "decision_note": "The focal turn offers no apology, responsibility-taking, softening, goodwill, or de-escalating move. Its blame-shifting works against repair.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_obvious_04",
+      "plan_case_id": "TC015",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 3,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness",
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You're blaming me for canceling, but you're the one who never checks the forecast",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "B recasts A's request for joint decision-making as blame. B then pivots with 'but' into a counter-complaint that shifts responsibility onto A, without engaging the concern.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "you're the one who never checks the forecast",
+          "decision_note": "The global 'never' plus 'you're the one' frames A as the source of the problem through an enduring pattern rather than a bounded complaint. It is pattern-based rather than a trait insult, so it is a moderate case.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.93,
+          "evidence": "You're blaming me for canceling, but you're the one who never checks the forecast",
+          "decision_note": "B recasts A's request for joint decision-making as blame. B then pivots with 'but' into a counter-complaint that shifts responsibility onto A, without engaging the concern.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.92,
+          "evidence": "",
+          "decision_note": "'You're blaming me' misstates A's perspective and serves only as a setup for counter-blame. It does not acknowledge A's wish to be included or the impact on A.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn has no apology, softening, expression of care, or de-escalating move. It escalates through counter-blame.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_subtle_01",
+      "plan_case_id": "TC016",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 3,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I guess I'm not allowed to unwind for five minutes without it becoming a whole thing.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "B takes a sarcastic innocent-victim stance and minimizes the behavior as \"five minutes.\" B recasts A's complaint as overreaction and never engages with A feeling ignored while sharing something important.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.35,
+          "evidence": "",
+          "decision_note": "The phrase \"becoming a whole thing\" only implicitly suggests A overreacts. It is impersonal and names no trait, motive, or disposition of A. Its main function is deflection, not a character judgment.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.92,
+          "evidence": "I guess I'm not allowed to unwind for five minutes without it becoming a whole thing.",
+          "decision_note": "B takes a sarcastic innocent-victim stance and minimizes the behavior as \"five minutes.\" B recasts A's complaint as overreaction and never engages with A feeling ignored while sharing something important.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "Nothing acknowledges A's feeling of being ignored or the importance of what A was saying. Calling it \"a whole thing\" dismisses A's reaction.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn contains no apology, responsibility-taking, softening, care, or bid to reset. Its sarcastic tone escalates the conflict rather than de-escalating it.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_subtle_02",
+      "plan_case_id": "TC017",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "So now I'm the bad guy because I wasn't cheerful after twelve hours at work? Nobody even asks what I need.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "B made a specific behavioral complaint. A answers with an innocent-victim stance (\"now I'm the bad guy\"), reframes the complaint as a demand for cheerfulness, and uses the workday as an excuse without acknowledging impact. A then shifts to a counter-complaint.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.62,
+          "evidence": "",
+          "decision_note": "\"Nobody even asks what I need\" is a generalized grievance that implicitly includes B, but it names no trait, motive, or character flaw in B. It reads mainly as an unmet need voiced as a counter-complaint, so it falls short of criticism (borderline).",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.92,
+          "evidence": "So now I'm the bad guy because I wasn't cheerful after twelve hours at work? Nobody even asks what I need.",
+          "decision_note": "B made a specific behavioral complaint. A answers with an innocent-victim stance (\"now I'm the bad guy\"), reframes the complaint as a demand for cheerfulness, and uses the workday as an excuse without acknowledging impact. A then shifts to a counter-complaint.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.93,
+          "evidence": "",
+          "decision_note": "The turn is entirely self-focused. It never acknowledges how A's curtness landed for B.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.93,
+          "evidence": "",
+          "decision_note": "There is no apology, responsibility-taking, softening, or expression of care. The sarcastic rhetorical question escalates rather than de-escalates.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_subtle_03",
+      "plan_case_id": "TC018",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "Somehow I get blamed whether I defend you or keep the peace. I can't win with you.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A recasts B's mild unmet wish as unfair blame and takes an innocent-victim stance. A then counter-complains about B instead of engaging with the impact of not speaking up.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.65,
+          "evidence": "I can't win with you.",
+          "decision_note": "This is a global statement about B's enduring pattern of being impossible to satisfy. It places the problem in B rather than in a specific behavior, though it is not an explicit character insult.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.88,
+          "evidence": "Somehow I get blamed whether I defend you or keep the peace. I can't win with you.",
+          "decision_note": "A recasts B's mild unmet wish as unfair blame and takes an innocent-victim stance. A then counter-complains about B instead of engaging with the impact of not speaking up.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.93,
+          "evidence": "",
+          "decision_note": "The turn does not acknowledge or reflect B's wish or feelings. It focuses only on A's own sense of being blamed.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.92,
+          "evidence": "",
+          "decision_note": "The turn contains no apology, softening, expression of care, or constructive redirect. It escalates rather than de-escalates.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_subtle_04",
+      "plan_case_id": "TC019",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "So the lunches, repairs, and groceries I handle just don't count now?",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A answers a bounded request about school forms by pointing to other tasks and implying unfair dismissal. This deflects the concern with an innocent-victim stance rather than engaging with it.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "The turn implies B is discounting A's work but makes no character, motive, or global judgment about B.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.88,
+          "evidence": "So the lunches, repairs, and groceries I handle just don't count now?",
+          "decision_note": "A answers a bounded request about school forms by pointing to other tasks and implying unfair dismissal. This deflects the concern with an innocent-victim stance rather than engaging with it.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.92,
+          "evidence": "",
+          "decision_note": "Nothing acknowledges B's frustration about having to remind A or B's view of the workload.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.92,
+          "evidence": "",
+          "decision_note": "There is no apology, ownership, softening, or goodwill; the rhetorical question is more likely to escalate than de-escalate.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_hn_01",
+      "plan_case_id": "TC020",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A does not deny, excuse, counter-complain, or take a victim stance in response to B's complaint. A drops the Saturday claim and ties action to checking the facts rather than evading responsibility.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.96,
+          "evidence": "",
+          "decision_note": "There is no negative evaluation of B. The only possible fault named is A's own possible mistake about the day.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "A does not deny, excuse, counter-complain, or take a victim stance in response to B's complaint. A drops the Saturday claim and ties action to checking the facts rather than evading responsibility.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.88,
+          "evidence": "",
+          "decision_note": "Admitting that B's version of the facts may be right is factual openness. A does not reflect B's frustration, perspective, or the impact of the uncleaned bathroom.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.55,
+          "evidence": "I may have the day wrong. Let's check the calendar, and if we agreed on Friday, I'll clean it tonight.",
+          "decision_note": "Borderline. Faced with B's blame, A softens their own position, offers a collaborative 'Let's,' and commits to making amends. This goes slightly beyond a purely practical solution by taking provisional responsibility and steering the exchange away from a standoff, although the conflict is mild and there is no apology.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_hn_02",
+      "plan_case_id": "TC021",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The denial of intent is paired with acknowledgment of impact and ownership of behavior, so it is context plus accountability rather than deflection.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.97,
+          "evidence": "",
+          "decision_note": "No negative evaluation of B's character or motives; the only negative evaluation is self-directed.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "The denial of intent is paired with acknowledgment of impact and ownership of behavior, so it is context plus accountability rather than deflection.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.93,
+          "evidence": "I can understand why it felt that way",
+          "decision_note": "Explicitly conveys that B's feeling of rejection makes sense, without dismissing it, while A keeps a different account of intent.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.92,
+          "evidence": "I should have told you I needed a minute.",
+          "decision_note": "Takes unconditional responsibility for the behavior behind the rupture and reassures B, functioning to restore connection.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_hn_03",
+      "plan_case_id": "TC022",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The factual correction about today comes with explicit ownership of Tuesday, with no excuse, counterattack, or blame-shifting. This fits the exclusion for context paired with responsibility.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The request to keep the situations separate is a bounded framing request with no global or character judgment of B.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "The factual correction about today comes with explicit ownership of Tuesday, with no excuse, counterattack, or blame-shifting. This fits the exclusion for context paired with responsibility.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "A concedes A's own fault but does not name, reflect, or make sense of B's feelings or perspective.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.55,
+          "evidence": "Tuesday I didn't text, and that was on me.",
+          "decision_note": "A volunteers responsibility for the valid part of B's complaint, reciprocating B's concession and easing the mild rupture. Confidence is limited because there is no apology, care, or tone shift, and the turn's main aim is accurate framing.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_01",
+      "plan_case_id": "TC023",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I can understand why that felt like I wasn't interested in you, especially when you were telling me something personal.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A says B's reaction is understandable, accurately reflects B's feeling of being unimportant, and recognizes the personal context. Nothing in the turn dismisses this.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.97,
+          "evidence": "",
+          "decision_note": "The turn contains no negative evaluation of B. Its only negative content describes how A's own behavior came across.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.93,
+          "evidence": "",
+          "decision_note": "The turn has no denial, excuse, minimizing, or counter-complaint. A engages with B's hurt instead of defending the phone use.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.95,
+          "evidence": "I can understand why that felt like I wasn't interested in you, especially when you were telling me something personal.",
+          "decision_note": "A says B's reaction is understandable, accurately reflects B's feeling of being unimportant, and recognizes the personal context. Nothing in the turn dismisses this.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.68,
+          "evidence": "",
+          "decision_note": "The turn is validation alone. It has no apology, ownership, expression of care, or explicit de-escalation move, so the 'validation alone' exclusion applies. This is a borderline call.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_02",
+      "plan_case_id": "TC024",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "It makes sense that you're depleted. You've carried the bedtime routine alone all week.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Reflects B's exhaustion and explicitly states it is understandable given its cause, without a dismissive 'but'.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.97,
+          "evidence": "",
+          "decision_note": "No negative evaluation of B; the turn sympathetically describes B's effort.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "No denial, excuse, counter-complaint, or victim stance; A concedes B's account rather than citing work hours.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.95,
+          "evidence": "It makes sense that you're depleted. You've carried the bedtime routine alone all week.",
+          "decision_note": "Reflects B's exhaustion and explicitly states it is understandable given its cause, without a dismissive 'but'.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "",
+          "decision_note": "No apology, ownership, care statement, or restart; the de-escalating effect rests on validation alone, which is excluded without a distinct repair function.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_03",
+      "plan_case_id": "TC025",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "Of course you're anxious. You planned around Friday, and now two days of work got dumped into one night.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Names B's emotion as understandable and accurately reflects the cause and impact B described, without dismissal.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.97,
+          "evidence": "",
+          "decision_note": "No negative judgment of Speaker B; the only problem named is situational (work dumped into one night).",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.97,
+          "evidence": "",
+          "decision_note": "No prior blame or complaint toward A exists, and the turn contains no excuse, denial, or counterattack.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.95,
+          "evidence": "Of course you're anxious. You planned around Friday, and now two days of work got dumped into one night.",
+          "decision_note": "Names B's emotion as understandable and accurately reflects the cause and impact B described, without dismissal.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.92,
+          "evidence": "",
+          "decision_note": "Supportive validation alone with no rupture or conflict between A and B to de-escalate or repair.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_04",
+      "plan_case_id": "TC026",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I can see why you experienced it as rejection",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A accurately reflects B's stated feeling of rejection and says it makes sense, tying it to the triggering behavior without any dismissive 'but.'",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.96,
+          "evidence": "",
+          "decision_note": "The only negative content concerns A's own behavior. Nothing evaluates B's character, motives, or patterns.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.92,
+          "evidence": "",
+          "decision_note": "There is no denial, excuse, counter-complaint, or victim stance. The tiredness explanation from Turn 1 is not repeated or used to dismiss B's hurt.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.95,
+          "evidence": "I can see why you experienced it as rejection",
+          "decision_note": "A accurately reflects B's stated feeling of rejection and says it makes sense, tying it to the triggering behavior without any dismissive 'but.'",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.6,
+          "evidence": "when I turned away without explaining what was happening",
+          "decision_note": "Beyond validating, A owns the specific lapse (not explaining) rather than repeating the exhaustion excuse. This implicit responsibility-taking softens the rupture, though the lack of an explicit apology or care statement keeps confidence moderate.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_01",
+      "plan_case_id": "TC027",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You walk in already exhausted, and seeing the sink full feels like one more demand waiting for you.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The turn accurately reflects B's emotional experience, paraphrasing 'one more thing waiting for me', and nothing undercuts it.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn describes B's state after work. It contains no negative judgment of B's character, motives, or patterns.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "There is no denial, excuse, minimization, or counter-complaint. A centers B's experience rather than protecting self.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.93,
+          "evidence": "You walk in already exhausted, and seeing the sink full feels like one more demand waiting for you.",
+          "decision_note": "The turn accurately reflects B's emotional experience, paraphrasing 'one more thing waiting for me', and nothing undercuts it.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "This is validation alone, with no apology, care statement, or de-escalation move, in a low-tension exchange with little rupture to repair.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_02",
+      "plan_case_id": "TC028",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "That number lands differently for you after the months when money really was tight.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A reflects B's subjective reaction and grounds it in real past hardship. This conveys that the reaction makes sense, with no dismissing follow-up.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.97,
+          "evidence": "",
+          "decision_note": "The turn contains no negative judgment of B. Its only evaluative content concerns a past financial situation, not B's character.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.96,
+          "evidence": "",
+          "decision_note": "B's prior turn was self-disclosure, not blame. A does not deny, excuse, counterattack, or protect self.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.93,
+          "evidence": "That number lands differently for you after the months when money really was tight.",
+          "decision_note": "A reflects B's subjective reaction and grounds it in real past hardship. This conveys that the reaction makes sense, with no dismissing follow-up.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "There is no rupture or escalation to interrupt. The turn functions as validation alone, which the criteria exclude from repair.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_03",
+      "plan_case_id": "TC029",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You had already spent the week counting on that downtime, and I changed what you thought you were coming home to.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A accurately reflects B's expectation and its context, and names the impact A's change had on B.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The turn does not negatively evaluate B. It describes B's expectation and A's own action.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.92,
+          "evidence": "",
+          "decision_note": "There is no excuse, minimization, or counter-complaint. A owns the change instead of defending the earlier plan.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.92,
+          "evidence": "You had already spent the week counting on that downtime, and I changed what you thought you were coming home to.",
+          "decision_note": "A accurately reflects B's expectation and its context, and names the impact A's change had on B.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.6,
+          "evidence": "",
+          "decision_note": "The ownership clause works within the reflection. There is no apology, expression of care, or reconnecting move beyond validation.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_04",
+      "plan_case_id": "TC030",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "Those last few dinners have given you plenty of reason to walk in braced for another comment.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A reflects B's tension ('braced') and states that the reaction makes sense given past dinners, without contradicting it.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "No negative judgment of B; the implied negativity concerns the sister's past comments, a third party.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "B voiced no complaint against A, and A neither excuses the sister nor deflects blame.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.92,
+          "evidence": "Those last few dinners have given you plenty of reason to walk in braced for another comment.",
+          "decision_note": "A reflects B's tension ('braced') and states that the reaction makes sense given past dinners, without contradicting it.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "There is no A–B rupture or escalation to interrupt. This is empathic support about third-party tension, and validation alone does not qualify as repair.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_hn_01",
+      "plan_case_id": "TC031",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The turn moves straight to a practical fix without naming, reflecting, or acknowledging B's stated worry.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.97,
+          "evidence": "",
+          "decision_note": "The only implied shortcoming is the speaker's own lack of preparedness. Nothing in the turn negatively evaluates Speaker B.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "The turn does not deny, minimize, counter-complain, or shift blame. It implicitly accepts responsibility for preventing a repeat.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.92,
+          "evidence": "",
+          "decision_note": "The turn moves straight to a practical fix without naming, reflecting, or acknowledging B's stated worry.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.68,
+          "evidence": "",
+          "decision_note": "There is a mild hint of accountability, but the turn mainly proposes a logistical solution. It does not address B's worry or the relational rupture, so it fits the practical-solution exclusion.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_hn_02",
+      "plan_case_id": "TC032",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "\"Don't worry\" and \"It'll all work out\" are reassurance and prediction. Neither names, reflects, or normalizes B's feeling of being buried, so the reassurance exclusion applies.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.97,
+          "evidence": "",
+          "decision_note": "The turn makes no negative evaluation of B's character, motives, or patterns. It is plain reassurance.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.96,
+          "evidence": "",
+          "decision_note": "B's prior turn expressed distress, not blame toward A. The focal turn contains no denial, excuse, counterattack, or victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.88,
+          "evidence": "",
+          "decision_note": "\"Don't worry\" and \"It'll all work out\" are reassurance and prediction. Neither names, reflects, or normalizes B's feeling of being buried, so the reassurance exclusion applies.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "No conflict or rupture between A and B exists before this turn. The turn is generic supportive positivity, not a conflict-regulation move.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_hn_03",
+      "plan_case_id": "TC033",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "\"I hear you\" is formulaic listening language that is immediately undercut by \"but\" and a dismissal. This matches the exclusion, and B's hurt is never reflected.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "Judging B's reaction as overblown is dismissive but bounded to this incident; there is no attribution to B's character, motives, or an enduring pattern.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.88,
+          "evidence": "you're making this into a much bigger deal than it was",
+          "decision_note": "A responds to B's stated hurt by minimizing it and recasting the issue as B's overreaction, deflecting responsibility rather than engaging with the concern.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.92,
+          "evidence": "",
+          "decision_note": "\"I hear you\" is formulaic listening language that is immediately undercut by \"but\" and a dismissal. This matches the exclusion, and B's hurt is never reflected.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "The turn has no apology, acknowledgment of impact, softening, or expression of care. The listening phrase only sets up a dismissal.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_01",
+      "plan_case_id": "TC034",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "That came out as an attack. I'm sorry. Let me start again: I was exhausted, and I should have texted you about the kitchen.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A corrects their own escalating statement, gives an unconditional apology, asks to restart, and takes responsibility. These are clear de-escalation moves.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The only negative evaluation, \"That came out as an attack,\" targets A's own earlier remark. Nothing in the turn judges B's character or patterns.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.88,
+          "evidence": "",
+          "decision_note": "\"I was exhausted\" is context paired directly with ownership (\"I should have texted you\"). A does not deny, counter-complain, or shift blame.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "",
+          "decision_note": "A concedes the substance of B's complaint and owns the hostile tone. However, A never explicitly names or reflects B's feelings or perspective, so this is accountability rather than validation.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.97,
+          "evidence": "That came out as an attack. I'm sorry. Let me start again: I was exhausted, and I should have texted you about the kitchen.",
+          "decision_note": "A corrects their own escalating statement, gives an unconditional apology, asks to restart, and takes responsibility. These are clear de-escalation moves.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_02",
+      "plan_case_id": "TC035",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "We're both getting sharp. Can we restart and talk about tonight without attacking each other?",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "An explicit restart request names the escalation as mutual, proposes a calmer norm, and redirects to a bounded topic. This is sufficient on its own, regardless of B's acceptance.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "\"We're both getting sharp\" describes the shared tone of the exchange, not B's character or an enduring pattern. The global framing from Turn 1 is absent.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "A does not deny B's charge of attacking, make excuses, or counterattack. \"Both\" includes A's own part rather than shifting blame onto B.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "\"Attacking each other\" picks up B's word as a ground rule. It does not explicitly name or reflect B's feeling of being attacked, or affirm that the reaction makes sense.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.97,
+          "evidence": "We're both getting sharp. Can we restart and talk about tonight without attacking each other?",
+          "decision_note": "An explicit restart request names the escalation as mutual, proposes a calmer norm, and redirects to a bounded topic. This is sufficient on its own, regardless of B's acceptance.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_03",
+      "plan_case_id": "TC036",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I'm sorry. Telling you what you feel wasn't fair. Let me try again and tell you what I'm scared of without blaming you.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "An unconditional apology and acceptance of responsibility for the rupture, followed by an explicit request to restart in a softer, non-blaming frame.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.96,
+          "evidence": "",
+          "decision_note": "The only negative evaluation is self-directed, about A's own behavior. There is no character judgment or blame aimed at B.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.96,
+          "evidence": "",
+          "decision_note": "A accepts B's complaint with an unconditional apology. There are no excuses, no counter-complaint, and no victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.68,
+          "evidence": "",
+          "decision_note": "Conceding that the behavior 'wasn't fair' agrees with B's complaint, but it does not explicitly name, reflect, or make sense of B's emotion or experience. It is primarily an apology.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.95,
+          "evidence": "I'm sorry. Telling you what you feel wasn't fair. Let me try again and tell you what I'm scared of without blaming you.",
+          "decision_note": "An unconditional apology and acceptance of responsibility for the rupture, followed by an explicit request to restart in a softer, non-blaming frame.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_04",
+      "plan_case_id": "TC037",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "This is turning into us against each other. I love you, and I want us on the same team while we figure out the visit.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A names the escalating rupture, expresses care, and asserts shared purpose while returning to the substantive issue. This is a clear de-escalating repair.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "No negative judgment of B's character or motives; the problem is framed as a shared dynamic ('us').",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "A does not deny, excuse, or counterattack B's charge. A steps out of the cycle and stays on the underlying issue.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "The turn does not name or reflect B's feelings or perspective. Affection and describing the dynamic are not recognition of B's experience.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.95,
+          "evidence": "This is turning into us against each other. I love you, and I want us on the same team while we figure out the visit.",
+          "decision_note": "A names the escalating rupture, expresses care, and asserts shared purpose while returning to the substantive issue. This is a clear de-escalating repair.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_01",
+      "plan_case_id": "TC038",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I'm arguing about permission instead of what we agreed to. What about the purchase worried you most?",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A corrects their own escalating framing, shifting from autonomy to the shared agreement. They then ask an open question that redirects toward constructive engagement with B's concern.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The only evaluative statement is self-directed, and nothing in the turn judges B's character, motives, or patterns.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "The turn contains no excuse, counter-complaint, or victim stance. A drops the earlier permission framing and engages with B's concern.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.6,
+          "evidence": "",
+          "decision_note": "The turn implicitly acknowledges B's perspective by reframing toward the shared agreement. However, it never explicitly says B's reaction makes sense, and 'worried' is presumed rather than reflected from anything B said.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.88,
+          "evidence": "I'm arguing about permission instead of what we agreed to. What about the purchase worried you most?",
+          "decision_note": "A corrects their own escalating framing, shifting from autonomy to the shared agreement. They then ask an open question that redirects toward constructive engagement with B's concern.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_02",
+      "plan_case_id": "TC039",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I don't want ten minutes to turn into a verdict on either of us. Tell me what waiting on me messed up for you.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A de-escalates the character judgment without retaliating, uses shared framing, implicitly owns the cause, and redirects toward the concrete impact on B. This addresses the rupture itself, judged on the focal turn's shape rather than B's reply.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.93,
+          "evidence": "",
+          "decision_note": "No negative judgment of B's character, motives, or patterns; 'either of us' frames the concern as shared rather than blaming B.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "",
+          "decision_note": "Repeating 'ten minutes' pushes back on B's global verdict, but A offers no excuse, denial, or counter-complaint. 'Waiting on me' locates the cause with A, and the turn engages B's concern directly.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.78,
+          "evidence": "",
+          "decision_note": "A invites B to describe the impact but does not name, reflect, or affirm B's emotion or perspective as understandable. Asking for the experience is not acknowledging it.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.85,
+          "evidence": "I don't want ten minutes to turn into a verdict on either of us. Tell me what waiting on me messed up for you.",
+          "decision_note": "A de-escalates the character judgment without retaliating, uses shared framing, implicitly owns the cause, and redirects toward the concrete impact on B. This addresses the rupture itself, judged on the focal turn's shape rather than B's reply.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_03",
+      "plan_case_id": "TC040",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You're not my enemy. I need ten quiet minutes, and then I want to come back and hear what you were trying to tell me.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "A expresses goodwill and makes an explicit pause request with a commitment to re-engage, a move shaped to de-escalate and restore constructive engagement. This rests on the focal turn itself, not on B's acceptance.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "The focal turn contains no negative character judgment of B; 'You're not my enemy' explicitly rejects an adversarial framing.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "A does not deny, excuse, counter-complain, or claim victimhood in response to the snapping complaint. The pause request is paired with a commitment to return, so it is not evasion.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "",
+          "decision_note": "Borderline. The turn shows willingness to listen later and offers reassurance, but it does not name or reflect B's feelings or the impact of being snapped at.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.92,
+          "evidence": "You're not my enemy. I need ten quiet minutes, and then I want to come back and hear what you were trying to tell me.",
+          "decision_note": "A expresses goodwill and makes an explicit pause request with a commitment to re-engage, a move shaped to de-escalate and restore constructive engagement. This rests on the focal turn itself, not on B's acceptance.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_04",
+      "plan_case_id": "TC041",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I don't want this to become another round of who carries more. What did you need from me tonight?",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Explicitly interrupts the escalating tit-for-tat and redirects toward B's needs on the same issue, functioning to de-escalate and restore constructive engagement.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "\"Another round of who carries more\" targets a shared recurring dynamic, not B's character or motives; no global blame of B.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.88,
+          "evidence": "",
+          "decision_note": "A does not rebut, excuse, or counterattack B's Turn 2 complaint; instead asks directly about B's need, engaging the concern.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "The question invites B's perspective but does not name, reflect, or affirm B's emotion or viewpoint; an open question alone is insufficient.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I don't want this to become another round of who carries more. What did you need from me tonight?",
+          "decision_note": "Explicitly interrupts the escalating tit-for-tat and redirects toward B's needs on the same issue, functioning to de-escalate and restore constructive engagement.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_hn_01",
+      "plan_case_id": "TC042",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "'Let's just forget it' with 'Fine, whatever' signals withdrawal and giving up rather than softening or a constructive restart. This fits the exclusion for ending the conversation to escape discomfort.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.93,
+          "evidence": "",
+          "decision_note": "The turn makes no negative judgment of B's character, motives, or patterns. It only drops the complaint.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "A is the complainant abandoning the issue, not deflecting blame. There is no denial, excuse, counterattack, or victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.95,
+          "evidence": "",
+          "decision_note": "Nothing acknowledges or reflects B's perspective or feelings. 'Fine' is resigned concession, not recognition.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.87,
+          "evidence": "",
+          "decision_note": "'Let's just forget it' with 'Fine, whatever' signals withdrawal and giving up rather than softening or a constructive restart. This fits the exclusion for ending the conversation to escape discomfort.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_hn_02",
+      "plan_case_id": "TC043",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Apology targets B's feeling rather than A's behavior and is paired with blame-shifting, so it is an excluded non-apology rather than a repair.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "Blames B for one specific incident without global, trait-based, or motive-based judgment of B's character.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.92,
+          "evidence": "but you made me step in",
+          "decision_note": "Responds to B's complaint about being undermined by shifting responsibility for A's action onto B, without owning the impact.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.85,
+          "evidence": "",
+          "decision_note": "Naming B's feeling is immediately undercut by the blaming 'but' clause, fitting the exclusion for contradicted listening language.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Apology targets B's feeling rather than A's behavior and is paired with blame-shifting, so it is an excluded non-apology rather than a repair.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_hn_03",
+      "plan_case_id": "TC044",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The turn addresses only the practical scheduling decision. It has no apology, softening, care, or reference to the tense interaction, so it fits the practical-solution exclusion. Turn 4 is only secondary context.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.96,
+          "evidence": "",
+          "decision_note": "The turn contains no negative evaluation of B's character, motives, or patterns. It only states a planned action.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.88,
+          "evidence": "",
+          "decision_note": "Although Turn 2 accuses A, the focal turn contains no denial, excuse, counter-complaint, or victim stance in response.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.93,
+          "evidence": "",
+          "decision_note": "B's frustration or perspective is not named, reflected, or acknowledged. A practical action alone does not meet the criteria.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.75,
+          "evidence": "",
+          "decision_note": "The turn addresses only the practical scheduling decision. It has no apology, softening, care, or reference to the tense interaction, so it fits the practical-solution exclusion. Turn 4 is only secondary context.",
+          "evidence_is_exact": true
+        }
+      }
+    }
+  ],
+  "error_analysis": []
+}

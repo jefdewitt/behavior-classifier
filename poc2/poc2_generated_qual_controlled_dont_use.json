@@ -1,6 +1,6 @@
 {
   "dataset_name": "poc2_generated",
-  "dataset_version": "1.1.0",
+  "dataset_version": "1.2.1",
   "ontology_reference": "ontology(1).json",
   "generation_plan_reference": "generation_plan.json",
   "unit_of_classification": "speaker turn with preceding dialogue context",
@@ -477,11 +477,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "I waited forty minutes without hearing from you."
+          "text": "Sorry, my meeting ran over."
         },
         {
           "speaker": "B",
-          "text": "My meeting ran over."
+          "text": "I waited forty minutes without hearing from you."
         },
         {
           "speaker": "A",
@@ -516,11 +516,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "We agreed not to give him the tablet after bedtime."
+          "text": "He wouldn't settle down last night."
         },
         {
           "speaker": "B",
-          "text": "He wouldn't settle down."
+          "text": "We agreed not to give him the tablet after bedtime."
         },
         {
           "speaker": "A",
@@ -631,11 +631,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "You were really short with me when you got home."
+          "text": "Today was brutal."
         },
         {
           "speaker": "B",
-          "text": "Today was brutal."
+          "text": "You were really short with me when you got home."
         },
         {
           "speaker": "A",
@@ -669,11 +669,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "I wish you'd spoken up when your dad criticized me."
+          "text": "I didn't know what to say when my dad criticized you."
         },
         {
           "speaker": "B",
-          "text": "I didn't know what to say in the moment."
+          "text": "I wish you'd spoken up."
         },
         {
           "speaker": "A",
@@ -707,11 +707,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "I need you to track the school forms without me reminding you."
+          "text": "I submitted the last school form."
         },
         {
           "speaker": "B",
-          "text": "I submitted the last one."
+          "text": "I need you to track the school forms without me reminding you."
         },
         {
           "speaker": "A",
@@ -745,11 +745,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "You didn't clean the bathroom like we agreed."
+          "text": "I thought we said Saturday for the bathroom."
         },
         {
           "speaker": "B",
-          "text": "I thought we had said Saturday, not Friday."
+          "text": "You didn't clean it like we agreed. We said Friday."
         },
         {
           "speaker": "A",
@@ -781,11 +781,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "You pulled away when I tried to hug you."
+          "text": "I was overwhelmed earlier."
         },
         {
           "speaker": "B",
-          "text": "I was overwhelmed in that moment."
+          "text": "You pulled away when I tried to hug you."
         },
         {
           "speaker": "A",
@@ -1159,15 +1159,15 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "I was worried when you were late and didn't text."
+          "text": "Sorry, my phone died on the train."
         },
         {
           "speaker": "B",
-          "text": "My phone died on the train."
+          "text": "I was worried when you were late and didn't text."
         },
         {
           "speaker": "A",
-          "text": "You should keep a charger in your bag so this doesn't happen again."
+          "text": "I should keep a charger in my bag so this doesn't happen again."
         },
         {
           "speaker": "B",
@@ -1195,11 +1195,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "I feel buried under all the appointments and forms."
+          "text": "There are a lot of appointments and forms this month."
         },
         {
           "speaker": "B",
-          "text": "There are a lot this month."
+          "text": "I feel buried under all of them."
         },
         {
           "speaker": "A",
@@ -1231,11 +1231,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "It hurt when you answered messages through our whole dinner."
+          "text": "I was dealing with a work issue at dinner."
         },
         {
           "speaker": "B",
-          "text": "I was dealing with a work issue."
+          "text": "It hurt when you answered messages through our whole dinner."
         },
         {
           "speaker": "A",
@@ -1267,11 +1267,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "You left the kitchen for me again."
+          "text": "Stop acting like I do nothing around here."
         },
         {
           "speaker": "B",
-          "text": "I worked late. Stop acting like I do nothing."
+          "text": "I only said the kitchen was left for me again."
         },
         {
           "speaker": "A",
@@ -1419,11 +1419,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "You bought it without telling me."
+          "text": "I don't see why I needed permission to spend my own money."
         },
         {
           "speaker": "B",
-          "text": "It was my money, so I didn't think I needed permission."
+          "text": "You bought it without telling me."
         },
         {
           "speaker": "A",
@@ -1457,11 +1457,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "You clearly don't respect my time."
+          "text": "Sorry, I was only ten minutes late."
         },
         {
           "speaker": "B",
-          "text": "I was ten minutes late. This is ridiculous."
+          "text": "You clearly don't respect my time."
         },
         {
           "speaker": "A",
@@ -1495,11 +1495,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "You've been snapping at me all evening."
+          "text": "Work is a disaster and you keep asking questions."
         },
         {
           "speaker": "B",
-          "text": "Because work is a disaster and you keep asking questions."
+          "text": "You've been snapping at me all evening."
         },
         {
           "speaker": "A",
@@ -1607,11 +1607,11 @@
       "dialogue": [
         {
           "speaker": "A",
-          "text": "You undermined me in front of the kids."
+          "text": "You were being too strict with the kids."
         },
         {
           "speaker": "B",
-          "text": "You were being too strict."
+          "text": "You undermined me in front of them."
         },
         {
           "speaker": "A",
@@ -1671,5 +1671,5 @@
     }
   ],
   "ontology_version": "1.0.0",
-  "generation_note": "Phase 4 QC revision: preserved 44-case matrix; regenerated def_obvious_04 and def_subtle_01; repaired speaker-role coherence for all eight validation positives; recalibrated several subtle positives to reduce prototype wording; criticism samples and hard-negative boundaries otherwise preserved."
+  "generation_note": "Phase 4 QC revision: preserved 44-case matrix; regenerated def_obvious_04 and def_subtle_01; repaired speaker-role coherence for all eight validation positives; recalibrated several subtle positives to reduce prototype wording; criticism samples and hard-negative boundaries otherwise preserved. Experiment A error review (v1.2.0): repaired speaker-role coherence in 14 samples (def_obvious_02/03, def_subtle_02/03/04, def_hn_01/02, rep_obvious_01, rep_subtle_01/02/03, rep_hn_02, val_hn_01/03) by rewriting turns 1-2 so the focal speaker is the accused/responding partner; focal turns and labels unchanged except val_hn_01 focal wording (You -> I should keep a charger). Experiment A error review (v1.2.1): repaired speaker-role coherence in val_hn_02 by rewriting turns 1-2 so the focal speaker (A) is the reassuring partner; focal turn and labels unchanged."
 }

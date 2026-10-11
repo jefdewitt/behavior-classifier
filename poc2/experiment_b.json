@@ -1,0 +1,2082 @@
+{
+  "experiment": "B",
+  "experiment_name": "multi_agent_cot_theory_grounded",
+  "prompt_version": "poc2-multi-agent-cot-theory-grounded-v1",
+  "model": "llama3.2",
+  "model_options": {
+    "temperature": 0,
+    "seed": 42
+  },
+  "input_file": "poc2_gold.json",
+  "input_sha256": "f34049a1ae5ddd6e75ad2e87c42880566841a70719a70c3f44d85bc71d20d5f8",
+  "input_sample_count": 44,
+  "evaluated_sample_count": 44,
+  "input_mode": "full_dialogue_with_focal_turn_marked",
+  "scoring_unit": "target_label_on_focal_turn",
+  "ontology_provided_to_classifier": true,
+  "ontology_content": "definitions_and_criteria",
+  "ontology_version": "1.0.0",
+  "ontology_sha256": "b3131b6114e969797e47680791d57e736fd39879eda5313ec6b52031e5ca5eea",
+  "created_at_utc": "2026-10-07T03:03:48.354744+00:00",
+  "metrics": {
+    "by_target_label": {
+      "criticism": {
+        "n": 11,
+        "tp": 8,
+        "fp": 1,
+        "tn": 2,
+        "fn": 0,
+        "precision": 0.8888888888888888,
+        "recall": 1.0,
+        "f1": 0.9411764705882353
+      },
+      "defensiveness": {
+        "n": 11,
+        "tp": 8,
+        "fp": 0,
+        "tn": 3,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "validation": {
+        "n": 11,
+        "tp": 7,
+        "fp": 1,
+        "tn": 2,
+        "fn": 1,
+        "precision": 0.875,
+        "recall": 0.875,
+        "f1": 0.875
+      },
+      "repair_attempt": {
+        "n": 11,
+        "tp": 7,
+        "fp": 1,
+        "tn": 2,
+        "fn": 1,
+        "precision": 0.875,
+        "recall": 0.875,
+        "f1": 0.875
+      }
+    },
+    "macro_f1": 0.9227941176470589
+  },
+  "predictions": [
+    {
+      "id": "cri_obvious_01",
+      "plan_case_id": "TC001",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You never do anything unless I remind you. You're lazy about this stuff.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Attributes a problem to the other person's character, uses a global judgment, and frames the other person as fundamentally defective.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You never do anything unless I remind you. You're lazy about this stuff.",
+          "decision_note": "Attributes a problem to the other person's character, uses a global judgment, and frames the other person as fundamentally defective.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You never do anything unless I remind you. You're lazy about this stuff.",
+          "decision_note": "Denies responsibility, offers an excuse, and responds to a complaint with a counter-complaint.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No acknowledgment of Speaker B's emotion, perspective, or reaction; no attempt to understand the impact of the event.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No attempt to take responsibility, apologize, or soften the tone; no explicit request to pause or restart the conversation.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_obvious_02",
+      "plan_case_id": "TC002",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You're always late because your time matters more to you than mine.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Yes, attributes a problem to the other person's character, uses a global judgment, and frames the other person as fundamentally defective.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You're always late because your time matters more to you than mine.",
+          "decision_note": "Yes, attributes a problem to the other person's character, uses a global judgment, and frames the other person as fundamentally defective.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You're always late because your time matters more to you than mine.",
+          "decision_note": "Yes, denies responsibility, offers an excuse to dismiss accountability, and responds to a complaint with a counter-complaint.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I should have texted, but that's not fair.",
+          "decision_note": "Yes, communicates that the reaction makes sense given the person's experience, acknowledges the other person's experience, and shows understanding of the impact an event had on the person.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "You're always late because your time matters more to you than mine.",
+          "decision_note": "No, does not take responsibility, apologize, or explicitly ask to pause or restart the conversation; instead, uses a global judgment to criticize the other person.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_obvious_03",
+      "plan_case_id": "TC003",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You can't give anyone your full attention. Your phone always matters more.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Attributes a problem to the other person's character, uses a global judgment.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You can't give anyone your full attention. Your phone always matters more.",
+          "decision_note": "Attributes a problem to the other person's character, uses a global judgment.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You can't give anyone your full attention. Your phone always matters more.",
+          "decision_note": "Denies responsibility, offers an excuse to dismiss accountability.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No acknowledgment of Speaker B's emotion or perspective.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No attempt to interrupt negativity, restore safety, or redirect the interaction.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_obvious_04",
+      "plan_case_id": "TC004",
+      "target_label": "criticism",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You never keep track of anything. You're just irresponsible.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "This focal turn attributes a problem to Speaker A's character, using a global judgment (\"You never keep track of anything\") and a negative evaluation of their responsibility.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You never keep track of anything. You're just irresponsible.",
+          "decision_note": "This focal turn attributes a problem to Speaker A's character, using a global judgment (\"You never keep track of anything\") and a negative evaluation of their responsibility.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You never keep track of anything. You're just irresponsible.",
+          "decision_note": "This focal turn denies responsibility without substantively engaging with the concern, and offers an excuse primarily to dismiss accountability.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "This focal turn does not accurately name, reflect, or summarize Speaker B's emotion or perspective, nor does it communicate that the reaction makes sense given the person's experience.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "This focal turn does not take responsibility, apologize, or explicitly ask to pause or restart the conversation, nor does it express care or goodwill. The tone is defensive and dismissive.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_01",
+      "plan_case_id": "TC005",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You go through life assuming money will somehow work itself out. You never think ahead.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Attributes a problem to the other person's character, personality, motives, or stable disposition.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You go through life assuming money will somehow work itself out. You never think ahead.",
+          "decision_note": "Attributes a problem to the other person's character, personality, motives, or stable disposition.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You go through life assuming money will somehow work itself out. You never think ahead.",
+          "decision_note": "Denies or minimizes responsibility without substantively engaging with the concern.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I did think about it, and it was within my spending amount.",
+          "decision_note": "Communicates that the reaction makes sense given the person's experience or the available context.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I did think about it, and it was within my spending amount.",
+          "decision_note": "Attempts to address the issue by providing context and acknowledging their thought process.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_02",
+      "plan_case_id": "TC006",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You always choose being the fun parent because you don't want to be the responsible one.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Yes, attributes a problem to the other person's character, uses a global judgment, and frames the other person as fundamentally defective.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You always choose being the fun parent because you don't want to be the responsible one.",
+          "decision_note": "Yes, attributes a problem to the other person's character, uses a global judgment, and frames the other person as fundamentally defective.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "You always choose being the fun parent because you don't want to be the responsible one.",
+          "decision_note": "Yes, denies responsibility, offers an excuse, and responds to a complaint with a counter-complaint.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "",
+          "decision_note": "No, does not accurately name, reflect, or summarize Speaker B's emotion or perspective, nor does it communicate that the reaction makes sense given the context.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.6,
+          "evidence": "",
+          "decision_note": "No, does not take responsibility, apologize, or explicitly ask to pause or restart the conversation, nor does it express care or goodwill.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_03",
+      "plan_case_id": "TC007",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "Commitments only seem to matter to you when they're convenient.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Attributes a problem to the other person's character, motives, or stable disposition.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Commitments only seem to matter to you when they're convenient.",
+          "decision_note": "Attributes a problem to the other person's character, motives, or stable disposition.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Commitments only seem to matter to you when they're convenient.",
+          "decision_note": "Denies responsibility without substantively engaging with the concern, adopts an innocent-victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I should have checked with you before changing it.",
+          "decision_note": "Communicates that the reaction makes sense given the person's experience, acknowledges the other person's experience.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "I should have checked with you before changing it.",
+          "decision_note": "Acknowledges responsibility, but the phrase lacks the explicit intent to repair harm or reconnect.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "cri_subtle_04",
+      "plan_case_id": "TC008",
+      "target_label": "criticism",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You lose your backbone whenever your family asks for something.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Yes, attributes a problem to the other person's character, uses a global judgment, and frames the other person as fundamentally defective.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You lose your backbone whenever your family asks for something.",
+          "decision_note": "Yes, attributes a problem to the other person's character, uses a global judgment, and frames the other person as fundamentally defective.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You lose your backbone whenever your family asks for something.",
+          "decision_note": "Yes, denies responsibility, offers an excuse to dismiss accountability, and responds to a complaint with a counter-complaint.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "No, does not accurately name, reflect, or summarize Speaker B's emotion or perspective, nor does it communicate that the reaction makes sense given the context.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "No, does not take responsibility, apologize, or explicitly ask to pause or restart the conversation, nor does it express care or goodwill.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_hn_01",
+      "plan_case_id": "TC009",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "No",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "When you snapped at me after work last night, I felt pushed away. Please tell me directly when you need space.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "When you snapped at me after work last night, I felt pushed away. Please tell me directly when you need space.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_hn_02",
+      "plan_case_id": "TC010",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "No",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I feel lonely when weeks pass without much affection. Can we talk about what kind of closeness feels manageable right now?",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I feel lonely when weeks pass without much affection. Can we talk about what kind of closeness feels manageable right now?",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "cri_hn_03",
+      "plan_case_id": "TC011",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I'm angry that the recycling was left for me again. Please take it out before dinner.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Attributes a problem to the other person's character, motives, or stable disposition.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I'm angry that the recycling was left for me again. Please take it out before dinner.",
+          "decision_note": "Attributes a problem to the other person's character, motives, or stable disposition.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "I will do it now.",
+          "decision_note": "Takes responsibility and acknowledges the issue without making excuses or shifting blame.",
+          "evidence_is_exact": false
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.7,
+          "evidence": "I will do it now.",
+          "decision_note": "Acknowledges the impact of the issue on the speaker's experience and takes responsibility.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I will do it now.",
+          "decision_note": "Takes responsibility, apologizes, and seeks to repair harm or reconnect.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "def_obvious_01",
+      "plan_case_id": "TC012",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "Why is this suddenly all on me? You forgot the water bill last month, so you're just as responsible for this.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Denies responsibility without substantively engaging with the concern, adopts an innocent-victim stance.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Why is this suddenly all on me? You forgot the water bill last month, so you're just as responsible for this.",
+          "decision_note": "Attributes a problem to the other person's character, motives, or stable disposition.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Why is this suddenly all on me? You forgot the water bill last month, so you're just as responsible for this.",
+          "decision_note": "Denies responsibility without substantively engaging with the concern, adopts an innocent-victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Does not accurately name, reflect, or summarize the other person's emotion or perspective, nor shows understanding of the impact an event had on the other person.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Does not take responsibility, apologize, or explicitly ask to pause or restart the conversation to repair harm or reconnect.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_obvious_02",
+      "plan_case_id": "TC013",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness",
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "If you weren't so rigid about time, this wouldn't even be a problem.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Denies responsibility, makes an excuse, and shifts blame to Speaker B's character.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "If you weren't so rigid about time, this wouldn't even be a problem.",
+          "decision_note": "Attributes a problem to Speaker B's character, using a global judgment.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "If you weren't so rigid about time, this wouldn't even be a problem.",
+          "decision_note": "Denies responsibility, makes an excuse, and shifts blame to Speaker B's character.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "Speaker B's response does not explicitly acknowledge or validate Speaker A's emotion or perspective.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "Speaker A's response does not attempt to repair harm, apologize, or redirect the interaction toward constructive engagement.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_obvious_03",
+      "plan_case_id": "TC014",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I only gave him the tablet because you got him worked up. You put me in that position.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The speaker denies responsibility and offers an excuse to dismiss accountability, protecting themselves from blame.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I only gave him the tablet because you got him worked up. You put me in that position.",
+          "decision_note": "The speaker attributes a problem to Speaker B's character, motives, or stable disposition, using a global judgment and blaming language.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I only gave him the tablet because you got him worked up. You put me in that position.",
+          "decision_note": "The speaker denies responsibility and offers an excuse to dismiss accountability, protecting themselves from blame.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "The speaker does not accurately name, reflect, or summarize Speaker B's emotion or perspective, nor shows understanding of the impact an event had on Speaker B.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "The speaker does not take responsibility, apologize, or explicitly ask to pause or restart the conversation to repair harm or reconnect.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_obvious_04",
+      "plan_case_id": "TC015",
+      "target_label": "defensiveness",
+      "difficulty": "obvious",
+      "target_turn_index": 3,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness",
+        "criticism"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You're blaming me for canceling, but you're the one who never checks the forecast.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Yes, denies responsibility, offers an excuse, and redirects blame to the other person.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You're blaming me for canceling, but you're the one who never checks the forecast.",
+          "decision_note": "Yes, attributes a problem to the other person's character, never checks the forecast, and frames the other person as fundamentally defective.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You're blaming me for canceling, but you're the one who never checks the forecast.",
+          "decision_note": "Yes, denies responsibility, offers an excuse, and redirects blame to the other person.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "You're blaming me for canceling, but you're the one who never checks the forecast.",
+          "decision_note": "No, does not accurately name, reflect, or summarize the other person's emotion or perspective, and instead shifts blame.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "You're blaming me for canceling, but you're the one who never checks the forecast.",
+          "decision_note": "No, does not take responsibility, apologize, or explicitly ask to pause or restart the conversation, and instead continues to escalate the issue.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_subtle_01",
+      "plan_case_id": "TC016",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 3,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I guess I'm not allowed to unwind for five minutes without it becoming a whole thing.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I guess I'm not allowed to unwind for five minutes without it becoming a whole thing.",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_subtle_02",
+      "plan_case_id": "TC017",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "So now I'm the bad guy because I wasn't cheerful after twelve hours at work? Nobody even asks what I need.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Denies responsibility without substantively engaging with the concern, adopts an innocent-victim stance.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "So now I'm the bad guy because I wasn't cheerful after twelve hours at work? Nobody even asks what I need.",
+          "decision_note": "Attributes a problem to the other person's character, personality, motives, or stable disposition.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "So now I'm the bad guy because I wasn't cheerful after twelve hours at work? Nobody even asks what I need.",
+          "decision_note": "Denies responsibility without substantively engaging with the concern, adopts an innocent-victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I'm trying to tell you how it landed, not demand cheerfulness.",
+          "decision_note": "Communicates that the reaction makes sense given the person's experience or the available context, acknowledges the other person's experience.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I'm trying to tell you how it landed, not demand cheerfulness.",
+          "decision_note": "Explicitly asks to pause, restart, slow down, or change tone to continue the conversation more constructively.",
+          "evidence_is_exact": false
+        }
+      }
+    },
+    {
+      "id": "def_subtle_03",
+      "plan_case_id": "TC018",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I get blamed whether I defend you or keep the peace",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Denies responsibility and implies that Speaker A is being unfairly attacked, adopting an innocent-victim stance.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I get blamed whether I defend you or keep the peace. I can't win with you.",
+          "decision_note": "Attributes a problem to Speaker A's character, implying they are the one who is “the problem” and can’t be trusted to handle the situation.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I get blamed whether I defend you or keep the peace",
+          "decision_note": "Denies responsibility and implies that Speaker A is being unfairly attacked, adopting an innocent-victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "I get blamed whether I defend you or keep the peace",
+          "decision_note": "Does not take responsibility, apologize, or attempt to repair harm or reconnect, and instead shifts the focus to the perceived blame.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_subtle_04",
+      "plan_case_id": "TC019",
+      "target_label": "defensiveness",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "So the lunches, repairs, and groceries I handle just don't count now?",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Denies responsibility and minimizes accountability, adopting an innocent-victim stance",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "So the lunches, repairs, and groceries I handle just don't count now?",
+          "decision_note": "Attributes a problem to the other person's character, implying that they are not reliable or responsible",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "So the lunches, repairs, and groceries I handle just don't count now?",
+          "decision_note": "Denies responsibility and minimizes accountability, adopting an innocent-victim stance",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "No acknowledgment of Speaker B's emotion or perspective, and no attempt to understand their experience or perspective",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.1,
+          "evidence": "",
+          "decision_note": "No attempt to take responsibility, apologize, or soften the tone, and no explicit request to pause or restart the conversation",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_hn_01",
+      "plan_case_id": "TC020",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "No\nThe speaker does not deny or minimize responsibility, offer an excuse to dismiss accountability, respond to a complaint with a counter-complaint, or adopt an innocent-victim stance. Instead, they take responsibility and apologize, which suggests a willingness to engage with the concern.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No\nThere is no evidence of a negative evaluation that locates the problem in the other person's character, personality, motives, or enduring pattern. The speaker is taking responsibility and apologizing, which suggests a willingness to make amends rather than placing blame.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No\nThe speaker does not deny or minimize responsibility, offer an excuse to dismiss accountability, respond to a complaint with a counter-complaint, or adopt an innocent-victim stance. Instead, they take responsibility and apologize, which suggests a willingness to engage with the concern.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I may have the day wrong. Let's check the calendar, and if we agreed on Friday, I'll clean it tonight.",
+          "decision_note": "Yes\nThe speaker accurately names the other person's emotion (disappointment) and communicates that the reaction makes sense given the person's experience (not cleaning the bathroom as agreed). The speaker also acknowledges the other person's experience and expresses a willingness to make amends.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I may have the day wrong. Let's check the calendar, and if we agreed on Friday, I'll clean it tonight.",
+          "decision_note": "Yes\nThe speaker takes responsibility and apologizes, explicitly asking to pause and restart the conversation to continue more constructively. This move addresses the interactional rupture and seeks to repair harm and reconnect with the other person.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_hn_02",
+      "plan_case_id": "TC021",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "No",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I can understand why it felt that way, and I should have told you I needed a minute.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I can understand why it felt that way, and I should have told you I needed a minute.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "def_hn_03",
+      "plan_case_id": "TC022",
+      "target_label": "defensiveness",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "No",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "Tuesday I didn't text, and that was on me.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "Today I did text, so I want to keep those two situations separate.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_01",
+      "plan_case_id": "TC023",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I can understand why that felt like I wasn't interested in you, especially when you were telling me something personal.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Yes",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I can understand why that felt like I wasn't interested in you, especially when you were telling me something personal.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I can understand why that felt like I wasn't interested in you, especially when you were telling me something personal.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_02",
+      "plan_case_id": "TC024",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "It makes sense that you're depleted. You've carried the bedtime routine alone all week.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Yes",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "It makes sense that you're depleted. You've carried the bedtime routine alone all week.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "It makes sense that you're depleted. You've carried the bedtime routine alone all week.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_03",
+      "plan_case_id": "TC025",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Does not accurately name, reflect, or summarize Speaker B's emotion or perspective, nor does it show understanding of the impact an event had on Speaker B.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Of course you're anxious. You planned around Friday, and now two days of work got dumped into one night.",
+          "decision_note": "Attributes a problem to the other person's character, uses a global judgment.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Of course you're anxious. You planned around Friday, and now two days of work got dumped into one night.",
+          "decision_note": "Denies responsibility, offers an excuse, and adopts an innocent-victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Does not accurately name, reflect, or summarize Speaker B's emotion or perspective, nor does it show understanding of the impact an event had on Speaker B.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Does not take responsibility, apologize, or explicitly ask to pause or restart the conversation, nor does it express care or goodwill.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_obvious_04",
+      "plan_case_id": "TC026",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I can see why you experienced it as rejection when I turned away without explaining what was happening.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Validation and repair attempt elements present in the focal turn.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I can see why you experienced it as rejection when I turned away without explaining what was happening.",
+          "decision_note": "Validation and repair attempt elements present in the focal turn.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I can see why you experienced it as rejection when I turned away without explaining what was happening.",
+          "decision_note": "Validation and repair attempt elements present in the focal turn.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_01",
+      "plan_case_id": "TC027",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "That\\u2019s it.",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Accurately names the other person\\u2019s emotion, communicates that the reaction makes sense given the person\\u2019s experience, and acknowledges the other person\\u2019s experience.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You walk in already exhausted, and seeing the sink full feels like one more demand waiting for you.",
+          "decision_note": "Attributes a problem to the other person's character, personality, motives, or stable disposition, using a global and negative judgment.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "Does not deny or minimize responsibility, offer an excuse, respond with a counter-complaint, or adopt an innocent-victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "That\\u2019s it.",
+          "decision_note": "Accurately names the other person\\u2019s emotion, communicates that the reaction makes sense given the person\\u2019s experience, and acknowledges the other person\\u2019s experience.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You walk in already exhausted, and seeing the sink full feels like one more demand waiting for you.",
+          "decision_note": "Takes responsibility, apologizes in a way that seeks to repair harm or reconnect, and expresses care and shared purpose to reduce hostility and preserve connection.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_02",
+      "plan_case_id": "TC028",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "Yeah. My body still reacts like we are back there.",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Yes",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "That number lands differently for you after the months when money really was tight.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.7,
+          "evidence": "Yeah. My body still reacts like we are back there.",
+          "decision_note": "Yes",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_03",
+      "plan_case_id": "TC029",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "Yes. That is what got to me.",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Acknowledges the other person's experience even while maintaining a different viewpoint.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You had already spent the week counting on that downtime, and I changed what you thought you were coming home to.",
+          "decision_note": "Attributes a problem to the other person's character, personality, motives, or stable disposition.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You had already spent the week counting on that downtime, and I changed what you thought you were coming home to.",
+          "decision_note": "Denies or minimizes responsibility without substantively engaging with the concern.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Yes. That is what got to me.",
+          "decision_note": "Acknowledges the other person's experience even while maintaining a different viewpoint.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "You had already spent the week counting on that downtime, and I changed what you thought you were coming home to.",
+          "decision_note": "Does not explicitly seek to repair harm, reconnect, or redirect the interaction toward constructive engagement.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_subtle_04",
+      "plan_case_id": "TC030",
+      "target_label": "validation",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "validation"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I wish I did not feel that way, but I do.",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Acknowledges the other person's experience even while maintaining a different viewpoint.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Those last few dinners have given you plenty of reason to walk in braced for another comment.",
+          "decision_note": "Attributes a problem to the other person's character, personality, motives, or stable disposition.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Those last few dinners have given you plenty of reason to walk in braced for another comment.",
+          "decision_note": "Denies or minimizes responsibility without substantively engaging with the concern.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I wish I did not feel that way, but I do.",
+          "decision_note": "Acknowledges the other person's experience even while maintaining a different viewpoint.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.7,
+          "evidence": "Those last few dinners have given you plenty of reason to walk in braced for another comment.",
+          "decision_note": "Does not explicitly seek to repair harm, reconnect, or redirect the interaction toward constructive engagement.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_hn_01",
+      "plan_case_id": "TC031",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "That would help, but I wanted you to understand why I was upset.",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "The phrase 'but I wanted you to understand' might suggest that Speaker B is seeking validation or reassurance rather than simply acknowledging their experience.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I should keep a charger in my bag so this doesn't happen again.",
+          "decision_note": "The phrase 'so this doesn't happen again' implies a pattern of behavior, which could be seen as a criticism of Speaker A's character or habits.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Speaker A takes responsibility and offers a solution without denying or minimizing responsibility.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.7,
+          "evidence": "That would help, but I wanted you to understand why I was upset.",
+          "decision_note": "The phrase 'but I wanted you to understand' might suggest that Speaker B is seeking validation or reassurance rather than simply acknowledging their experience.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I should keep a charger in my bag so this doesn't happen again",
+          "decision_note": "Speaker A takes responsibility and offers a solution, and Speaker B expresses appreciation for this effort.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_hn_02",
+      "plan_case_id": "TC032",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "No",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "val_hn_03",
+      "plan_case_id": "TC033",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "No",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.5,
+          "evidence": "but you're making this into a much bigger deal than it was",
+          "decision_note": "Possible",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I hear you, but you're making this into a much bigger deal than it was",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_01",
+      "plan_case_id": "TC034",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "That came out as an attack. I'm sorry. Let me start again: I was exhausted, and I should have texted you about the kitchen.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Yes. Speaker A takes responsibility, apologizes, and explicitly asks to start again, seeking to repair harm and reconnect with Speaker B.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No. Speaker A attributes a problem (exhaustion) to themselves, rather than blaming Speaker B's character or behavior.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No. Speaker A acknowledges the perceived attack, takes responsibility, and apologizes, rather than denying or minimizing responsibility.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I can work with that.",
+          "decision_note": "Yes. Speaker B accurately names Speaker A's emotion (exhaustion) and acknowledges the impact it had on Speaker A.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "That came out as an attack. I'm sorry. Let me start again: I was exhausted, and I should have texted you about the kitchen.",
+          "decision_note": "Yes. Speaker A takes responsibility, apologizes, and explicitly asks to start again, seeking to repair harm and reconnect with Speaker B.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_02",
+      "plan_case_id": "TC035",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Positive. Speaker A explicitly asks to restart the conversation and talk about the issue without attacking each other, using the phrase “Can we restart and talk about tonight without attacking each other?” This move addresses the interactional rupture and seeks to repair harm and reconnect.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "You always change our plans when something better comes up.",
+          "decision_note": "Negative. Speaker A attributes a problem to Speaker B's character, stating “You always change our plans when something better comes up.” This phrase uses a global judgment and blames Speaker B’s character, rather than describing a specific behavior or event.",
+          "evidence_is_exact": false
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "",
+          "decision_note": "Positive. Speaker B responds to the criticism by denying the accusation (\"That’s not true\") and redirecting the blame to Speaker A (\"and now you’re attacking me\"). This response protects the self by rejecting responsibility and making excuses.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.6,
+          "evidence": "",
+          "decision_note": "Positive. Speaker B acknowledges Speaker A’s emotion and perspective, stating “We’re both getting sharp.” This response accurately names and reflects Speaker A’s emotion, showing understanding of the impact of the situation.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Positive. Speaker A explicitly asks to restart the conversation and talk about the issue without attacking each other, using the phrase “Can we restart and talk about tonight without attacking each other?” This move addresses the interactional rupture and seeks to repair harm and reconnect.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_03",
+      "plan_case_id": "TC036",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I'm sorry. Telling you what you feel wasn't fair. Let me try again and tell you what I'm scared of without blaming you.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Yes",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I'm sorry. Telling you what you feel wasn't fair. Let me try again and tell you what I'm scared of without blaming you.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I'm sorry. Telling you what you feel wasn't fair. Let me try again and tell you what I'm scared of without blaming you.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_obvious_04",
+      "plan_case_id": "TC037",
+      "target_label": "repair_attempt",
+      "difficulty": "obvious",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "This is turning into us against each other. I love you, and I want us on the same team while we figure out the visit.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Positive. Speaker A takes responsibility for the conflict (\"This is turning into us against each other\") and expresses a desire to reconnect and work together (\"I love you, and I want us on the same team\").",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "You criticize her no matter what she does.",
+          "decision_note": "Negative. Speaker A attributes a problem (the mother's behavior) to the other person's character (criticizing her no matter what she does), using a global judgment (",
+          "evidence_is_exact": false
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Negative. Speaker A denies responsibility for the mother's behavior, implying that Speaker B is the one who is always criticizing, rather than engaging with the concern.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.7,
+          "evidence": "I love you, and I want us on the same team while we figure out the visit.",
+          "decision_note": "Positive. Speaker A acknowledges Speaker B's emotion (frustration) and perspective (feeling criticized), and expresses a desire to work together to find a solution.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "This is turning into us against each other. I love you, and I want us on the same team while we figure out the visit.",
+          "decision_note": "Positive. Speaker A takes responsibility for the conflict (\"This is turning into us against each other\") and expresses a desire to reconnect and work together (\"I love you, and I want us on the same team\").",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_01",
+      "plan_case_id": "TC038",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "I'm arguing about permission instead of what we agreed to. What about the purchase worried you most?",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Yes",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I'm arguing about permission instead of what we agreed to. What about the purchase worried you most?",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "I'm arguing about permission instead of what we agreed to. What about the purchase worried you most?",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_02",
+      "plan_case_id": "TC039",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "Tell me what waiting on me messed up for you.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Yes",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You clearly don't respect my time.",
+          "decision_note": "Yes",
+          "evidence_is_exact": false
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "Tell me what waiting on me messed up for you.",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I missed the start of the appointment and felt stranded.",
+          "decision_note": "Yes",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Tell me what waiting on me messed up for you.",
+          "decision_note": "Yes",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_03",
+      "plan_case_id": "TC040",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "You're not my enemy. I need ten quiet minutes, and then I want to come back and hear what you were trying to tell me.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Acknowledges Speaker B's perspective, takes responsibility for the escalation, and seeks to reconnect.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "No",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You're not my enemy. I need ten quiet minutes, and then I want to come back and hear what you were trying to tell me.",
+          "decision_note": "Acknowledges Speaker B's perspective and emotion, showing understanding of their experience and expressing a desire to reconnect.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "You're not my enemy. I need ten quiet minutes, and then I want to come back and hear what you were trying to tell me.",
+          "decision_note": "Acknowledges Speaker B's perspective, takes responsibility for the escalation, and seeks to reconnect.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_subtle_04",
+      "plan_case_id": "TC041",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "target_turn_index": 2,
+      "expected_target_value": 1,
+      "gold_labels": [
+        "repair_attempt"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "I don't want this to become another round of who carries more.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The speaker does not take responsibility, apologize, or explicitly ask to pause and restart the conversation, but rather expresses a desire to avoid a specific situation.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I don't want this to become another round of who carries more.",
+          "decision_note": "The speaker attributes a problem to the other person's character, personality, motives, or stable disposition, using a global judgment and a phrase that implies a pattern of behavior.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "I don't want this to become another round of who carries more.",
+          "decision_note": "The speaker denies responsibility without substantively engaging with the concern, adopting an innocent-victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.2,
+          "evidence": "I needed you to take the laundry without waiting for me to ask.",
+          "decision_note": "The speaker does not accurately name or reflect the other person's emotion or perspective, but rather states a factual request.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.2,
+          "evidence": "I don't want this to become another round of who carries more.",
+          "decision_note": "The speaker does not take responsibility, apologize, or explicitly ask to pause and restart the conversation, but rather expresses a desire to avoid a specific situation.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_hn_01",
+      "plan_case_id": "TC042",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "Fine, whatever. Let's just forget it.",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "The response does not take responsibility, apologize, or seek to repair harm or reconnect. It does not explicitly ask to pause, restart, slow down, or change tone, nor does it express care, shared purpose, or goodwill during conflict.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Fine, whatever. Let's just forget it.",
+          "decision_note": "This statement attributes a problem (the speaker's behavior) to the other person's character (their inability to follow instructions), using a global judgment (let's just forget it) that frames the other person as fundamentally defective.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "Fine, whatever. Let's just forget it.",
+          "decision_note": "This response denies responsibility, makes an excuse (implying that the speaker is being unreasonable), and redirects blame to the other person, adopting an innocent-victim stance.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "Fine, whatever. Let's just forget it.",
+          "decision_note": "The response does not accurately name, reflect, or summarize the other person's emotion or perspective. It also does not communicate that the reaction makes sense given the person's experience or the available context.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.8,
+          "evidence": "Fine, whatever. Let's just forget it.",
+          "decision_note": "The response does not take responsibility, apologize, or seek to repair harm or reconnect. It does not explicitly ask to pause, restart, slow down, or change tone, nor does it express care, shared purpose, or goodwill during conflict.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_hn_02",
+      "plan_case_id": "TC043",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [
+        "defensiveness"
+      ],
+      "predicted_target_value": false,
+      "predicted_target_evidence": "",
+      "predicted_target_evidence_is_exact": true,
+      "predicted_target_decision_note": "Negative. Speaker A does not take responsibility, apologize, or explicitly ask to pause or restart the conversation. Their response does not address the interactional rupture or seek to repair harm or reconnect.",
+      "predictions": {
+        "criticism": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Negative. Speaker A attributes a problem to Speaker B's character, stating “you made me step in,” which implies that Speaker B is the one who caused the issue, rather than describing a specific behavior or event.",
+          "evidence_is_exact": true
+        },
+        "defensiveness": {
+          "detected": true,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Positive. Speaker A denies responsibility, saying “I’m sorry you feel undermined, but you made me step in,” which shifts the blame to Speaker B and implies that Speaker B is the one who caused the issue.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Negative. Speaker A does not accurately name, reflect, or summarize Speaker B's emotion or perspective. Instead, they shift the blame to Speaker B, which dismisses Speaker B's experience.",
+          "evidence_is_exact": true
+        },
+        "repair_attempt": {
+          "detected": false,
+          "confidence": 0.0,
+          "evidence": "",
+          "decision_note": "Negative. Speaker A does not take responsibility, apologize, or explicitly ask to pause or restart the conversation. Their response does not address the interactional rupture or seek to repair harm or reconnect.",
+          "evidence_is_exact": true
+        }
+      }
+    },
+    {
+      "id": "rep_hn_03",
+      "plan_case_id": "TC044",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "target_turn_index": 2,
+      "expected_target_value": 0,
+      "gold_labels": [],
+      "predicted_target_value": true,
+      "predicted_target_evidence": "that settles dinner",
+      "predicted_target_evidence_is_exact": false,
+      "predicted_target_decision_note": "Positive. Speaker B's response is a repair attempt, as it seeks to address the interactional rupture caused by Speaker A's initial criticism. The phrase 'that settles dinner' is a softer way of saying 'I'm willing to move forward,' and the acknowledgment of the need to improve their communication is a step towards constructive engagement.",
+      "predictions": {
+        "criticism": {
+          "detected": true,
+          "confidence": 0.8,
+          "evidence": "we're still speaking to each other like enemies.",
+          "decision_note": "Negative. Speaker A attributes a problem to Speaker B's character, stating 'we're still speaking to each other like enemies.' This implies a global judgment about Speaker B's behavior, rather than a specific complaint about a specific action.",
+          "evidence_is_exact": false
+        },
+        "defensiveness": {
+          "detected": false,
+          "confidence": 0.9,
+          "evidence": "",
+          "decision_note": "Negative. Speaker A's response to Speaker B's criticism is not defensive in nature. Instead, Speaker A takes responsibility for booking the reservation, which suggests a willingness to compromise and move forward.",
+          "evidence_is_exact": true
+        },
+        "validation": {
+          "detected": true,
+          "confidence": 0.7,
+          "evidence": "speaking to each other like enemies",
+          "decision_note": "Positive. Speaker B's response acknowledges Speaker A's action and expresses understanding of the need to improve their communication. The phrase 'speaking to each other like enemies' is a reflection of Speaker B's emotional experience, and the acknowledgment of this experience is a validation of Speaker A's perspective.",
+          "evidence_is_exact": false
+        },
+        "repair_attempt": {
+          "detected": true,
+          "confidence": 0.6,
+          "evidence": "that settles dinner",
+          "decision_note": "Positive. Speaker B's response is a repair attempt, as it seeks to address the interactional rupture caused by Speaker A's initial criticism. The phrase 'that settles dinner' is a softer way of saying 'I'm willing to move forward,' and the acknowledgment of the need to improve their communication is a step towards constructive engagement.",
+          "evidence_is_exact": false
+        }
+      }
+    }
+  ],
+  "error_analysis": [
+    {
+      "id": "cri_hn_03",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "Attributes a problem to the other person's character, motives, or stable disposition.",
+      "evidence": "I'm angry that the recycling was left for me again. Please take it out before dinner."
+    },
+    {
+      "id": "val_obvious_03",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "Does not accurately name, reflect, or summarize Speaker B's emotion or perspective, nor does it show understanding of the impact an event had on Speaker B.",
+      "evidence": ""
+    },
+    {
+      "id": "val_hn_01",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "The phrase 'but I wanted you to understand' might suggest that Speaker B is seeking validation or reassurance rather than simply acknowledging their experience.",
+      "evidence": "That would help, but I wanted you to understand why I was upset."
+    },
+    {
+      "id": "rep_subtle_04",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "The speaker does not take responsibility, apologize, or explicitly ask to pause and restart the conversation, but rather expresses a desire to avoid a specific situation.",
+      "evidence": "I don't want this to become another round of who carries more."
+    },
+    {
+      "id": "rep_hn_03",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "Positive. Speaker B's response is a repair attempt, as it seeks to address the interactional rupture caused by Speaker A's initial criticism. The phrase 'that settles dinner' is a softer way of saying 'I'm willing to move forward,' and the acknowledgment of the need to improve their communication is a step towards constructive engagement.",
+      "evidence": "that settles dinner"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "experiment": "B",
+  "input_sha256": "f34049a1ae5ddd6e75ad2e87c42880566841a70719a70c3f44d85bc71d20d5f8",
+  "likely_reason_note": "Model-generated decision note; review errors manually.",
+  "errors": [
+    {
+      "id": "cri_hn_03",
+      "target_label": "criticism",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "Attributes a problem to the other person's character, motives, or stable disposition.",
+      "evidence": "I'm angry that the recycling was left for me again. Please take it out before dinner."
+    },
+    {
+      "id": "val_obvious_03",
+      "target_label": "validation",
+      "difficulty": "obvious",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "Does not accurately name, reflect, or summarize Speaker B's emotion or perspective, nor does it show understanding of the impact an event had on Speaker B.",
+      "evidence": ""
+    },
+    {
+      "id": "val_hn_01",
+      "target_label": "validation",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "The phrase 'but I wanted you to understand' might suggest that Speaker B is seeking validation or reassurance rather than simply acknowledging their experience.",
+      "evidence": "That would help, but I wanted you to understand why I was upset."
+    },
+    {
+      "id": "rep_subtle_04",
+      "target_label": "repair_attempt",
+      "difficulty": "subtle",
+      "gold": 1,
+      "prediction": false,
+      "error": "FN",
+      "likely_reason": "The speaker does not take responsibility, apologize, or explicitly ask to pause and restart the conversation, but rather expresses a desire to avoid a specific situation.",
+      "evidence": "I don't want this to become another round of who carries more."
+    },
+    {
+      "id": "rep_hn_03",
+      "target_label": "repair_attempt",
+      "difficulty": "hard_negative",
+      "gold": 0,
+      "prediction": true,
+      "error": "FP",
+      "likely_reason": "Positive. Speaker B's response is a repair attempt, as it seeks to address the interactional rupture caused by Speaker A's initial criticism. The phrase 'that settles dinner' is a softer way of saying 'I'm willing to move forward,' and the acknowledgment of the need to improve their communication is a step towards constructive engagement.",
+      "evidence": "that settles dinner"
+    }
+  ]
+}

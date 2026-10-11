@@ -1,0 +1,103 @@
+{
+  "poc": "poc2",
+  "status": "frozen",
+  "frozen_on": "2026-10-11",
+  "gold_dataset_version": "1.2.1",
+  "ontology_version": "1.0.0",
+  "git_head_at_freeze": "259cc62c5b75e8a35371084a0f3af1e3dd357f4a",
+  "note": "Hashes of POC 2 artifacts at freeze. Verify with: shasum -a 256 <file>.",
+  "files": {
+    "ontology.json": {
+      "role": "input: ontology v1.0.0",
+      "sha256": "b3131b6114e969797e47680791d57e736fd39879eda5313ec6b52031e5ca5eea"
+    },
+    "poc2_gold.json": {
+      "role": "input: gold dataset v1.2.1",
+      "sha256": "f34049a1ae5ddd6e75ad2e87c42880566841a70719a70c3f44d85bc71d20d5f8"
+    },
+    "generation_plan.json": {
+      "role": "input: generation plan",
+      "sha256": "55ccc726abe04defe0f0dc1dfce6216f174240af0af3b94ea046cbc3eaa369af"
+    },
+    "poc2_generated_orig_dont_use.json": {
+      "role": "lineage: original generation",
+      "sha256": "b6975e28586ad856d88ea06c48b352d2cef0f19cca6bffd7bdc863d6055aee89"
+    },
+    "poc2_generated_qual_controlled_dont_use.json": {
+      "role": "lineage: Phase 4 QC (+ v1.2.x speaker-role fixes)",
+      "sha256": "3a4c9ff845df38854d3917170d4452898c700c2b1d445846271baa93f3e21eb4"
+    },
+    "multi_agent_cot_baseline.py": {
+      "role": "code: experiment runner (A/B/C)",
+      "sha256": "e6388e686c4717292e60edf20d1758cc9f93ca37955f206941b58ae165d4e291"
+    },
+    "llm_providers.py": {
+      "role": "code: model providers (ollama, anthropic)",
+      "sha256": "f5dba7aa56380f4c04768d163578fd834ffc95c772cfe3973e1569c8425df9bf"
+    },
+    "visualize_experiments.py": {
+      "role": "code: comparison report",
+      "sha256": "6930701cc4ce6239218c339eb32a48c8f7c35a736a7b2ea56b3978f3d6f5978b"
+    },
+    "experiment_a.json": {
+      "role": "result: A",
+      "sha256": "a9be7c7f40840c9059aa2d1848974d0e3ac84b9714007c09146570376f6253ab"
+    },
+    "experiment_a_error_analysis.json": {
+      "role": "result: A",
+      "sha256": "22648bdf5a15a61febecef5c30c7e86378732dbeb7f5c884373e80ce10204ce9"
+    },
+    "experiment_a_error_review.md": {
+      "role": "review: A",
+      "sha256": "82e3d68547c4312c548bd035a4976ac8d51883a5b1cce18727b870638a72563c"
+    },
+    "experiment_b.json": {
+      "role": "result: B",
+      "sha256": "7fd9c8293620bdcc635fa5675e87756f0792e74f79e524f74af437bc7bd39f5d"
+    },
+    "experiment_b_error_analysis.json": {
+      "role": "result: B",
+      "sha256": "2cf1c20326e97e5e18b2407f1e93bae6d0691cf350f6fac2561d961a1f09ef4f"
+    },
+    "experiment_b_error_review.md": {
+      "role": "review: B",
+      "sha256": "3a987a680f19b842463b5d99037673e81633f51793a1f10b1a2b95f43ca2439f"
+    },
+    "experiment_b_claude-opus-5-5.json": {
+      "role": "result: B, Opus capacity comparison",
+      "sha256": "ed1fa6910eb325758a60ac58ccc5ac9e5abaf4138a6c17befa39fbfd6171fc1a"
+    },
+    "experiment_b_claude-opus-5-5_error_analysis.json": {
+      "role": "result: B, Opus capacity comparison",
+      "sha256": "2180afb528b676b74462cc7bacb615a48dc8f77e5804a603ca10a7a829b7fd65"
+    },
+    "experiment_c.json": {
+      "role": "result: C (context ablation)",
+      "sha256": "6e7e7ae8ef231c7312263667616ef1874c81c1a883195fdebf8b62700cdae5d2"
+    },
+    "experiment_c_error_analysis.json": {
+      "role": "result: C (context ablation)",
+      "sha256": "99ed02fbe61b0aa516b3f77d27e658e2e819d132b53b9dca6b6dd2195cc44536"
+    },
+    "experiment_c_error_review.md": {
+      "role": "review: C",
+      "sha256": "c78d06310a8a4aa30e1e2ae0534b26024b6ab6b5e971b3755fd2ff610c630eb9"
+    },
+    "experiment_ab_comparison.html": {
+      "role": "report: A, B, B Opus",
+      "sha256": "1012324036527d8178e44293ab78d6ea0db02741f40e0f0d873625538ac243f9"
+    },
+    "experiment_bc_comparison.html": {
+      "role": "report: B, C",
+      "sha256": "b6614224fde7c782c6967609d007af90be70e83078172a259993402fd0a726b9"
+    },
+    "experiment_a_comparison.html": {
+      "role": "report: superseded (early unseeded A run on gold v1.1.0)",
+      "sha256": "673192ebcddc9bb67bed8c10fa02358ab269fd9b27612b6f70ea6687e2d80f49"
+    },
+    "poc2_instructions_README.md": {
+      "role": "docs: instructions and results",
+      "sha256": "04b7c70b888f53578857edab5dd3a67c902eaced53e496f94b4c30e08b76972a"
+    }
+  }
+}
